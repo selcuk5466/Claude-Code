@@ -114,7 +114,7 @@ function submitBooking(e) {
   if (!/^\S+@\S+\.\S+$/.test(email)) return ($("formMsg").textContent = "Geçerli bir e-posta girin.");
   if (!/^(\+90|0)?5\d{9}$/.test(phone)) return ($("formMsg").textContent = "Geçerli bir cep telefonu girin (05xx xxx xx xx).");
 
-  const code = "YA" + Math.random().toString(36).slice(2, 8).toUpperCase();
+  const code = "SK" + Math.random().toString(36).slice(2, 8).toUpperCase();
   const form = $("bookForm");
   form.innerHTML = `
     <div class="success">
