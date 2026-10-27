@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YolArkadaşı | Araç Kiralama</title>
+  <meta name="description" content="Uygun fiyatlı, hızlı ve güvenli araç kiralama. Ekonomik, SUV, lüks ve ticari araçlar.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a href="#" class="logo">🚗 Yol<span>Arkadaşı</span></a>
+      <nav>
+        <a href="#filo">Araçlarımız</a>
+        <a href="#nasil">Nasıl Çalışır?</a>
+        <a href="#sss">SSS</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Yolculuğun Başlasın,<br>Aracın Hazır.</h1>
+      <p>Gizli ücret yok, kolay iptal, 7/24 yol yardımı.</p>
+
+      <form id="searchForm" class="search" novalidate>
+        <label>Alış Yeri
+          <select id="pickup" required>
+            <option>İstanbul Havalimanı</option>
+            <option>Sabiha Gökçen Havalimanı</option>
+            <option>Ankara Esenboğa</option>
+            <option>İzmir Adnan Menderes</option>
+            <option>Antalya Havalimanı</option>
+          </select>
+        </label>
+        <label>Alış Tarihi
+          <input type="date" id="startDate" required>
+        </label>
+        <label>Teslim Tarihi
+          <input type="date" id="endDate" required>
+        </label>
+        <button type="submit" class="btn">Araç Ara</button>
+      </form>
+      <p id="searchMsg" class="msg" role="alert"></p>
+    </div>
+  </section>
+
+  <main>
+    <section id="filo" class="container section">
+      <h2>Araç Filomuz</h2>
+      <div class="filters">
+        <button class="chip active" data-cat="all">Tümü</button>
+        <button class="chip" data-cat="Ekonomik">Ekonomik</button>
+        <button class="chip" data-cat="SUV">SUV</button>
+        <button class="chip" data-cat="Lüks">Lüks</button>
+        <button class="chip" data-cat="Ticari">Ticari</button>
+        <select id="sort" aria-label="Sırala">
+          <option value="price-asc">Fiyat: Düşükten yükseğe</option>
+          <option value="price-desc">Fiyat: Yüksekten düşüğe</option>
+          <option value="name">İsme göre</option>
+        </select>
+      </div>
+      <p id="rangeInfo" class="range-info"></p>
+      <div id="cars" class="grid"></div>
+    </section>
+
+    <section id="nasil" class="how">
+      <div class="container section">
+        <h2>Nasıl Çalışır?</h2>
+        <div class="steps">
+          <div><b>1</b><h3>Aracını Seç</h3><p>Tarih ve lokasyonu belirle, filodan sana uygun aracı seç.</p></div>
+          <div><b>2</b><h3>Rezervasyon Yap</h3><p>Bilgilerini gir, dakikalar içinde onay al.</p></div>
+          <div><b>3</b><h3>Anahtarı Al, Yola Çık</h3><p>Seçtiğin noktada aracı teslim al ve yolculuğa başla.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sss" class="container section">
+      <h2>Sıkça Sorulan Sorular</h2>
+      <details><summary>Kiralamak için hangi belgeler gerekli?</summary><p>Geçerli ehliyet (en az 1 yıllık), kimlik veya pasaport ve kredi kartı gerekir.</p></details>
+      <details><summary>Yaş sınırı var mı?</summary><p>Ekonomik sınıf için 21, SUV/Ticari için 23, Lüks sınıf için 27 yaş ve üzeri.</p></details>
+      <details><summary>Rezervasyonu iptal edebilir miyim?</summary><p>Teslimattan 24 saat öncesine kadar ücretsiz iptal edebilirsiniz.</p></details>
+      <details><summary>Kilometre sınırı var mı?</summary><p>Günlük 300 km dahildir. Aşan her km için araç sınıfına göre ek ücret uygulanır.</p></details>
+    </section>
+  </main>
+
+  <footer id="iletisim" class="footer">
+    <div class="container">
+      <div>
+        <strong>YolArkadaşı Araç Kiralama</strong>
+        <p>📞 0850 000 00 00 · ✉️ info@yolarkadasi.example</p>
+        <p>Çağrı merkezi 7/24 hizmetinizdedir.</p>
+      </div>
+      <small>© <span id="year"></span> YolArkadaşı. Tüm hakları saklıdır. (Demo site)</small>
+    </div>
+  </footer>
+
+  <!-- Rezervasyon penceresi -->
+  <dialog id="bookDialog">
+    <form id="bookForm" method="dialog" novalidate>
+      <button type="button" class="close" id="closeBtn" aria-label="Kapat">×</button>
+      <h3 id="bookTitle"></h3>
+      <p id="bookSummary" class="summary"></p>
+      <label>Ad Soyad <input id="fName" required autocomplete="name"></label>
+      <label>E-posta <input id="fEmail" type="email" required autocomplete="email"></label>
+      <label>Telefon <input id="fPhone" type="tel" required autocomplete="tel" placeholder="05xx xxx xx xx"></label>
+      <label class="check"><input type="checkbox" id="fInsurance"> Tam kasko + ek sigorta (+150 ₺/gün)</label>
+      <label class="check"><input type="checkbox" id="fChild"> Çocuk koltuğu (+40 ₺/gün)</label>
+      <p class="total">Toplam: <strong id="bookTotal"></strong></p>
+      <p id="formMsg" class="msg" role="alert"></p>
+      <button type="submit" class="btn">Rezervasyonu Tamamla</button>
+    </form>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>
