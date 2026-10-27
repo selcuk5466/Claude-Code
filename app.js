@@ -74,6 +74,47 @@ function renderCars() {
         </div>
       </article>`).join("")
     : '<p class="empty">Bu kategoride araç bulunamadı.</p>';
+  observeReveal();
+}
+
+/* ---------- Kaydırma animasyonları ---------- */
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+let revealObserver;
+function observeReveal() {
+  const els = document.querySelectorAll(".car, .steps > div, details, .section h2");
+  if (reduceMotion || !("IntersectionObserver" in window)) return;
+  revealObserver = revealObserver || new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (en.isIntersecting) { en.target.classList.add("in"); revealObserver.unobserve(en.target); }
+    });
+  }, { threshold: 0.12 });
+  els.forEach((el, i) => {
+    if (el.classList.contains("in") || el.classList.contains("reveal")) return;
+    el.classList.add("reveal");
+    el.style.transitionDelay = (i % 4) * 70 + "ms";
+    revealObserver.observe(el);
+  });
+}
+
+function initRoadCar() {
+  const car = $("roadCar"), road = car.parentElement, hero = document.querySelector(".hero .container");
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const p = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+    const y = p * (road.clientHeight - car.offsetHeight);
+    // Araç aşağı doğru ilerlerken hafifçe sağa-sola salınır
+    car.style.transform = `translate(${Math.sin(p * 18) * 4}px, ${y}px)`;
+    if (!reduceMotion && hero) {
+      const h = Math.min(1, window.scrollY / 500);
+      hero.style.transform = `translateY(${Math.min(window.scrollY, 300) * 0.12}px)`;
+      hero.style.opacity = String(1 - h * 0.6);
+    }
+  };
+  window.addEventListener("scroll", () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  window.addEventListener("resize", update);
+  update();
 }
 
 /* ---------- Rezervasyon ---------- */
@@ -132,6 +173,7 @@ document.addEventListener("DOMContentLoaded", () => {
   $("year").textContent = new Date().getFullYear();
   initDates();
   renderCars();
+  initRoadCar();
 
   $("startDate").addEventListener("change", () => {
     $("endDate").min = $("startDate").value;

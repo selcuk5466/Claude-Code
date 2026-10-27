@@ -84,3 +84,24 @@ dialog h3 { margin: 0; padding-right: 30px; }
   .nav nav { gap: 14px; font-size: .85rem; }
   .filters select { margin-left: 0; width: 100%; }
 }
+
+/* ---------- Kaydırmalı araç animasyonu ---------- */
+.road { position: fixed; left: 10px; top: 64px; bottom: 16px; width: 46px; z-index: 5; pointer-events: none; }
+.road-line { position: absolute; left: 50%; top: 0; bottom: 0; width: 4px; transform: translateX(-50%); border-radius: 4px;
+  background: repeating-linear-gradient(to bottom, rgba(255,107,0,.55) 0 14px, transparent 14px 28px); }
+.road-car { position: absolute; left: 50%; top: 0; margin-left: -17px; will-change: transform; filter: drop-shadow(0 6px 6px rgba(0,0,0,.3)); }
+.road-car svg { display: block; overflow: visible; }
+@media (min-width: 1240px) { .road { left: calc(50% - 600px); } }
+@media (max-width: 1239px) { .container { width: min(1120px, 100% - 76px); margin-left: 60px; margin-right: 16px; } }
+@media (max-width: 600px) { .road { left: 4px; width: 40px; } .road-car svg { width: 26px; height: 52px; } .road-car { margin-left: -13px; }
+  .container { width: calc(100% - 56px); margin-left: 48px; margin-right: 8px; } }
+
+/* Hero'da hafif parallax, kartlarda belirme animasyonu */
+.hero .container { will-change: transform, opacity; }
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.in { opacity: 1; transform: none; }
+.steps > div, details { transition: transform .2s; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .road-car { transition: none; }
+}

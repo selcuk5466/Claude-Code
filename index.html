@@ -8,6 +8,23 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Kaydırmayla aşağı inen araç -->
+  <div class="road" aria-hidden="true">
+    <div class="road-line"></div>
+    <div class="road-car" id="roadCar">
+      <svg viewBox="0 0 40 80" width="34" height="68">
+        <rect x="3" y="14" width="6" height="14" rx="2" fill="#111"/><rect x="31" y="14" width="6" height="14" rx="2" fill="#111"/>
+        <rect x="3" y="52" width="6" height="14" rx="2" fill="#111"/><rect x="31" y="52" width="6" height="14" rx="2" fill="#111"/>
+        <rect x="6" y="3" width="28" height="74" rx="13" fill="#ff6b00"/>
+        <rect x="10" y="46" width="20" height="13" rx="4" fill="#1c2233"/>
+        <rect x="11" y="18" width="18" height="8" rx="3" fill="#1c2233" opacity=".75"/>
+        <rect x="12" y="29" width="16" height="15" rx="3" fill="#d95a00"/>
+        <circle cx="12" cy="73" r="2.5" fill="#fff6c2"/><circle cx="28" cy="73" r="2.5" fill="#fff6c2"/>
+        <path d="M12 76 L8 90 L16 90 Z M28 76 L24 90 L32 90 Z" fill="#fff6c2" opacity=".35"/>
+      </svg>
+    </div>
+  </div>
+
   <header class="header">
     <div class="container nav">
       <a href="#" class="logo">🚗 Sakarya <span>Araç Kiralama</span></a>
