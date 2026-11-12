@@ -15,22 +15,22 @@ Altın 4.000 doların altına indi, ama ABD borsası aynı gün yükseldi. Neden
 
 ⏱️ BÖLÜMLER
 0:00 Altın 4.000 doların altına indi
-0:22 ABD Ekim enflasyonu
+0:20 ABD Ekim enflasyonu
 0:42 Fed Aralık toplantısı ve faiz beklentisi
 1:11 Tahvil faizi ve dolar
-1:46 Altın neden düştü?
+1:38 Altın neden düştü?
 1:59 Altın fiyatları (ons, gram, çeyrek)
 2:21 Analistler ne diyor?
 2:48 Gümüş ve paladyum
 3:14 ABD borsası
-3:36 Yapay zeka rallisi ve CoreWeave
-4:02 Avrupa ve Asya borsaları
-4:37 Petrol ve Bitcoin
+3:42 Yapay zeka rallisi ve CoreWeave
+4:08 Avrupa ve Asya borsaları
+4:41 Petrol ve Bitcoin
 5:09 BIST 100 ve kurlar
-5:35 TCMB Enflasyon Raporu
-6:11 Fed artırıyor, TCMB indirim bekleniyor
-6:38 MSCI kararı ve Türkiye'ye etkisi
-7:14 Yarın takip edilecek veriler
+5:36 TCMB Enflasyon Raporu
+6:09 Fed artırıyor, TCMB indirim bekleniyor
+6:36 MSCI kararı ve Türkiye'ye etkisi
+7:12 Yarın takip edilecek veriler
 7:41 İki senaryo: ÜFE yüksek / düşük gelirse
 8:05 Kapanış
 

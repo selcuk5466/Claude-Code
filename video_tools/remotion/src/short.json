@@ -1,0 +1,140 @@
+{
+ "total": 57.1,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 10.94
+  },
+  {
+   "start": 11.29,
+   "dur": 21.34
+  },
+  {
+   "start": 32.98,
+   "dur": 20.12
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.0,
+   "end": 2.85,
+   "text": "Altın 4.000 doların altına indi."
+  },
+  {
+   "start": 2.85,
+   "end": 4.77,
+   "text": "3 işlem günüdür üst üste düşüyor"
+  },
+  {
+   "start": 4.77,
+   "end": 7.14,
+   "text": "ve Salı'dan beri bütün tartışma"
+  },
+  {
+   "start": 7.14,
+   "end": 8.94,
+   "text": "tek bir veri etrafında dönüyor:"
+  },
+  {
+   "start": 8.94,
+   "end": 10.94,
+   "text": "ABD'de Ekim enflasyonu."
+  },
+  {
+   "start": 11.29,
+   "end": 13.19,
+   "text": "Önce enflasyona bakalım."
+  },
+  {
+   "start": 13.19,
+   "end": 16.13,
+   "text": "Rakam aylık %0,4 çıktı."
+  },
+  {
+   "start": 16.13,
+   "end": 18.59,
+   "text": "Ekonomistler %0,3 bekliyordu."
+  },
+  {
+   "start": 18.59,
+   "end": 20.87,
+   "text": "Çekirdek enflasyon da %0,3"
+  },
+  {
+   "start": 20.87,
+   "end": 23.06,
+   "text": "beklentinin biraz üstünde kaldı."
+  },
+  {
+   "start": 23.06,
+   "end": 24.89,
+   "text": "Asıl dikkat çeken kısım şu:"
+  },
+  {
+   "start": 24.89,
+   "end": 27.41,
+   "text": "aylık enflasyon üst üste 3. kez"
+  },
+  {
+   "start": 27.41,
+   "end": 30.53,
+   "text": "%0,4 ya da daha yüksek geldi."
+  },
+  {
+   "start": 30.53,
+   "end": 32.63,
+   "text": "Bu, tek seferlik bir sapma gibi görünmüyor."
+  },
+  {
+   "start": 32.98,
+   "end": 34.25,
+   "text": "Şimdi altına gelelim,"
+  },
+  {
+   "start": 34.25,
+   "end": 35.42,
+   "text": "çünkü altının tepkisi"
+  },
+  {
+   "start": 35.42,
+   "end": 37.73,
+   "text": "bu haftanın en sert hareketi oldu."
+  },
+  {
+   "start": 37.73,
+   "end": 40.58,
+   "text": "Mantık basit. Altın faiz getirmiyor."
+  },
+  {
+   "start": 40.58,
+   "end": 42.71,
+   "text": "Faizler yükselince onu elde tutmanın"
+  },
+  {
+   "start": 42.71,
+   "end": 43.94,
+   "text": "maliyeti artıyor."
+  },
+  {
+   "start": 43.94,
+   "end": 45.74,
+   "text": "Üstüne dolar da güçlendi."
+  },
+  {
+   "start": 45.74,
+   "end": 48.74,
+   "text": "Dolarla fiyatlanan altın, başka para biriminden"
+  },
+  {
+   "start": 48.74,
+   "end": 50.99,
+   "text": "alan yatırımcıya daha pahalı geliyor."
+  },
+  {
+   "start": 50.99,
+   "end": 53.1,
+   "text": "İkisi birleşince satış gelmiş."
+  }
+ ],
+ "endCardStart": 53.1
+}

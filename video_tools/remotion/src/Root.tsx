@@ -3,6 +3,7 @@ import {Composition, Sequence} from 'remotion';
 import bounds from './bounds.json';
 import {SCENES} from './scenes';
 import {Bg, Ticker} from './ui';
+import {ShortVideo, SHORT_TOTAL, SHORT_FPS} from './Short';
 const LITE = process.env.LITE === '1';
 
 const FPS = 30;
@@ -28,5 +29,8 @@ const Video: React.FC = () => {
 };
 
 export const Root: React.FC = () => (
-  <Composition id="Video" component={Video} durationInFrames={TOTAL} fps={FPS} width={1920} height={1080} />
+  <>
+    <Composition id="Video" component={Video} durationInFrames={TOTAL} fps={FPS} width={1920} height={1080} />
+    <Composition id="Short" component={ShortVideo} durationInFrames={SHORT_TOTAL} fps={SHORT_FPS} width={1080} height={1920} />
+  </>
 );
