@@ -1,0 +1,32 @@
+import React from 'react';
+import {Composition, Sequence} from 'remotion';
+import bounds from './bounds.json';
+import {SCENES} from './scenes';
+import {Bg, Ticker} from './ui';
+const LITE = process.env.LITE === '1';
+
+const FPS = 30;
+const TOTAL = Math.ceil(bounds.total * FPS);
+
+const Video: React.FC = () => {
+  const starts: number[] = bounds.starts;
+  return (
+    <>
+      {LITE ? <div style={{position:'absolute',inset:0,background:'#08182f'}}/> : <Bg total={TOTAL} />}
+      {SCENES.map((Scene, i) => {
+        const from = Math.round(starts[i] * FPS);
+        const to = i + 1 < starts.length ? Math.round(starts[i + 1] * FPS) : TOTAL;
+        return (
+          <Sequence key={i} from={from} durationInFrames={to - from}>
+            <Scene />
+          </Sequence>
+        );
+      })}
+      <Ticker total={TOTAL} />
+    </>
+  );
+};
+
+export const Root: React.FC = () => (
+  <Composition id="Video" component={Video} durationInFrames={TOTAL} fps={FPS} width={1920} height={1080} />
+);
