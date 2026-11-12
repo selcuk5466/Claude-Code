@@ -1,0 +1,160 @@
+{
+ "total": 54.331,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 28.293,
+   "sentences": [
+    {
+     "start": 0.06,
+     "end": 3.24
+    },
+    {
+     "start": 3.24,
+     "end": 10.86
+    },
+    {
+     "start": 10.86,
+     "end": 13.635
+    },
+    {
+     "start": 13.635,
+     "end": 19.275
+    },
+    {
+     "start": 19.275,
+     "end": 21.943
+    },
+    {
+     "start": 21.943,
+     "end": 28.293
+    }
+   ]
+  },
+  {
+   "start": 28.643,
+   "dur": 21.688,
+   "sentences": [
+    {
+     "start": 0.218,
+     "end": 2.318
+    },
+    {
+     "start": 2.318,
+     "end": 9.068
+    },
+    {
+     "start": 9.068,
+     "end": 16.913
+    },
+    {
+     "start": 16.913,
+     "end": 21.688
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.06,
+   "end": 3.24,
+   "text": "Borsa tarafında ise tablo altından ayrışıyor."
+  },
+  {
+   "start": 3.24,
+   "end": 7.245,
+   "text": "Salı günü enflasyon verisiyle Nasdaq %0,7,"
+  },
+  {
+   "start": 7.245,
+   "end": 10.86,
+   "text": "S&P 500 %0,38 düştü."
+  },
+  {
+   "start": 10.86,
+   "end": 12.485,
+   "text": "Çarşamba günü yapay zeka"
+  },
+  {
+   "start": 12.485,
+   "end": 13.635,
+   "text": "hisseleri geri döndü."
+  },
+  {
+   "start": 13.635,
+   "end": 16.98,
+   "text": "S&P 500 %1,31 yükselip"
+  },
+  {
+   "start": 16.98,
+   "end": 19.275,
+   "text": "7.619 puana çıktı."
+  },
+  {
+   "start": 19.275,
+   "end": 21.943,
+   "text": "Nasdaq %1,60 arttı."
+  },
+  {
+   "start": 21.943,
+   "end": 28.293,
+   "text": "Dow Jones %0,49'la 52.486 puanda kapandı."
+  },
+  {
+   "start": 28.861,
+   "end": 30.961,
+   "text": "Tetikleyici CoreWeave oldu."
+  },
+  {
+   "start": 30.961,
+   "end": 33.181,
+   "text": "Şirket gelir beklentisini aştı"
+  },
+  {
+   "start": 33.181,
+   "end": 34.321,
+   "text": "ve son günlerde yapay"
+  },
+  {
+   "start": 34.321,
+   "end": 36.151,
+   "text": "zeka endişesi taşıyan yatırımcıyı"
+  },
+  {
+   "start": 36.151,
+   "end": 37.711,
+   "text": "biraz rahatlattı."
+  },
+  {
+   "start": 37.711,
+   "end": 41.011,
+   "text": "Faiz artışı beklentisi yerindeyken borsanın yükselmesi,"
+  },
+  {
+   "start": 41.011,
+   "end": 42.121,
+   "text": "şu an yapay zeka"
+  },
+  {
+   "start": 42.121,
+   "end": 44.071,
+   "text": "haberlerinin makro verilerden daha"
+  },
+  {
+   "start": 44.071,
+   "end": 45.556,
+   "text": "baskın olduğunu gösteriyor."
+  },
+  {
+   "start": 45.556,
+   "end": 46.771,
+   "text": "S&P 500,"
+  },
+  {
+   "start": 46.771,
+   "end": 50.331,
+   "text": "Ekim ayındaki rekorunun yaklaşık %2,5 altında."
+  }
+ ],
+ "endCardStart": 50.331
+}

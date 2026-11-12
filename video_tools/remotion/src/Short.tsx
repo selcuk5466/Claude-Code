@@ -6,7 +6,7 @@ import {Arrow, C, FONT, Pill, Tx, clamp, fmt, useTL} from './ui';
 export const SHORT_FPS = 30;
 export const SHORT_TOTAL = Math.ceil(data.total * SHORT_FPS);
 
-const ShortBg: React.FC = () => {
+export const ShortBg: React.FC = () => {
   const f = useCurrentFrame(); const t = f / 30;
   const parts = Array.from({length: 22}, (_, i) => {
     const sx = random('sx' + i) * 1080, sp = 14 + random('ss' + i) * 30, sz = 3 + random('sz' + i) * 6;
@@ -26,19 +26,19 @@ const ShortBg: React.FC = () => {
   );
 };
 
-const Fade: React.FC<{children: React.ReactNode; out?: boolean}> = ({children, out = true}) => {
+export const Fade: React.FC<{children: React.ReactNode; out?: boolean}> = ({children, out = true}) => {
   const {f, durationInFrames} = useTL();
   const o = out ? interpolate(f, [durationInFrames - 7, durationInFrames], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}) : 1;
   return <AbsoluteFill style={{opacity: o}}>{children}</AbsoluteFill>;
 };
 
-const Coin: React.FC<{x: number; y: number; size: number; o?: number}> = ({x, y, size, o = 1}) => (
+export const Coin: React.FC<{x: number; y: number; size: number; o?: number}> = ({x, y, size, o = 1}) => (
   <div style={{position: 'absolute', left: x, top: y, width: size, height: size, borderRadius: '50%', opacity: o,
     background: `radial-gradient(circle at 35% 30%, #fff1b8, ${C.gold} 55%, #8a6a22)`, boxShadow: `0 0 50px ${C.gold}99`, display: 'flex', alignItems: 'center', justifyContent: 'center',
     fontFamily: FONT, fontWeight: 900, fontSize: size * 0.55, color: '#6b4d10'}}>$</div>
 );
 
-const Card: React.FC<{x: number; y: number; w: number; h: number; t0: number; accent: string; children?: React.ReactNode}> = ({x, y, w, h, t0, accent, children}) => {
+export const Card: React.FC<{x: number; y: number; w: number; h: number; t0: number; accent: string; children?: React.ReactNode}> = ({x, y, w, h, t0, accent, children}) => {
   const {pop, p} = useTL(); const s = pop(t0); const o = p(t0, 0.3);
   return (
     <div style={{position: 'absolute', left: x, top: y, width: w, height: h, borderRadius: 32, opacity: o, transform: `translateY(${(1 - s) * 80}px) scale(${0.92 + 0.08 * s})`, overflow: 'hidden',
@@ -50,7 +50,7 @@ const Card: React.FC<{x: number; y: number; w: number; h: number; t0: number; ac
   );
 };
 
-const VBar: React.FC<{x: number; base: number; w: number; h: number; color: string}> = ({x, base, w, h, color}) => (
+export const VBar: React.FC<{x: number; base: number; w: number; h: number; color: string}> = ({x, base, w, h, color}) => (
   <div style={{position: 'absolute', left: x, top: base - h, width: w, height: Math.max(0, h), borderRadius: '24px 24px 0 0',
     background: `linear-gradient(180deg, ${color}, ${color}99)`, boxShadow: `0 0 60px ${color}66, inset 0 2px 0 rgba(255,255,255,.35)`}} />
 );
@@ -135,7 +135,7 @@ const SC: React.FC = () => {
 };
 
 // ----------------------------------------------------------------------------- bitiş kartı
-const SEnd: React.FC = () => {
+export const SEnd: React.FC = () => {
   const {t, p, pop} = useTL();
   const s = 1 + 0.05 * Math.sin(t * 5) * p(1.2, 0.4);
   return (
@@ -151,9 +151,9 @@ const SEnd: React.FC = () => {
 };
 
 // ----------------------------------------------------------------------------- altyazılar
-const Captions: React.FC = () => {
+export const Captions: React.FC<{caps?: {start: number; end: number; text: string}[]}> = ({caps = data.captions}) => {
   const f = useCurrentFrame(); const t = f / SHORT_FPS;
-  const cap = data.captions.find((c) => t >= c.start && t < c.end);
+  const cap = caps.find((c) => t >= c.start && t < c.end);
   if (!cap) return null;
   const age = (t - cap.start) * SHORT_FPS;
   const sc = interpolate(age, [0, 5], [0.88, 1], {extrapolateRight: 'clamp'});

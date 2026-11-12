@@ -4,6 +4,7 @@ import bounds from './bounds.json';
 import {SCENES} from './scenes';
 import {Bg, Ticker} from './ui';
 import {ShortVideo, SHORT_TOTAL, SHORT_FPS} from './Short';
+import {ShortBorsa, ShortFed, ShortYarin, BORSA_FRAMES, FED_FRAMES, YARIN_FRAMES} from './ShortMulti';
 const LITE = process.env.LITE === '1';
 
 const FPS = 30;
@@ -32,5 +33,8 @@ export const Root: React.FC = () => (
   <>
     <Composition id="Video" component={Video} durationInFrames={TOTAL} fps={FPS} width={1920} height={1080} />
     <Composition id="Short" component={ShortVideo} durationInFrames={SHORT_TOTAL} fps={SHORT_FPS} width={1080} height={1920} />
+    <Composition id="ShortFed" component={ShortFed} durationInFrames={FED_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="ShortYarin" component={ShortYarin} durationInFrames={YARIN_FRAMES} fps={30} width={1080} height={1920} />
+    <Composition id="ShortBorsa" component={ShortBorsa} durationInFrames={BORSA_FRAMES} fps={30} width={1080} height={1920} />
   </>
 );

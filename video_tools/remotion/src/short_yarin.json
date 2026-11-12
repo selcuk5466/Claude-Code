@@ -1,0 +1,199 @@
+{
+ "total": 56.34,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 28.66,
+   "sentences": [
+    {
+     "start": 0.14,
+     "end": 2.06
+    },
+    {
+     "start": 2.06,
+     "end": 8.09
+    },
+    {
+     "start": 8.09,
+     "end": 12.38
+    },
+    {
+     "start": 12.38,
+     "end": 17.36
+    },
+    {
+     "start": 17.36,
+     "end": 21.38
+    },
+    {
+     "start": 21.38,
+     "end": 28.66
+    }
+   ]
+  },
+  {
+   "start": 29.01,
+   "dur": 23.33,
+   "sentences": [
+    {
+     "start": 0.283,
+     "end": 1.723
+    },
+    {
+     "start": 1.723,
+     "end": 6.313
+    },
+    {
+     "start": 6.313,
+     "end": 11.593
+    },
+    {
+     "start": 11.593,
+     "end": 18.823
+    },
+    {
+     "start": 18.823,
+     "end": 23.33
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.14,
+   "end": 2.06,
+   "text": "Şimdi yarına bakalım."
+  },
+  {
+   "start": 2.06,
+   "end": 4.76,
+   "text": "Bugün ABD'de haftalık işsizlik"
+  },
+  {
+   "start": 4.76,
+   "end": 6.41,
+   "text": "başvuruları ve ikinci el"
+  },
+  {
+   "start": 6.41,
+   "end": 8.09,
+   "text": "konut satışları açıklanıyor."
+  },
+  {
+   "start": 8.09,
+   "end": 10.01,
+   "text": "Konut satışları için beklenti"
+  },
+  {
+   "start": 10.01,
+   "end": 12.38,
+   "text": "3,85 milyon adet."
+  },
+  {
+   "start": 12.38,
+   "end": 15.14,
+   "text": "Ama piyasayı asıl oynatacak veri yarın:"
+  },
+  {
+   "start": 15.14,
+   "end": 17.36,
+   "text": "ABD üretici fiyat endeksi."
+  },
+  {
+   "start": 17.36,
+   "end": 19.55,
+   "text": "Eylül verisi Aralık 2022'den"
+  },
+  {
+   "start": 19.55,
+   "end": 21.38,
+   "text": "beri en sert artıştı."
+  },
+  {
+   "start": 21.38,
+   "end": 22.46,
+   "text": "Üretici fiyatları,"
+  },
+  {
+   "start": 22.46,
+   "end": 25.04,
+   "text": "enflasyonun tüketiciye ulaşmadan önceki"
+  },
+  {
+   "start": 25.04,
+   "end": 26.93,
+   "text": "halini gösterdiği için Fed'in"
+  },
+  {
+   "start": 26.93,
+   "end": 28.66,
+   "text": "düşüncesini erken ele veriyor."
+  },
+  {
+   "start": 29.293,
+   "end": 30.733,
+   "text": "Burada 2 senaryo var."
+  },
+  {
+   "start": 30.733,
+   "end": 32.293,
+   "text": "Rakam yüksek gelirse,"
+  },
+  {
+   "start": 32.293,
+   "end": 35.323,
+   "text": "Fed'in yarım puanlık artış ihtimali güçlenebilir."
+  },
+  {
+   "start": 35.323,
+   "end": 36.913,
+   "text": "Bu durumda dolar yükselir,"
+  },
+  {
+   "start": 36.913,
+   "end": 38.773,
+   "text": "altın ve teknoloji hisseleri"
+  },
+  {
+   "start": 38.773,
+   "end": 40.603,
+   "text": "yeniden baskı görebilir."
+  },
+  {
+   "start": 40.603,
+   "end": 42.073,
+   "text": "Rakam düşük gelirse,"
+  },
+  {
+   "start": 42.073,
+   "end": 43.783,
+   "text": "piyasa Fed'in daha ölçülü"
+  },
+  {
+   "start": 43.783,
+   "end": 45.853,
+   "text": "gidebileceğini fiyatlar ve altın"
+  },
+  {
+   "start": 45.853,
+   "end": 47.833,
+   "text": "ile borsa nefes alabilir."
+  },
+  {
+   "start": 47.833,
+   "end": 49.393,
+   "text": "Hangisinin geleceğini bilmiyoruz,"
+  },
+  {
+   "start": 49.393,
+   "end": 51.043,
+   "text": "ama yarın akşam elimizde"
+  },
+  {
+   "start": 51.043,
+   "end": 52.34,
+   "text": "net bir cevap olacak."
+  }
+ ],
+ "endCardStart": 52.34
+}
