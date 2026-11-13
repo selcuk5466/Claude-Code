@@ -1,0 +1,186 @@
+{
+ "total": 46.977,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 42.977,
+   "sentences": [
+    {
+     "start": 0.2,
+     "end": 4.085
+    },
+    {
+     "start": 4.085,
+     "end": 10.94
+    },
+    {
+     "start": 10.94,
+     "end": 17.6
+    },
+    {
+     "start": 17.6,
+     "end": 22.28
+    },
+    {
+     "start": 22.28,
+     "end": 26.09
+    },
+    {
+     "start": 26.09,
+     "end": 30.95
+    },
+    {
+     "start": 30.95,
+     "end": 36.11
+    },
+    {
+     "start": 36.11,
+     "end": 42.977
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.2,
+   "end": 1.61,
+   "text": "Salı günkü enflasyon verisinin"
+  },
+  {
+   "start": 1.61,
+   "end": 2.99,
+   "text": "ardından Fed yetkilileri dün"
+  },
+  {
+   "start": 2.99,
+   "end": 4.085,
+   "text": "de aynı mesajı verdi."
+  },
+  {
+   "start": 4.085,
+   "end": 5.78,
+   "text": "Cleveland Fed Başkanı Hammack,"
+  },
+  {
+   "start": 5.78,
+   "end": 8.18,
+   "text": "enflasyondaki iyileşmenin durduğunu söyledi"
+  },
+  {
+   "start": 8.18,
+   "end": 9.35,
+   "text": "ve daha sıkı bir"
+  },
+  {
+   "start": 9.35,
+   "end": 10.94,
+   "text": "politika gerektiğini belirtti."
+  },
+  {
+   "start": 10.94,
+   "end": 12.172,
+   "text": "Chicago Fed Başkanı Goolsbee"
+  },
+  {
+   "start": 12.172,
+   "end": 13.4,
+   "text": "ile San Francisco Fed"
+  },
+  {
+   "start": 13.4,
+   "end": 15.14,
+   "text": "Başkanı Daly de faizlerin"
+  },
+  {
+   "start": 15.14,
+   "end": 16.818,
+   "text": "biraz daha artırılması gerekeceğini"
+  },
+  {
+   "start": 16.818,
+   "end": 17.6,
+   "text": "söyledi."
+  },
+  {
+   "start": 17.6,
+   "end": 19.04,
+   "text": "Piyasa artık 8–9 Aralık"
+  },
+  {
+   "start": 19.04,
+   "end": 20.781,
+   "text": "toplantısında çeyrek puanlık artışı"
+  },
+  {
+   "start": 20.781,
+   "end": 22.28,
+   "text": "%100 fiyatlıyor."
+  },
+  {
+   "start": 22.28,
+   "end": 23.787,
+   "text": "Yarım puanlık artış ihtimali"
+  },
+  {
+   "start": 23.787,
+   "end": 26.09,
+   "text": "ise %15 civarında."
+  },
+  {
+   "start": 26.09,
+   "end": 27.32,
+   "text": "ABD 10 yıllık tahvil"
+  },
+  {
+   "start": 27.32,
+   "end": 29.84,
+   "text": "faizi %5,13'le 3 haftanın"
+  },
+  {
+   "start": 29.84,
+   "end": 30.95,
+   "text": "zirvesini gördü."
+  },
+  {
+   "start": 30.95,
+   "end": 32.51,
+   "text": "Dolar endeksi 103 civarına"
+  },
+  {
+   "start": 32.51,
+   "end": 34.31,
+   "text": "çıkarak yaklaşık 19 ayın"
+  },
+  {
+   "start": 34.31,
+   "end": 36.11,
+   "text": "en yüksek seviyesine geldi."
+  },
+  {
+   "start": 36.11,
+   "end": 37.67,
+   "text": "Avrupa'da da tablo benzer:"
+  },
+  {
+   "start": 37.67,
+   "end": 38.0,
+   "text": "piyasa,"
+  },
+  {
+   "start": 38.0,
+   "end": 39.77,
+   "text": "Avrupa Merkez Bankası'nın 17"
+  },
+  {
+   "start": 39.77,
+   "end": 41.57,
+   "text": "Aralık'ta faiz artırma ihtimalini"
+  },
+  {
+   "start": 41.57,
+   "end": 42.977,
+   "text": "%93 görüyor."
+  }
+ ],
+ "endCardStart": 42.977
+}

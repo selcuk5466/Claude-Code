@@ -1,0 +1,209 @@
+{
+ "total": 54.107,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 35.808,
+   "sentences": [
+    {
+     "start": 0.2,
+     "end": 7.58
+    },
+    {
+     "start": 7.58,
+     "end": 14.166
+    },
+    {
+     "start": 14.166,
+     "end": 17.96
+    },
+    {
+     "start": 17.96,
+     "end": 22.49
+    },
+    {
+     "start": 22.49,
+     "end": 24.32
+    },
+    {
+     "start": 24.32,
+     "end": 30.08
+    },
+    {
+     "start": 30.08,
+     "end": 35.808
+    }
+   ]
+  },
+  {
+   "start": 36.158,
+   "dur": 13.949,
+   "sentences": [
+    {
+     "start": 0.131,
+     "end": 1.781
+    },
+    {
+     "start": 1.781,
+     "end": 6.131
+    },
+    {
+     "start": 6.131,
+     "end": 10.151
+    },
+    {
+     "start": 10.151,
+     "end": 13.949
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.2,
+   "end": 1.19,
+   "text": "Dün Başkan Trump,"
+  },
+  {
+   "start": 1.19,
+   "end": 3.47,
+   "text": "İran'la anlaşmaya ihtiyaç olmadığını,"
+  },
+  {
+   "start": 3.47,
+   "end": 4.91,
+   "text": "İran'ın parasına da"
+  },
+  {
+   "start": 4.91,
+   "end": 5.99,
+   "text": "Hürmüz Boğazı'na da"
+  },
+  {
+   "start": 5.99,
+   "end": 7.58,
+   "text": "sahip olduklarını söyledi."
+  },
+  {
+   "start": 7.58,
+   "end": 8.96,
+   "text": "Bu sözlerin ardından Brent"
+  },
+  {
+   "start": 8.96,
+   "end": 12.98,
+   "text": "petrol %3,3 artışla 95,82"
+  },
+  {
+   "start": 12.98,
+   "end": 14.166,
+   "text": "dolardan kapandı."
+  },
+  {
+   "start": 14.166,
+   "end": 17.96,
+   "text": "WTI ise 88,74 dolara çıktı."
+  },
+  {
+   "start": 17.96,
+   "end": 18.71,
+   "text": "İran ordusu,"
+  },
+  {
+   "start": 18.71,
+   "end": 20.45,
+   "text": "Hürmüz Boğazı'nda 4 tankerin"
+  },
+  {
+   "start": 20.45,
+   "end": 22.49,
+   "text": "patlamalarla vurulduğunu açıkladı."
+  },
+  {
+   "start": 22.49,
+   "end": 24.32,
+   "text": "Müzakerelerde de ilerleme yok."
+  },
+  {
+   "start": 24.32,
+   "end": 25.43,
+   "text": "Buna rağmen petrol,"
+  },
+  {
+   "start": 25.43,
+   "end": 27.2,
+   "text": "geçen haftanın sert düşüşünün"
+  },
+  {
+   "start": 27.2,
+   "end": 29.18,
+   "text": "ardından ikinci haftalık düşüşe"
+  },
+  {
+   "start": 29.18,
+   "end": 30.08,
+   "text": "doğru gidiyor."
+  },
+  {
+   "start": 30.08,
+   "end": 30.65,
+   "text": "Bu önemli,"
+  },
+  {
+   "start": 30.65,
+   "end": 33.23,
+   "text": "çünkü petrol yükselirse enflasyon"
+  },
+  {
+   "start": 33.23,
+   "end": 34.85,
+   "text": "baskısı artıyor ve Fed'in"
+  },
+  {
+   "start": 34.85,
+   "end": 35.808,
+   "text": "işi zorlaşıyor."
+  },
+  {
+   "start": 36.289,
+   "end": 37.939,
+   "text": "Jeopolitik riskler de sürüyor."
+  },
+  {
+   "start": 37.939,
+   "end": 38.359,
+   "text": "İran,"
+  },
+  {
+   "start": 38.359,
+   "end": 40.339,
+   "text": "saldırıya uğrarsa savaşı bölgenin"
+  },
+  {
+   "start": 40.339,
+   "end": 42.289,
+   "text": "dışına taşıyacağı uyarısı yaptı."
+  },
+  {
+   "start": 42.289,
+   "end": 44.198,
+   "text": "İsrail'in de olası saldırılar"
+  },
+  {
+   "start": 44.198,
+   "end": 46.309,
+   "text": "için hazırlıklarını artırdığı bildirildi."
+  },
+  {
+   "start": 46.309,
+   "end": 47.932,
+   "text": "ABD ise İran'ın Qeshm"
+  },
+  {
+   "start": 47.932,
+   "end": 50.107,
+   "text": "Adası'na sınırlı saldırılar düzenledi."
+  }
+ ],
+ "endCardStart": 50.107
+}

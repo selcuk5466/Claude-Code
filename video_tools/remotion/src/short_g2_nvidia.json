@@ -1,0 +1,168 @@
+{
+ "total": 50.73,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 46.73,
+   "sentences": [
+    {
+     "start": 0.2,
+     "end": 5.58
+    },
+    {
+     "start": 5.58,
+     "end": 12.38
+    },
+    {
+     "start": 12.38,
+     "end": 15.406
+    },
+    {
+     "start": 15.406,
+     "end": 18.83
+    },
+    {
+     "start": 18.83,
+     "end": 20.942
+    },
+    {
+     "start": 20.942,
+     "end": 27.2
+    },
+    {
+     "start": 27.2,
+     "end": 30.71
+    },
+    {
+     "start": 30.71,
+     "end": 35.24
+    },
+    {
+     "start": 35.24,
+     "end": 36.98
+    },
+    {
+     "start": 36.98,
+     "end": 43.25
+    },
+    {
+     "start": 43.25,
+     "end": 46.73
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.2,
+   "end": 2.84,
+   "text": "Şirketin kurucusu ve CEO'su Jensen Huang,"
+  },
+  {
+   "start": 2.84,
+   "end": 4.07,
+   "text": "gündeme gelen bir skandalın"
+  },
+  {
+   "start": 4.07,
+   "end": 5.58,
+   "text": "ardından istifa etti."
+  },
+  {
+   "start": 5.58,
+   "end": 8.18,
+   "text": "Nvidia hisseleri açılışta %14'e"
+  },
+  {
+   "start": 8.18,
+   "end": 9.47,
+   "text": "kadar düştü ve şirketin"
+  },
+  {
+   "start": 9.47,
+   "end": 11.0,
+   "text": "piyasa değeri 4 trilyon"
+  },
+  {
+   "start": 11.0,
+   "end": 12.38,
+   "text": "doların altına indi."
+  },
+  {
+   "start": 12.38,
+   "end": 13.94,
+   "text": "Finans direktörü Colette Kress"
+  },
+  {
+   "start": 13.94,
+   "end": 15.406,
+   "text": "geçici CEO oldu."
+  },
+  {
+   "start": 15.406,
+   "end": 18.83,
+   "text": "Nvidia'nın bilançosu 17 Kasım'da açıklanacak."
+  },
+  {
+   "start": 18.83,
+   "end": 20.942,
+   "text": "Dün ABD borsaları düşüşle kapandı."
+  },
+  {
+   "start": 20.942,
+   "end": 23.966,
+   "text": "S&P 500 yaklaşık %0,35,"
+  },
+  {
+   "start": 23.966,
+   "end": 27.2,
+   "text": "Dow Jones %0,36 geriledi."
+  },
+  {
+   "start": 27.2,
+   "end": 28.64,
+   "text": "Artan tahvil faizleri ve"
+  },
+  {
+   "start": 28.64,
+   "end": 30.71,
+   "text": "petrol de baskıyı artırdı."
+  },
+  {
+   "start": 30.71,
+   "end": 32.36,
+   "text": "Haftalık işsizlik başvuruları ise"
+  },
+  {
+   "start": 32.36,
+   "end": 33.65,
+   "text": "beklentinin biraz üstünde,"
+  },
+  {
+   "start": 33.65,
+   "end": 35.24,
+   "text": "200.000 geldi."
+  },
+  {
+   "start": 35.24,
+   "end": 36.98,
+   "text": "Bugün Asya'da tablo daha iyi."
+  },
+  {
+   "start": 36.98,
+   "end": 39.77,
+   "text": "Japonya'da Nikkei %1,48,"
+  },
+  {
+   "start": 39.77,
+   "end": 43.25,
+   "text": "Güney Kore'de Kospi %1,97 yükseldi."
+  },
+  {
+   "start": 43.25,
+   "end": 46.73,
+   "text": "ABD vadeli işlemleri de pozitif başladı."
+  }
+ ],
+ "endCardStart": 46.73
+}

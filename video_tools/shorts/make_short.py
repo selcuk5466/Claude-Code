@@ -13,13 +13,19 @@ CONFIGS = {
     'fed_tcmb': [(2, 0, 5), (14, 0, 1)],
     'yarin': [(17, 0, 5), (18, 0, 4)],
     'borsa': [(8, 0, 5), (9, 0, 3)],
+    # 13 Kasım (senaryo-kayitli.txt paragraf numaraları)
+    'g2_fed': [(1, 1, 8)],
+    'g2_altin': [(3, 1, 6)],
+    'g2_nvidia': [(4, 1, 11)],
+    'g2_petrol': [(6, 1, 7), (7, 0, 3)],
+    'g2_turkiye': [(9, 1, 6), (10, 0, 3)],
 }
 GAP, END_CARD, TAIL = 0.35, 4.0, 0.12
 
 # ------------------------------------------------------------------ Türkçe sayı sözcükleri -> rakam
 NUM = {'sıfır': 0, 'bir': 1, 'iki': 2, 'üç': 3, 'dört': 4, 'beş': 5, 'altı': 6, 'yedi': 7, 'sekiz': 8, 'dokuz': 9, 'on': 10,
        'yirmi': 20, 'otuz': 30, 'kırk': 40, 'elli': 50, 'altmış': 60, 'yetmiş': 70, 'seksen': 80, 'doksan': 90, 'yüz': 100, 'bin': 1000, 'milyon': 10 ** 6}
-SUF = {'la': "'la", 'le': "'le", 'den': "'den", 'dan': "'dan", 'a': "'a", 'e': "'e", 'ya': "'ya", 'ye': "'ye", 'li': "'li", 'lık': "'lık", 'lik': "'lik"}
+SUF = {'ten': "'ten", 'tan': "'tan", 'la': "'la", 'le': "'le", 'den': "'den", 'dan': "'dan", 'a': "'a", 'e': "'e", 'ya': "'ya", 'ye': "'ye", 'li': "'li", 'lık': "'lık", 'lik': "'lik"}
 MONTHS = ('ocak', 'şubat', 'mart', 'nisan', 'mayıs', 'haziran', 'temmuz', 'ağustos', 'eylül', 'ekim', 'kasım', 'aralık')
 def lower(w): return w.replace('İ', 'i').replace('I', 'ı').lower()
 
@@ -27,6 +33,7 @@ def num_word(tok):
     """'dokuzla' -> (9, "'la") ; 'dokuz' -> (9, '') ; değilse None"""
     t = lower(re.sub(r"[.,:;]+$", '', tok))
     if t in NUM: return NUM[t], ''
+    if t.startswith('dörd') and t[4:] in SUF: return 4, SUF[t[4:]]
     for k in sorted(NUM, key=len, reverse=True):
         if t.startswith(k) and t[len(k):] in SUF: return NUM[k], SUF[t[len(k):]]
     return None

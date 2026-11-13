@@ -1,0 +1,143 @@
+{
+ "total": 39.324,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 35.324,
+   "sentences": [
+    {
+     "start": 0.024,
+     "end": 5.424
+    },
+    {
+     "start": 5.424,
+     "end": 11.214
+    },
+    {
+     "start": 11.214,
+     "end": 16.044
+    },
+    {
+     "start": 16.044,
+     "end": 20.244
+    },
+    {
+     "start": 20.244,
+     "end": 27.774
+    },
+    {
+     "start": 27.774,
+     "end": 35.324
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.024,
+   "end": 2.274,
+   "text": "Altın dün yaklaşık %3"
+  },
+  {
+   "start": 2.274,
+   "end": 3.894,
+   "text": "düşerek 13 ayın en"
+  },
+  {
+   "start": 3.894,
+   "end": 5.424,
+   "text": "düşük seviyesine indi."
+  },
+  {
+   "start": 5.424,
+   "end": 6.684,
+   "text": "Ons altın bugün sabah"
+  },
+  {
+   "start": 6.684,
+   "end": 10.134,
+   "text": "saatlerinde 3.885 ile 3.890"
+  },
+  {
+   "start": 10.134,
+   "end": 11.214,
+   "text": "dolar arasında."
+  },
+  {
+   "start": 11.214,
+   "end": 12.864,
+   "text": "Yani hafif bir toparlanma"
+  },
+  {
+   "start": 12.864,
+   "end": 14.364,
+   "text": "var ama haftalık bazda"
+  },
+  {
+   "start": 14.364,
+   "end": 16.044,
+   "text": "sert bir kayıp yaşıyor."
+  },
+  {
+   "start": 16.044,
+   "end": 17.244,
+   "text": "Gümüş de %3'ten"
+  },
+  {
+   "start": 17.244,
+   "end": 18.444,
+   "text": "fazla düşerek 50"
+  },
+  {
+   "start": 18.444,
+   "end": 20.244,
+   "text": "dolar civarına geriledi."
+  },
+  {
+   "start": 20.244,
+   "end": 21.384,
+   "text": "Nedeni tanıdık:"
+  },
+  {
+   "start": 21.384,
+   "end": 22.524,
+   "text": "faiz yükseliyor,"
+  },
+  {
+   "start": 22.524,
+   "end": 24.414,
+   "text": "dolar güçleniyor ve petrolün"
+  },
+  {
+   "start": 24.414,
+   "end": 26.454,
+   "text": "tekrar artması enflasyon endişesini"
+  },
+  {
+   "start": 26.454,
+   "end": 27.774,
+   "text": "canlı tutuyor."
+  },
+  {
+   "start": 27.774,
+   "end": 28.644,
+   "text": "Analistler,"
+  },
+  {
+   "start": 28.644,
+   "end": 30.804,
+   "text": "haftalık kapanışın 3.850"
+  },
+  {
+   "start": 30.804,
+   "end": 32.124,
+   "text": "doların altında gelmesinin"
+  },
+  {
+   "start": 32.124,
+   "end": 35.324,
+   "text": "düşüşü derinleştirebileceğini söylüyor."
+  }
+ ],
+ "endCardStart": 35.324
+}

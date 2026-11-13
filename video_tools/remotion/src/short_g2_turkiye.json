@@ -1,0 +1,180 @@
+{
+ "total": 50.775,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 32.38,
+   "sentences": [
+    {
+     "start": 0.2,
+     "end": 3.83
+    },
+    {
+     "start": 3.83,
+     "end": 11.15
+    },
+    {
+     "start": 11.15,
+     "end": 20.0
+    },
+    {
+     "start": 20.0,
+     "end": 23.66
+    },
+    {
+     "start": 23.66,
+     "end": 29.21
+    },
+    {
+     "start": 29.21,
+     "end": 32.38
+    }
+   ]
+  },
+  {
+   "start": 32.73,
+   "dur": 14.045,
+   "sentences": [
+    {
+     "start": 0.045,
+     "end": 2.265
+    },
+    {
+     "start": 2.265,
+     "end": 8.085
+    },
+    {
+     "start": 8.085,
+     "end": 10.995
+    },
+    {
+     "start": 10.995,
+     "end": 14.045
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.2,
+   "end": 1.85,
+   "text": "Dün Merkez Bankası yılın"
+  },
+  {
+   "start": 1.85,
+   "end": 3.83,
+   "text": "son Enflasyon Raporu'nu açıkladı."
+  },
+  {
+   "start": 3.83,
+   "end": 4.91,
+   "text": "Başkan Karahan,"
+  },
+  {
+   "start": 4.91,
+   "end": 6.83,
+   "text": "2026 yıl sonu enflasyon"
+  },
+  {
+   "start": 6.83,
+   "end": 11.15,
+   "text": "tahminini %28'den %29,5'e yükseltti."
+  },
+  {
+   "start": 11.15,
+   "end": 12.83,
+   "text": "2027 için tahmin ve"
+  },
+  {
+   "start": 12.83,
+   "end": 15.83,
+   "text": "ara hedef %15'ten %21'e,"
+  },
+  {
+   "start": 15.83,
+   "end": 20.0,
+   "text": "2028 için %9'dan %13,5'e çıktı."
+  },
+  {
+   "start": 20.0,
+   "end": 21.65,
+   "text": "2029 sonu için ise"
+  },
+  {
+   "start": 21.65,
+   "end": 23.66,
+   "text": "ilk kez %9 öngörüldü."
+  },
+  {
+   "start": 23.66,
+   "end": 24.17,
+   "text": "Karahan,"
+  },
+  {
+   "start": 24.17,
+   "end": 26.15,
+   "text": "enflasyondaki düşüşün sürdüğünü"
+  },
+  {
+   "start": 26.15,
+   "end": 27.32,
+   "text": "ama enerji fiyatları"
+  },
+  {
+   "start": 27.32,
+   "end": 29.21,
+   "text": "yüzünden yavaşladığını söyledi."
+  },
+  {
+   "start": 29.21,
+   "end": 30.77,
+   "text": "Merkez Bankası petrol fiyatı"
+  },
+  {
+   "start": 30.77,
+   "end": 32.38,
+   "text": "varsayımlarını da yukarı çekti."
+  },
+  {
+   "start": 32.775,
+   "end": 34.275,
+   "text": "Borsa İstanbul dün güçlü"
+  },
+  {
+   "start": 34.275,
+   "end": 34.995,
+   "text": "bir gün geçirdi."
+  },
+  {
+   "start": 34.995,
+   "end": 37.605,
+   "text": "BIST 100 endeksi %1,24"
+  },
+  {
+   "start": 37.605,
+   "end": 40.815,
+   "text": "yükselerek 11.811 puandan kapandı."
+  },
+  {
+   "start": 40.815,
+   "end": 41.085,
+   "text": "Bu,"
+  },
+  {
+   "start": 41.085,
+   "end": 42.375,
+   "text": "15 Ekim'den bu yana"
+  },
+  {
+   "start": 42.375,
+   "end": 43.725,
+   "text": "en yüksek kapanış."
+  },
+  {
+   "start": 43.725,
+   "end": 46.775,
+   "text": "Gün içinde 11.898'e kadar çıktı."
+  }
+ ],
+ "endCardStart": 46.775
+}
