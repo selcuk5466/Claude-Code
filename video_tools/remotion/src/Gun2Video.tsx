@@ -26,9 +26,9 @@ const Stat: React.FC<{x: number; y: number; w: number; h: number; t0: number; co
   return (
     <div style={{opacity: o}}>
       <Card x={x} y={y} w={w} h={h} t0={t0} accent={col}>
-        <Label x={36} y={34} o={p(t0 + 0.1, 0.3)}>{label}</Label>
-        <Tx x={36} y={88} w={w - 60} s={vs} wt={900} glow={col} ls={-1} o={p(t0 + 0.1, 0.3)}>{value}</Tx>
-        {sub && <Tx x={36} y={h - 62} w={w - 60} s={28} wt={600} c={C.grey} o={p(t0 + 0.2, 0.3)}>{sub}</Tx>}
+        <Label x={36} y={28} o={p(t0 + 0.1, 0.3)}>{label}</Label>
+        <Tx x={36} y={sub ? 66 : 88} w={w - 60} s={vs} wt={900} glow={col} ls={-1} o={p(t0 + 0.1, 0.3)}>{value}</Tx>
+        {sub && <Tx x={36} y={Math.min(h - 50, 66 + vs * 1.35 + 8)} w={w - 60} s={28} wt={600} c={C.grey} o={p(t0 + 0.2, 0.3)}>{sub}</Tx>}
       </Card>
     </div>
   );
@@ -36,12 +36,15 @@ const Stat: React.FC<{x: number; y: number; w: number; h: number; t0: number; co
 
 const News: React.FC<{x: number; y: number; w: number; h: number; t0: number; col?: string; head: string; src: string; hs?: number; o?: number}> = ({x, y, w, h, t0, col = C.gold, head, src, hs = 40, o = 1}) => {
   const {p} = useTL();
+  let sz = hs;
+  const lines = (z: number) => Math.ceil((head.length * z * 0.55) / (w - 72));
+  while (sz > 24 && 74 + lines(sz) * sz * 1.2 > h - 50) sz -= 2;
   return (
     <div style={{opacity: o}}>
       <Card x={x} y={y} w={w} h={h} t0={t0} accent={col}>
-        <div style={{position: 'absolute', left: 36, top: 28, padding: '4px 16px', borderRadius: 8, background: col, color: '#07142a', fontFamily: FONT, fontWeight: 900, fontSize: 20, letterSpacing: 3, opacity: p(t0 + 0.1, 0.3)}}>HABER</div>
-        <Tx x={36} y={78} w={w - 72} s={hs} wt={800} o={p(t0 + 0.15, 0.3)} lh={1.2}>{head}</Tx>
-        <Tx x={36} y={h - 52} w={w - 72} s={22} wt={600} c={C.grey} o={p(t0 + 0.3, 0.3)}>{src}</Tx>
+        <div style={{position: 'absolute', left: 36, top: 24, padding: '4px 16px', borderRadius: 8, background: col, color: '#07142a', fontFamily: FONT, fontWeight: 900, fontSize: 20, letterSpacing: 3, opacity: p(t0 + 0.1, 0.3)}}>HABER</div>
+        <Tx x={36} y={70} w={w - 72} s={sz} wt={800} o={p(t0 + 0.15, 0.3)} lh={1.2}>{head}</Tx>
+        <Tx x={36} y={h - 42} w={w - 72} s={22} wt={600} c={C.grey} o={p(t0 + 0.3, 0.3)}>{src}</Tx>
       </Card>
     </div>
   );
@@ -274,8 +277,8 @@ const Sc11: React.FC = () => {
       <Stat x={1410} y={280} w={400} h={220} t0={S(10, 4) + 0.6} col={C.gold} label="GRAM ALTIN" value="≈6.320 TL" vs={46} />
       <Card x={990} y={540} w={820} h={230} t0={S(10, 5)} accent={C.gold}>
         <Label x={36} y={30} o={1}>BUGÜN 10:00 • TÜRKİYE</Label>
-        <Tx x={36} y={76} w={750} s={38} wt={800}>Cari denge (Eylül) ve TCMB Piyasa Katılımcıları Anketi</Tx>
-        <Tx x={36} y={150} w={750} s={30} wt={600} c={C.grey}>Cari denge beklentisi: ≈+2,5 milyar $ (önceki +4,05)</Tx>
+        <Tx x={36} y={70} w={750} s={34} wt={800} lh={1.15}>Cari denge (Eylül) ve TCMB Piyasa Katılımcıları Anketi</Tx>
+        <Tx x={36} y={158} w={750} s={26} wt={600} c={C.grey}>Cari denge beklentisi: ≈+2,5 milyar $ (önceki +4,05)</Tx>
       </Card>
       <Chip x={990} y={800} w={820} h={96} t0={S(10, 8)} col={C.gold} s={24}>ARALIK'TA TCMB'DEN İNDİRİM BEKLENİYOR • ENERJİ RİSKİ</Chip>
       <Src>Endeks24, Borsamatik, Halk Yatırım, Şeker Yatırım • 12–13 Kasım 2026</Src>
