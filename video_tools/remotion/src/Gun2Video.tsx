@@ -339,7 +339,53 @@ const ScBond: React.FC = () => {
   );
 };
 
-const SCENES = [Sc1, Sc2, Sc3, Sc4, ScRez, ScBond, Sc5, Sc6, Sc7, Sc8, Sc9, Sc10, Sc11];
+const ScUfe: React.FC = () => {
+  const T = (si: number) => R(13, si);
+  return (
+    <Shell title="ABD ÜFE Verisi" sub="Ekim ayı üretici enflasyonu: manşet beklentinin altında, yıllık oran zirvede">
+      <Stat x={110} y={290} w={820} h={300} t0={T(1)} col={C.green} label="ÜFE • EKİM • AYLIK" value="%0,3" sub="beklenti %0,4" vs={130} />
+      <Stat x={990} y={290} w={820} h={300} t0={T(3)} col={C.red} label="ÜFE • EKİM • YILLIK" value="%6,5" sub="eylül %6,3 • beklenti %6,6" vs={130} />
+      <Stat x={110} y={620} w={400} h={240} t0={T(6)} col={C.gold} label="ÇEKİRDEK • AYLIK" value="%0,3" sub="beklentiyle uyumlu" vs={84} />
+      <Stat x={530} y={620} w={400} h={240} t0={T(7)} col={C.gold} label="ÇEKİRDEK • YILLIK" value="%5,0" vs={84} />
+      <Chip x={990} y={620} w={820} h={90} t0={T(5)} col={C.red} s={24}>KASIM 2022'DEN BU YANA EN YÜKSEK YILLIK SEVİYE</Chip>
+      <Chip x={990} y={740} w={820} h={120} t0={T(9)} col={C.gold} s={24}>FED'İN ARALIK ARTIŞ BEKLENTİSİNİ ORTADAN KALDIRMIYOR</Chip>
+      <Src>ABD Çalışma İstatistikleri Bürosu (BLS), AA, FXStreet, Foreks • 13 Kasım 2026</Src>
+    </Shell>
+  );
+};
+
+const ScHafta: React.FC = () => {
+  const T = (si: number) => R(14, si);
+  return (
+    <Shell title="Haftanın Hikâyesi" sub="Petrol düşüşüyle gelen yükselişi enflasyon verisi tersine çevirdi">
+      <Stat x={110} y={290} w={1700} h={160} t0={T(0)} col={C.green} label="PAZARTESİ" value="Petroldeki düşüşle sert yükseliş" vs={50} />
+      <Stat x={110} y={480} w={1700} h={160} t0={T(0) + 2.8} col={C.red} label="SALI" value="ABD enflasyon verisi tabloyu değiştirdi" vs={50} />
+      <Stat x={110} y={670} w={1700} h={160} t0={T(0) + 5.6} col={C.gold} label="SONRASI" value="Faiz ve dolar yükseliyor" vs={50} />
+      <Chip x={110} y={860} w={820} h={80} t0={T(1)} col={C.red} s={26}>ALTIN ↓</Chip>
+      <Chip x={990} y={860} w={820} h={80} t0={T(1) + 0.8} col={C.red} s={26}>BITCOIN ↓</Chip>
+      <Src>Haftalık piyasa verileri • 9–13 Kasım 2026</Src>
+    </Shell>
+  );
+};
+
+const ScKapanis: React.FC = () => {
+  const T = (si: number) => R(15, si);
+  const {p} = useTL();
+  return (
+    <Shell title="Önümüzdeki Hafta" sub="Gözler perakende satışlara, Nvidia bilançosuna ve Fed tutanaklarına">
+      <Stat x={110} y={290} w={820} h={200} t0={T(0)} col={C.gold} label="17 KASIM • SALI" value="Perakende satışlar • Nvidia bilançosu" vs={40} />
+      <Stat x={990} y={290} w={820} h={200} t0={T(1)} col={C.gold} label="18 KASIM • ÇARŞAMBA" value="Fed toplantı tutanakları" vs={40} />
+      <Chip x={110} y={520} w={820} h={76} t0={T(2)} col={C.red} s={24}>FED: FAİZ ARTIŞI BEKLENTİSİ GÜÇLÜ</Chip>
+      <Chip x={990} y={520} w={820} h={76} t0={T(2) + 0.6} col={C.red} s={24}>DOLAR YÜKSEK • ALTIN VE BITCOIN BASKI ALTINDA</Chip>
+      <Chip x={110} y={620} w={820} h={76} t0={T(3)} col={C.gold} s={24}>PETROL: İRAN HABERLERİNE DUYARLI</Chip>
+      <Chip x={990} y={620} w={820} h={76} t0={T(4)} col={C.green} s={24}>TÜRKİYE: BORSA GÜÇLÜ • TCMB TAHMİNİ YUKARI ÇEKTİ</Chip>
+      <Chip x={110} y={730} w={1700} h={80} t0={T(5)} col={C.gold} s={26}>BİLGİLENDİRME AMAÇLIDIR • YATIRIM TAVSİYESİ DEĞİLDİR</Chip>
+      <div style={{opacity: p(T(6), 0.4)}}><Chip x={110} y={840} w={1700} h={90} t0={T(6)} col={C.red} s={34}>KANALA ABONE OL • YARIN GÜNLÜK PİYASA ÖZETİ</Chip></div>
+    </Shell>
+  );
+};
+
+const SCENES = [Sc1, Sc2, Sc3, Sc4, ScRez, ScBond, Sc5, Sc6, Sc7, Sc8, Sc9, Sc10, Sc11, ScUfe, ScHafta, ScKapanis];
 
 const TICK = [
   ['ALTIN', '≈3.890 $', '▼', C.red], ['S&P 500', '-%0,35', '▼', C.red], ['DOW JONES', '-%0,36', '▼', C.red], ['NIKKEI', '+%1,48', '▲', C.green], ['KOSPI', '+%1,97', '▲', C.green],
