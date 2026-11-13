@@ -9,7 +9,9 @@ export const GUN2_TOTAL = Math.ceil(D.total * FPS);
 type P = {start: number; end: number; sentences: number[]};
 const paras = D.paras as P[];
 // paragraf pi içinde cümle si'nin yerel başlangıcı (saniye)
-const S = (pi: number, si: number) => paras[pi].sentences[si] - paras[pi].start;
+const R = (pi: number, si: number) => paras[pi].sentences[si] - paras[pi].start;
+// eski sahneler 4. paragraftan itibaren 2 paragraf kaydı (rezerv + tahvil bölümü)
+const S = (pi: number, si: number) => R(pi >= 4 ? pi + 2 : pi, si);
 
 // ------------------------------------------------------------------ ortak parçalar
 const Src: React.FC<{t0?: number; children: string}> = ({t0 = 0.8, children}) => {
@@ -286,7 +288,58 @@ const Sc11: React.FC = () => {
   );
 };
 
-const SCENES = [Sc1, Sc2, Sc3, Sc4, Sc5, Sc6, Sc7, Sc8, Sc9, Sc10, Sc11];
+
+const Bar: React.FC<{y: number; t0: number; name: string; val: number; max: number; txt: string; note?: string; col: string}> = ({y, t0, name, val, max, txt, note, col}) => {
+  const {p} = useTL();
+  const w = 400 * (val / max) * p(t0, 0.9);
+  return (
+    <div style={{opacity: p(t0, 0.3)}}>
+      <Tx x={36} y={y} w={210} s={28} wt={800}>{name}</Tx>
+      <div style={{position: 'absolute', left: 250, top: y + 4, width: Math.max(6, w), height: 36, borderRadius: 10, background: `linear-gradient(90deg, ${col}aa, ${col})`, boxShadow: `0 0 24px ${col}66`}} />
+      <Tx x={250 + Math.max(6, w) + 14} y={y + 2} w={300} s={30} wt={900} c={col}>{txt}</Tx>
+      {note && <Tx x={250} y={y + 48} w={520} s={20} wt={600} c={C.grey}>{note}</Tx>}
+    </div>
+  );
+};
+
+const ScRez: React.FC = () => {
+  const P = 4; const T = (si: number) => R(P, si);
+  return (
+    <Shell title="Altının Sessiz Alıcıları" sub="Merkez bankaları rezervlerini artırmaya devam ediyor">
+      <Stat x={110} y={290} w={820} h={300} t0={T(1)} col={C.gold} label="MERKEZ BANKASI ALIMI • 3. ÇEYREK" value="321 ton" sub="geçen yıla göre +%42 • 2024 4Ç'den beri en yüksek" vs={130} />
+      <Stat x={110} y={620} w={820} h={290} t0={T(3)} col={C.green} label="YILBAŞINDAN BERİ (İLK 9 AY)" value="675 ton" sub="2025'in alım hızının üzerinde" vs={120} />
+      <Card x={990} y={290} w={820} h={430} t0={T(4)} accent={C.gold}>
+        <Label x={36} y={26} o={1}>ALTIN REZERVİ (TON)</Label>
+        <Bar y={76} t0={T(5)} name="ÇİN" val={2435} max={2435} txt="2.435" note="ekimde +26 ton • 24 aydır alıyor" col={C.gold} />
+        <Bar y={168} t0={T(6)} name="POLONYA" val={700} max={2435} txt="700" note="700 ton hedefine ulaştı" col={C.green} />
+        <Bar y={260} t0={T(7)} name="ÖZBEKİSTAN" val={453} max={2435} txt="453" col={C.green} />
+        <Bar y={332} t0={T(7) + 0.6} name="ÇEKYA" val={90} max={2435} txt="90" col={C.green} />
+      </Card>
+      <Chip x={990} y={750} w={820} h={76} t0={T(8)} col={C.red} s={26}>RUSYA: 3. ÇEYREKTE -19 TON (SATIŞ)</Chip>
+      <Chip x={990} y={840} w={820} h={76} t0={T(9)} col={C.red} s={26}>TÜRKİYE: OCAK–AĞUSTOS NET SATIŞ ≈ -82 TON</Chip>
+      <Src>Dünya Altın Konseyi (WGC), Kitco, IMF • 3 Kasım – 10 Kasım 2026</Src>
+    </Shell>
+  );
+};
+
+const ScBond: React.FC = () => {
+  const P = 5; const T = (si: number) => R(P, si);
+  return (
+    <Shell title="Tahvil Piyasası" sub="Faizler yükseldi, 30 yıllık ihalede talep zayıf kaldı">
+      <Stat x={110} y={290} w={820} h={300} t0={T(1)} col={C.red} label="ABD 10 YILLIK • DÜN KAPANIŞ" value="≈%5,10" sub="yüzde 5'in üzerine çıktı" vs={130} />
+      <Stat x={110} y={620} w={400} h={240} t0={T(2)} col={C.gold} label="2 YILLIK" value="%4,86" vs={84} />
+      <Stat x={530} y={620} w={400} h={240} t0={T(2) + 0.6} col={C.gold} label="30 YILLIK" value="%5,43" vs={84} />
+      <Chip x={110} y={875} w={820} h={66} t0={T(5)} col={C.red} s={22}>BU HAFTA 3–10–30 YILLIK İHALELER ZAYIF</Chip>
+      <Stat x={990} y={290} w={820} h={300} t0={T(3)} col={C.red} label="30 YILLIK İHALE • 25 MİLYAR $" value="%5,441" sub="ihale faizi" vs={120} />
+      <Stat x={990} y={620} w={820} h={220} t0={T(4)} col={C.red} label="TEKLİF KARŞILAMA ORANI" value="2,36" sub="Haziran'dan bu yana en zayıf talep" vs={72} />
+      <Chip x={990} y={860} w={400} h={80} t0={T(6)} col={C.gold} s={22}>JAPONYA 10Y: %2,83</Chip>
+      <Chip x={1410} y={860} w={400} h={80} t0={T(6) + 0.8} col={C.gold} s={22}>TÜRKİYE 10Y: ≈%33</Chip>
+      <Src>TreasuryDirect, CNBC, Tradeweb, Investing.com • 12 Kasım 2026</Src>
+    </Shell>
+  );
+};
+
+const SCENES = [Sc1, Sc2, Sc3, Sc4, ScRez, ScBond, Sc5, Sc6, Sc7, Sc8, Sc9, Sc10, Sc11];
 
 const TICK = [
   ['ALTIN', '≈3.890 $', '▼', C.red], ['S&P 500', '-%0,35', '▼', C.red], ['DOW JONES', '-%0,36', '▼', C.red], ['NIKKEI', '+%1,48', '▲', C.green], ['KOSPI', '+%1,97', '▲', C.green],
