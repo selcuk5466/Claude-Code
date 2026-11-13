@@ -5,6 +5,7 @@ import {SCENES} from './scenes';
 import {Bg, Ticker} from './ui';
 import {ShortVideo, SHORT_TOTAL, SHORT_FPS} from './Short';
 import {ShortBorsa, ShortFed, ShortYarin, BORSA_FRAMES, FED_FRAMES, YARIN_FRAMES} from './ShortMulti';
+import {Gun2Video, GUN2_TOTAL} from './Gun2Video';
 import {G2Altin, G2Fed, G2Nvidia, G2Petrol, G2Turkiye, G2_FRAMES} from './ShortG2';
 const LITE = process.env.LITE === '1';
 
@@ -41,6 +42,7 @@ export const Root: React.FC = () => (
     <Composition id="G2Nvidia" component={G2Nvidia} durationInFrames={G2_FRAMES.nvidia} fps={30} width={1080} height={1920} />
     <Composition id="G2Petrol" component={G2Petrol} durationInFrames={G2_FRAMES.petrol} fps={30} width={1080} height={1920} />
     <Composition id="G2Turkiye" component={G2Turkiye} durationInFrames={G2_FRAMES.turkiye} fps={30} width={1080} height={1920} />
+    <Composition id="Gun2" component={Gun2Video} durationInFrames={GUN2_TOTAL} fps={30} width={1920} height={1080} />
     <Composition id="ShortBorsa" component={ShortBorsa} durationInFrames={BORSA_FRAMES} fps={30} width={1080} height={1920} />
   </>
 );

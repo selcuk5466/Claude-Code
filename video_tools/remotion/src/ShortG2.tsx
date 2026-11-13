@@ -35,6 +35,15 @@ const Chip: React.FC<{x?: number; y: number; w?: number; h?: number; t0: number;
   );
 };
 
+const Src: React.FC<{t0?: number; children: string}> = ({t0 = 0.8, children}) => {
+  const {p} = useTL();
+  return (
+    <div style={{position: 'absolute', left: 60, top: 1135, width: 960, opacity: p(t0, 0.4) * 0.92, fontFamily: FONT, fontSize: 23, fontWeight: 600, color: C.grey, lineHeight: 1.2}}>
+      <span style={{color: C.gold, fontWeight: 800, letterSpacing: 2, marginRight: 12}}>KAYNAK</span>{children}
+    </div>
+  );
+};
+
 const win = (p: (a: number, d: number) => number, a: number, b?: number) => p(a, 0.3) * (b === undefined ? 1 : 1 - p(b, 0.3));
 
 const HProb: React.FC<{y: number; label: string; v: number; fin: string; col: string; t0: number}> = ({y, label, v, fin, col, t0}) => {
@@ -87,6 +96,7 @@ const FedA: React.FC = () => {
       <Stat x={60} y={850} w={300} h={250} t0={j5} col={C.red} label="ABD 10 YILLIK" value="%5,13" sub="3 haftanın zirvesi" />
       <Stat x={390} y={850} w={300} h={250} t0={j6} col={C.green} label="DOLAR ENDEKSİ" value="≈103" sub="19 ayın zirvesi" />
       <Stat x={720} y={850} w={300} h={250} t0={j7} col={C.gold} label="AMB 17 ARALIK" value="%93" sub="artış ihtimali" />
+      <Src>Barchart/Nasdaq, Bloomberg, Trading Economics • 12–13 Kasım 2026</Src>
     </Fade>
   );
 };
@@ -113,9 +123,10 @@ const AltinA: React.FC = () => {
       <div style={{opacity: win(p, j5)}}>
         <Chip x={60} y={430} w={960} h={190} t0={j5} col={C.red} s={38}>{'3.850 $ ALTINDA HAFTALIK KAPANIŞ\n= DAHA FAZLA DÜŞÜŞ RİSKİ'}</Chip>
       </div>
-      <Stat x={60} y={700} w={960} h={170} t0={j1} col={C.red} label="ONS ALTIN • BUGÜN SABAH" value="≈3.885–3.890 $" vs={78} />
-      <Chip y={900} t0={j2} col={C.red} s={30}>HAFTALIK BAZDA SERT KAYIP</Chip>
-      <Stat x={60} y={1000} w={960} h={150} t0={j3} col={C.grey} label="GÜMÜŞ" value="≈50 $  (-%3'ten fazla)" vs={54} />
+      <Stat x={60} y={690} w={960} h={160} t0={j1} col={C.red} label="ONS ALTIN • BUGÜN SABAH" value="≈3.885–3.890 $" vs={74} />
+      <Chip y={870} h={70} t0={j2} col={C.red} s={28}>HAFTALIK BAZDA SERT KAYIP</Chip>
+      <Stat x={60} y={960} w={960} h={140} t0={j3} col={C.grey} label="GÜMÜŞ" value="≈50 $  (-%3'ten fazla)" vs={52} />
+      <Src>Trading Economics, Reuters, FXEmpire • 12–13 Kasım 2026</Src>
     </Fade>
   );
 };
@@ -147,6 +158,7 @@ const NvA: React.FC = () => {
         <Stat x={550} y={440} w={470} h={210} t0={j(9) + 0.6} col={C.green} label="KOSPI" value="+%1,97" vs={78} />
         <Chip y={690} t0={j(10)} col={C.green} s={32}>ABD VADELİ İŞLEMLERİ POZİTİF</Chip>
       </div>
+      <Src>Reuters, Bloomberg, WSJ, Barchart • 12–13 Kasım 2026</Src>
     </Fade>
   );
 };
@@ -172,6 +184,7 @@ const PetA: React.FC = () => {
         <Chip y={490} h={72} t0={j(5)} col={C.green} s={28}>İKİNCİ HAFTALIK DÜŞÜŞ YOLUNDA</Chip>
         <Chip y={580} h={72} t0={j(6)} col={C.red} s={26}>PETROL ↑ → ENFLASYON ↑ → FED'İN İŞİ ZOR</Chip>
       </div>
+      <Src>CNBC, Bloomberg, Business Times • 12–13 Kasım 2026</Src>
     </Fade>
   );
 };
@@ -192,6 +205,7 @@ const PetB: React.FC = () => {
           <Tx x={44} y={70} w={880} s={38} wt={800}>{it.txt}</Tx>
         </Card>
       ))}
+      <Src>Al Jazeera, Barchart/Nasdaq, Bastille Post • 12 Kasım 2026</Src>
     </Fade>
   );
 };
@@ -222,8 +236,9 @@ const TrA: React.FC = () => {
           </React.Fragment>
         );
       })}
-      <div style={{opacity: win(p, j(4), j(5))}}><Chip y={1075} t0={j(4)} col={C.red} s={26}>DÜŞÜŞ SÜRÜYOR AMA ENERJİ YAVAŞLATTI</Chip></div>
-      <div style={{opacity: win(p, j(5))}}><Chip y={1075} t0={j(5)} col={C.red} s={26}>PETROL FİYATI VARSAYIMI YUKARI ÇEKİLDİ</Chip></div>
+      <div style={{opacity: win(p, j(4), j(5))}}><Chip y={1052} h={66} t0={j(4)} col={C.red} s={24}>DÜŞÜŞ SÜRÜYOR AMA ENERJİ YAVAŞLATTI</Chip></div>
+      <div style={{opacity: win(p, j(5))}}><Chip y={1052} h={66} t0={j(5)} col={C.red} s={24}>PETROL FİYATI VARSAYIMI YUKARI ÇEKİLDİ</Chip></div>
+      <Src>TCMB Enflasyon Raporu 2026-IV, Integral Yatırım • 12 Kasım 2026</Src>
     </Fade>
   );
 };
@@ -238,6 +253,7 @@ const TrB: React.FC = () => {
       <Tx x={60} y={720} s={120} wt={900} c={C.green} glow={C.green} o={p(j(1) + 0.6, 0.3)}>{'+%' + fmt(1.24 * p(j(1) + 0.6, 1.0), 2)}</Tx>
       <Chip y={900} t0={j(2)} col={C.gold} s={30}>15 EKİM'DEN BERİ EN YÜKSEK KAPANIŞ</Chip>
       <Chip y={1000} t0={j(3)} col={C.green} s={30}>GÜN İÇİ ZİRVE: 11.898</Chip>
+      <Src>Borsa İstanbul verileri (Endeks24, Borsamatik) • 12 Kasım 2026</Src>
     </Fade>
   );
 };
