@@ -1,0 +1,56 @@
+{
+ "total": 18.84,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 14.84,
+   "sentences": [
+    {
+     "start": 0.15,
+     "end": 2.43
+    },
+    {
+     "start": 2.43,
+     "end": 11.67
+    },
+    {
+     "start": 11.67,
+     "end": 14.84
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.15,
+   "end": 2.43,
+   "text": "Ama burada ince bir nokta var."
+  },
+  {
+   "start": 2.43,
+   "end": 4.379,
+   "text": "Enflasyon yüzde yirmiyken bu"
+  },
+  {
+   "start": 4.379,
+   "end": 6.3,
+   "text": "parayı sadece enflasyona yetişecek"
+  },
+  {
+   "start": 6.3,
+   "end": 7.83,
+   "text": "şekilde değerlendirseydiniz,"
+  },
+  {
+   "start": 7.83,
+   "end": 11.67,
+   "text": "4 yılın sonunda 4.277.000 liranız olurdu."
+  },
+  {
+   "start": 11.67,
+   "end": 14.84,
+   "text": "Yani gerçek kazanç yalnızca 48 bin lira."
+  }
+ ],
+ "endCardStart": 14.84
+}

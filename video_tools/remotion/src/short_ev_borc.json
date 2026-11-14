@@ -1,0 +1,80 @@
+{
+ "total": 23.029,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 19.029,
+   "sentences": [
+    {
+     "start": 0.079,
+     "end": 5.749
+    },
+    {
+     "start": 5.749,
+     "end": 9.859
+    },
+    {
+     "start": 9.859,
+     "end": 13.849
+    },
+    {
+     "start": 13.849,
+     "end": 19.029
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.079,
+   "end": 3.859,
+   "text": "Ev 3.000.000'dan 6.220.800 liraya çıktı,"
+  },
+  {
+   "start": 3.859,
+   "end": 5.749,
+   "text": "neredeyse 2 katı."
+  },
+  {
+   "start": 5.749,
+   "end": 9.859,
+   "text": "Bankaya kalan borç yaklaşık 1.900.000 lira."
+  },
+  {
+   "start": 9.859,
+   "end": 10.786,
+   "text": "Bu borcun bugünün"
+  },
+  {
+   "start": 10.786,
+   "end": 11.899,
+   "text": "parasıyla değeri ise"
+  },
+  {
+   "start": 11.899,
+   "end": 13.849,
+   "text": "900.000 lira civarı."
+  },
+  {
+   "start": 13.849,
+   "end": 14.689,
+   "text": "Yani borç,"
+  },
+  {
+   "start": 14.689,
+   "end": 16.339,
+   "text": "rakam olarak az azaldı"
+  },
+  {
+   "start": 16.339,
+   "end": 18.199,
+   "text": "ama gerçek değeriyle yarıdan"
+  },
+  {
+   "start": 18.199,
+   "end": 19.029,
+   "text": "fazla eridi."
+  }
+ ],
+ "endCardStart": 19.029
+}

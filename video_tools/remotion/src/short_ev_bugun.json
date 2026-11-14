@@ -1,0 +1,76 @@
+{
+ "total": 22.686,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 18.686,
+   "sentences": [
+    {
+     "start": 0.246,
+     "end": 10.236
+    },
+    {
+     "start": 10.236,
+     "end": 13.866
+    },
+    {
+     "start": 13.866,
+     "end": 18.686
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.246,
+   "end": 1.468,
+   "text": "4 yıl sonra ev"
+  },
+  {
+   "start": 1.468,
+   "end": 3.756,
+   "text": "yılda %22,3'le artsa,"
+  },
+  {
+   "start": 3.756,
+   "end": 5.856,
+   "text": "parasını sadece enflasyona yetişecek"
+  },
+  {
+   "start": 5.856,
+   "end": 7.686,
+   "text": "şekilde değerlendiren birine göre"
+  },
+  {
+   "start": 7.686,
+   "end": 10.236,
+   "text": "3.100.000 lira geride kalırsınız."
+  },
+  {
+   "start": 10.236,
+   "end": 11.436,
+   "text": "Kirayı da eklesek bile"
+  },
+  {
+   "start": 11.436,
+   "end": 13.866,
+   "text": "yaklaşık 1.200.000 lira geride."
+  },
+  {
+   "start": 13.866,
+   "end": 15.666,
+   "text": "Yani bugünün faiziyle,"
+  },
+  {
+   "start": 15.666,
+   "end": 17.106,
+   "text": "bugünün fiyat artışıyla bu"
+  },
+  {
+   "start": 17.106,
+   "end": 18.686,
+   "text": "hikâye tersine dönüyor."
+  }
+ ],
+ "endCardStart": 18.686
+}
