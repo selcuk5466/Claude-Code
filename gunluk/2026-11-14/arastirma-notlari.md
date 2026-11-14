@@ -11,3 +11,14 @@ Doğrulanan rakamlar (kaynak):
 - Ons altın 13 ayın dibi (Kitco, Endeks24).
 
 Notlar: Mevduat faizi kaynaklarda farklı (32 günlük %32-39 / ortalama %41,87); metinde mevduat faiz oranı verilmedi. Videoda yatırım tavsiyesi yok.
+
+## Ürün karşılaştırması (13 Kasım 2025 → 14 Kasım 2026)
+- Benzin İstanbul Avrupa: 53,75 → 71,20 TL/lt (Ekonomim/Doğruhaber 13.11.2025; Politikam/Güneydoğu Ekspres 14.11.2026). 1000 TL: 18,6 → 14,0 lt.
+- Motorin: 57,61 → 95,20 TL/lt. 1000 TL: 17,4 → 10,5 lt.
+- Kıyma (Et ve Süt Kurumu, kg): 485 (Ağustos 2025'ten haziran 2026'ya sabit) → 600 TL (haziran 2026 zammı, %24-28). 1000 TL: 2,06 → 1,67 kg.
+- İstanbul Halk Ekmek: 10 TL (haziran 2025'ten) → 12,5 TL (4-5 Mayıs 2026, %25). 1000 TL: 100 → 80 ekmek.
+- İstanbul tam bilet: 35 TL (şubat 2026 zammı öncesi; 2025 değeri doğrudan teyit edilemedi) → 46,20 TL (temmuz 2026). 1000 TL: 28 → 21 biniş.
+- Uyarı: bilet için kasım 2025 değeri şubat 2026 öncesi tarife olarak alındı.
+- Kullanılmayan: yumurta (kasım 2025 A101 145 TL, 2026 kampanya 149 TL, liste 179 TL; kampanya karşılaştırması güvenilir değil), iPhone 17 Pro Max (119.999 lansman, 2026'da en ucuz ~107.000: dolar bazlı ürünler ucuzladı).
+- Tarihsel: TÜİK ekim 2022 yıllık %85,51 (24 yılın zirvesi); Berlin ekmek 1922 sonu ~160 mark → 1923 sonu ~200 milyar mark (yaygın aktarılan rakam).
+- Tüik ekim 2026: ulaştırma yıllık %36,39, gıda yıllık %27,73.
