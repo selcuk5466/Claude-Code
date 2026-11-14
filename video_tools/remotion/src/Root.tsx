@@ -6,6 +6,7 @@ import {Bg, Ticker} from './ui';
 import {ShortVideo, SHORT_TOTAL, SHORT_FPS} from './Short';
 import {ShortBorsa, ShortFed, ShortYarin, BORSA_FRAMES, FED_FRAMES, YARIN_FRAMES} from './ShortMulti';
 import {Gun2Video, GUN2_TOTAL} from './Gun2Video';
+import {EnfHook, EnfFive, EnfAsg, EnfBer, EnfYan, ENF_SHORT_FRAMES} from './ShortEnf';
 import {G2Altin, G2Fed, G2Nvidia, G2Petrol, G2Turkiye, G2_FRAMES} from './ShortG2';
 import {Thumb} from './Thumb';
 import {CoinStack} from './Coins3D';
@@ -39,6 +40,11 @@ export const Root: React.FC = () => (
   <>
     <Composition id="Video" component={Video} durationInFrames={TOTAL} fps={FPS} width={1920} height={1080} />
     <Composition id="Short" component={ShortVideo} durationInFrames={SHORT_TOTAL} fps={SHORT_FPS} width={1080} height={1920} />
+    <Composition id="EnfHook" component={EnfHook} durationInFrames={ENF_SHORT_FRAMES.hook} fps={30} width={1080} height={1920} />
+    <Composition id="EnfFive" component={EnfFive} durationInFrames={ENF_SHORT_FRAMES.five} fps={30} width={1080} height={1920} />
+    <Composition id="EnfAsg" component={EnfAsg} durationInFrames={ENF_SHORT_FRAMES.asg} fps={30} width={1080} height={1920} />
+    <Composition id="EnfBer" component={EnfBer} durationInFrames={ENF_SHORT_FRAMES.ber} fps={30} width={1080} height={1920} />
+    <Composition id="EnfYan" component={EnfYan} durationInFrames={ENF_SHORT_FRAMES.yan} fps={30} width={1080} height={1920} />
     <Composition id="ShortFed" component={ShortFed} durationInFrames={FED_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="ShortYarin" component={ShortYarin} durationInFrames={YARIN_FRAMES} fps={30} width={1080} height={1920} />
     <Composition id="G2Fed" component={G2Fed} durationInFrames={G2_FRAMES.fed} fps={30} width={1080} height={1920} />

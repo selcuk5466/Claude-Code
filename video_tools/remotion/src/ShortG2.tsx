@@ -14,7 +14,7 @@ type D = typeof fedD;
 const frames = (d: {total: number}) => Math.ceil(d.total * FPS);
 const st = (d: D, seg: number, i: number) => d.segments[seg].sentences[i].start;
 
-const Title: React.FC<{children: string; s?: number}> = ({children, s = 88}) => {
+export const Title: React.FC<{children: string; s?: number}> = ({children, s = 88}) => {
   const {p} = useTL();
   const lines = children.split('\n').length;
   return (
@@ -25,7 +25,7 @@ const Title: React.FC<{children: string; s?: number}> = ({children, s = 88}) => 
   );
 };
 
-const Chip: React.FC<{x?: number; y: number; w?: number; h?: number; t0: number; t1?: number; col: string; children: React.ReactNode; s?: number}> = ({x = 60, y, w = 960, h = 78, t0, t1, col, children, s = 32}) => {
+export const Chip: React.FC<{x?: number; y: number; w?: number; h?: number; t0: number; t1?: number; col: string; children: React.ReactNode; s?: number}> = ({x = 60, y, w = 960, h = 78, t0, t1, col, children, s = 32}) => {
   const {p, pop} = useTL();
   const o = p(t0, 0.3) * (t1 === undefined ? 1 : 1 - p(t1, 0.3));
   return (
@@ -35,7 +35,7 @@ const Chip: React.FC<{x?: number; y: number; w?: number; h?: number; t0: number;
   );
 };
 
-const Src: React.FC<{t0?: number; children: string}> = ({t0 = 0.8, children}) => {
+export const Src: React.FC<{t0?: number; children: string}> = ({t0 = 0.8, children}) => {
   const {p} = useTL();
   return (
     <div style={{position: 'absolute', left: 60, top: 1135, width: 960, opacity: p(t0, 0.4) * 0.92, fontFamily: FONT, fontSize: 23, fontWeight: 600, color: C.grey, lineHeight: 1.2}}>
@@ -44,7 +44,7 @@ const Src: React.FC<{t0?: number; children: string}> = ({t0 = 0.8, children}) =>
   );
 };
 
-const win = (p: (a: number, d: number) => number, a: number, b?: number) => p(a, 0.3) * (b === undefined ? 1 : 1 - p(b, 0.3));
+export const win = (p: (a: number, d: number) => number, a: number, b?: number) => p(a, 0.3) * (b === undefined ? 1 : 1 - p(b, 0.3));
 
 const HProb: React.FC<{y: number; label: string; v: number; fin: string; col: string; t0: number}> = ({y, label, v, fin, col, t0}) => {
   const {p} = useTL(); const q = p(t0, 1.0);
@@ -58,7 +58,7 @@ const HProb: React.FC<{y: number; label: string; v: number; fin: string; col: st
   );
 };
 
-const Stat: React.FC<{x: number; y: number; w: number; h: number; t0: number; col: string; label: string; value: string; sub?: string; vs?: number}> = ({x, y, w, h, t0, col, label, value, sub, vs = 64}) => {
+export const Stat: React.FC<{x: number; y: number; w: number; h: number; t0: number; col: string; label: string; value: string; sub?: string; vs?: number}> = ({x, y, w, h, t0, col, label, value, sub, vs = 64}) => {
   const {p} = useTL();
   return (
     <Card x={x} y={y} w={w} h={h} t0={t0} accent={col}>

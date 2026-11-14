@@ -12,6 +12,12 @@ import difflib, json, re, subprocess, sys
 CONFIGS = {
     'fed_tcmb': [(2, 0, 5), (14, 0, 1)],
     'yarin': [(17, 0, 5), (18, 0, 4)],
+    # 14 Kasım enflasyon videosu
+    'enf_hook': [(0, 0, 2), (1, 0, 2)],
+    'enf_5of7': [(4, 0, 3)],
+    'enf_asgari': [(6, 2, 5)],
+    'enf_berlin': [(12, 3, 5)],
+    'enf_yanilsama': [(16, 0, 3)],
     'borsa': [(8, 0, 5), (9, 0, 3)],
     # 13 Kasım (senaryo-kayitli.txt paragraf numaraları)
     'g2_fed': [(1, 1, 8)],

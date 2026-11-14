@@ -1,0 +1,75 @@
+{
+ "total": 21.183,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 17.183,
+   "sentences": [
+    {
+     "start": 0.112,
+     "end": 3.652
+    },
+    {
+     "start": 3.652,
+     "end": 9.772
+    },
+    {
+     "start": 9.772,
+     "end": 11.992
+    },
+    {
+     "start": 11.992,
+     "end": 17.183
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.112,
+   "end": 3.652,
+   "text": "Ekimde bir de %2,58 eklendi."
+  },
+  {
+   "start": 3.652,
+   "end": 5.002,
+   "text": "İkisini çarpınca,"
+  },
+  {
+   "start": 5.002,
+   "end": 6.592,
+   "text": "ocaktan bu yana fiyatlar"
+  },
+  {
+   "start": 6.592,
+   "end": 9.772,
+   "text": "yaklaşık %27,5 artmış çıkıyor."
+  },
+  {
+   "start": 9.772,
+   "end": 11.992,
+   "text": "Zam %27'ydi."
+  },
+  {
+   "start": 11.992,
+   "end": 13.612,
+   "text": "Yani asgari ücretli,"
+  },
+  {
+   "start": 13.612,
+   "end": 14.872,
+   "text": "zam aldığı alım"
+  },
+  {
+   "start": 14.872,
+   "end": 15.903,
+   "text": "gücünü 10 ay"
+  },
+  {
+   "start": 15.903,
+   "end": 17.183,
+   "text": "içinde geri vermiş."
+  }
+ ],
+ "endCardStart": 17.183
+}

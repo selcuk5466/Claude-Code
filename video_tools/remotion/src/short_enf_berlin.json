@@ -1,0 +1,66 @@
+{
+ "total": 20.353,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 16.353,
+   "sentences": [
+    {
+     "start": 0.261,
+     "end": 3.441
+    },
+    {
+     "start": 3.441,
+     "end": 12.471
+    },
+    {
+     "start": 12.471,
+     "end": 16.353
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.261,
+   "end": 1.521,
+   "text": "Daha uç bir örnek"
+  },
+  {
+   "start": 1.521,
+   "end": 3.441,
+   "text": "1923'te Almanya."
+  },
+  {
+   "start": 3.441,
+   "end": 5.031,
+   "text": "Berlin'de bir somun ekmek,"
+  },
+  {
+   "start": 5.031,
+   "end": 8.241,
+   "text": "1922 sonunda yaklaşık 160 markken,"
+  },
+  {
+   "start": 8.241,
+   "end": 10.071,
+   "text": "1923 sonunda yaklaşık"
+  },
+  {
+   "start": 10.071,
+   "end": 12.471,
+   "text": "200 milyar marka çıktı."
+  },
+  {
+   "start": 12.471,
+   "end": 14.301,
+   "text": "İnsanlar maaşını alır almaz,"
+  },
+  {
+   "start": 14.301,
+   "end": 16.353,
+   "text": "değeri erimeden harcamak için koşuyordu."
+  }
+ ],
+ "endCardStart": 16.353
+}

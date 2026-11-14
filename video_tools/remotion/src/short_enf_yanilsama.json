@@ -1,0 +1,85 @@
+{
+ "total": 22.037,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 18.037,
+   "sentences": [
+    {
+     "start": 0.047,
+     "end": 8.177
+    },
+    {
+     "start": 8.177,
+     "end": 11.747
+    },
+    {
+     "start": 11.747,
+     "end": 15.497
+    },
+    {
+     "start": 15.497,
+     "end": 18.037
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.047,
+   "end": 1.187,
+   "text": "Bunun anlamı şu:"
+  },
+  {
+   "start": 1.187,
+   "end": 1.847,
+   "text": "dolar,"
+  },
+  {
+   "start": 1.847,
+   "end": 2.447,
+   "text": "altın,"
+  },
+  {
+   "start": 2.447,
+   "end": 3.557,
+   "text": "borsa ve konut,"
+  },
+  {
+   "start": 3.557,
+   "end": 5.867,
+   "text": "hepsi enflasyonun gerisinde kaldı,"
+  },
+  {
+   "start": 5.867,
+   "end": 8.177,
+   "text": "mevduat zar zor yetişti."
+  },
+  {
+   "start": 8.177,
+   "end": 10.187,
+   "text": "İnsanlar kazandığını sanıyor ama"
+  },
+  {
+   "start": 10.187,
+   "end": 11.747,
+   "text": "alım gücü kaybediyor."
+  },
+  {
+   "start": 11.747,
+   "end": 12.977,
+   "text": "Rakam büyüyor,"
+  },
+  {
+   "start": 12.977,
+   "end": 15.497,
+   "text": "o rakamla alabildiğiniz şey küçülüyor."
+  },
+  {
+   "start": 15.497,
+   "end": 18.037,
+   "text": "Ekonomistler buna para yanılsaması diyor."
+  }
+ ],
+ "endCardStart": 18.037
+}

@@ -1,0 +1,75 @@
+{
+ "total": 20.94,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 16.94,
+   "sentences": [
+    {
+     "start": 0.156,
+     "end": 3.846
+    },
+    {
+     "start": 3.846,
+     "end": 5.676
+    },
+    {
+     "start": 5.676,
+     "end": 10.746
+    },
+    {
+     "start": 10.746,
+     "end": 16.94
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.156,
+   "end": 3.846,
+   "text": "Aynı liste bir yılda %30 pahalandı."
+  },
+  {
+   "start": 3.846,
+   "end": 5.676,
+   "text": "Bin liranız hâlâ bin lira."
+  },
+  {
+   "start": 5.676,
+   "end": 7.956,
+   "text": "Büyük kalemden başlarsanız önce kıymayı,"
+  },
+  {
+   "start": 7.956,
+   "end": 10.746,
+   "text": "sonra Netflix'i alıyorsunuz ve paranız bitiyor."
+  },
+  {
+   "start": 10.746,
+   "end": 13.596,
+   "text": "7 üründen beşini artık alamıyorsunuz:"
+  },
+  {
+   "start": 13.596,
+   "end": 14.316,
+   "text": "benzini,"
+  },
+  {
+   "start": 14.316,
+   "end": 15.006,
+   "text": "motorini,"
+  },
+  {
+   "start": 15.006,
+   "end": 15.666,
+   "text": "doları,"
+  },
+  {
+   "start": 15.666,
+   "end": 16.94,
+   "text": "bileti ve ekmeği."
+  }
+ ],
+ "endCardStart": 16.94
+}

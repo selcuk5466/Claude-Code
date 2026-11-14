@@ -1,0 +1,109 @@
+{
+ "total": 23.886,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 9.776,
+   "sentences": [
+    {
+     "start": 0.15,
+     "end": 2.07
+    },
+    {
+     "start": 2.07,
+     "end": 8.07
+    },
+    {
+     "start": 8.07,
+     "end": 9.776
+    }
+   ]
+  },
+  {
+   "start": 10.126,
+   "dur": 9.761,
+   "sentences": [
+    {
+     "start": 0.0,
+     "end": 2.841
+    },
+    {
+     "start": 2.841,
+     "end": 6.741
+    },
+    {
+     "start": 6.741,
+     "end": 9.761
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.15,
+   "end": 2.07,
+   "text": "Cebimdeki para aynı."
+  },
+  {
+   "start": 2.07,
+   "end": 3.03,
+   "text": "Ama market,"
+  },
+  {
+   "start": 3.03,
+   "end": 3.93,
+   "text": "benzinlik,"
+  },
+  {
+   "start": 3.93,
+   "end": 5.94,
+   "text": "hatta ekmek büfesi bana"
+  },
+  {
+   "start": 5.94,
+   "end": 7.26,
+   "text": "geçen yıldan daha az"
+  },
+  {
+   "start": 7.26,
+   "end": 8.07,
+   "text": "şey veriyor."
+  },
+  {
+   "start": 8.07,
+   "end": 9.776,
+   "text": "Cebimdekini kim çaldı?"
+  },
+  {
+   "start": 10.126,
+   "end": 11.736,
+   "text": "Şüpheli tek biri var:"
+  },
+  {
+   "start": 11.736,
+   "end": 12.966,
+   "text": "enflasyon."
+  },
+  {
+   "start": 12.966,
+   "end": 14.466,
+   "text": "Kimse kapınızı kırmadı,"
+  },
+  {
+   "start": 14.466,
+   "end": 16.866,
+   "text": "hesabınızdan tek kuruş çıkmadı."
+  },
+  {
+   "start": 16.866,
+   "end": 18.546,
+   "text": "Kanıt isterseniz birlikte bir"
+  },
+  {
+   "start": 18.546,
+   "end": 19.886,
+   "text": "alışveriş listesi yapalım."
+  }
+ ],
+ "endCardStart": 19.886
+}
