@@ -23,3 +23,9 @@ Notlar: Mevduat faizi kaynaklarda farklı (32 günlük %32-39 / ortalama %41,87)
 - Tarihsel: TÜİK ekim 2022 yıllık %85,51 (24 yılın zirvesi); Berlin ekmek 1922 sonu ~160 mark → 1923 sonu ~200 milyar mark (yaygın aktarılan rakam).
 - Tüik ekim 2026: ulaştırma yıllık %36,39, gıda yıllık %27,73.
 - Enag ekim 2026 yıllık: %45,12 (Euronews TR) vs TÜİK %29,77. Bin liranın alım gücünü korumak için gereken: 1000 x 1,2977 ≈ 1.298 TL.
+
+## Bin liralık sepet (13 Kasım 2025 → 14 Kasım 2026)
+Kalemler ve kaynaklar: kıyma 485→600 (Et ve Süt Kurumu); Netflix Standart 289,99 (haziran 2025'ten ekim 2026'ya) → 389,99 (ekim 2026 zammı); benzin 53,75→71,20; motorin 57,61→95,20; dolar 42,25→50,36 (BloombergHT/Aposto); İstanbul bilet 35 (şubat 2026 öncesi; 2025 doğrudan teyitsiz)→46,20; Halk Ekmek 10→12,5.
+Toplam: 973,60 → 1.265,45 (+%30,0). 1000/1265,45 = %79.
+Sepet sırası büyük kalemden küçüğe: kıyma 600 (kalan 400), Netflix 389,99 (kalan 10,01), diğer 5 kalem alınamıyor. Sıra değişirse sonuç değişir; videoda "büyük kalemden başlarsanız" denir.
+Eklenebilir/yeterince doğrulanmayan: pasaport defter bedeli 1.135→1.351 (+%19, devlet harcı enflasyonun altında), Çaykur çay (2025 karşılaştırması yok), sigara (2025 fiyatı yok), köprü 59 TL (2025 yok), taksi (2025 yok), zeytinyağı, tereyağı, kuşbaşı (2025 tarihli teyitli fiyat yok).
