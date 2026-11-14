@@ -29,3 +29,11 @@ Kalemler ve kaynaklar: kıyma 485→600 (Et ve Süt Kurumu); Netflix Standart 28
 Toplam: 973,60 → 1.265,45 (+%30,0). 1000/1265,45 = %79.
 Sepet sırası büyük kalemden küçüğe: kıyma 600 (kalan 400), Netflix 389,99 (kalan 10,01), diğer 5 kalem alınamıyor. Sıra değişirse sonuç değişir; videoda "büyük kalemden başlarsanız" denir.
 Eklenebilir/yeterince doğrulanmayan: pasaport defter bedeli 1.135→1.351 (+%19, devlet harcı enflasyonun altında), Çaykur çay (2025 karşılaştırması yok), sigara (2025 fiyatı yok), köprü 59 TL (2025 yok), taksi (2025 yok), zeytinyağı, tereyağı, kuşbaşı (2025 tarihli teyitli fiyat yok).
+
+## Maaş, kira ve gıda (video v2)
+- Asgari ücret net 2025 22.104,67 → 2026 28.075,50 (+%27,01). Kaynak: AA, BloombergHT. Temmuz ara zam için resmi karar bulunamadı (Bigpara, Karar, Habertürk haberleri beklenti yönünde, karar yok).
+- Birikmiş enflasyon: ocak 4,84 aylık; eylül itibarıyla aralığa göre %24,32 (Bisektor); ekim aylık %2,58 → 1,2432 x 1,0258 = 1,2753 (hesap). Zam 1,2701 → reel -%0,4. Tamamen eridi (hesaplama, TÜİK serisi).
+- Emekli temmuz zammı %17,76 (ocak-haziran enflasyonu); memur %13,52 (=%7 toplu sözleşme + %6,09 enflasyon farkı). Bigpara, Kariyer.net.
+- Kira: yasal tavan kasım %31,23, ekim %31,49, eylül %31,79. TCMB yeni kiracı kira endeksi eylül: yıllık nominal %26,6, reel -%2,4, İstanbul %35,5. 30.000 TL x 0,3123 = 9.369.
+- Gıda yıllık %27,73, ekim aylık %3,50, sebze aylık %12,66, ulaştırma yıllık %36,39. ENAG %45,12.
+- Ürün zamları: ekmek +25, kıyma +23,7, benzin +32,5, motorin +65,3, bilet +32,0, Netflix Standart +34,5.
