@@ -1,6 +1,14 @@
 import React from 'react';
 import {AbsoluteFill, Sequence, interpolate, useCurrentFrame} from 'remotion';
 import {AnimatedText} from 'remotion-bits';
+import {TransitionSeries, springTiming} from '@remotion/transitions';
+import {slide} from '@remotion/transitions/slide';
+import {fade} from '@remotion/transitions/fade';
+import {wipe} from '@remotion/transitions/wipe';
+import {scaleLinear} from 'd3-scale';
+import {line as d3line} from 'd3-shape';
+import rough from 'roughjs';
+import {CoinStack} from './Coins3D';
 import D from './enf_sentences.json';
 import {Bg, C, Card, FONT, Label, Shell, Tx, useTL} from './ui';
 
@@ -81,17 +89,15 @@ const Sc1: React.FC = () => {
       <div style={{position: 'absolute', left: 110, top: 600, width: 1200, fontFamily: FONT, fontWeight: 900, fontSize: 104, lineHeight: 1.02, color: C.red, letterSpacing: -2, textShadow: `0 0 50px ${C.red}88`}}>
         <AnimatedText transition={{split: 'character', splitStagger: 1.2, scale: [1.5, 1], opacity: [0, 1], blur: [10, 0], duration: 16, delay: Math.round(T(0, 2) * FPS)}}>KİM ÇALDI?</AnimatedText>
       </div>
-      {/* banknot: değer aynı, alım gücü eriyor */}
-      <div style={{position: 'absolute', left: 1210, top: 250, width: 600, height: 300, borderRadius: 26, background: 'linear-gradient(135deg, #2f6b4f, #1d4a39)', border: '4px solid rgba(255,255,255,.25)',
-        boxShadow: '0 30px 80px rgba(0,0,0,.55)', opacity: p(0.6, 0.6), transform: `rotate(-4deg) translateY(${(1 - p(0.6, 0.8)) * 60}px)`}}>
-        <Tx x={36} y={34} s={26} wt={800} c="#cfe9dc" ls={4}>TÜRK LİRASI</Tx>
-        <Tx x={36} y={110} s={118} wt={900} c="#f2fbf6">1.000 ₺</Tx>
-        <Tx x={36} y={240} s={24} wt={700} c="#bfe0cf">NOMİNAL DEĞER</Tx>
+      {/* 3 boyutlu jeton yığını (three.js): değer aynı, alım gücü eriyor */}
+      <div style={{position: 'absolute', left: 1000, top: 20, width: 800, height: 600, opacity: p(0.3, 0.6)}}>
+        <CoinStack width={800} height={600} lostFrom={Math.round(T(0, 2) * FPS)} lostDur={150} />
       </div>
-      <div style={{position: 'absolute', left: 1210, top: 590, width: 600, opacity: p(T(0, 2) + 0.6, 0.5)}}>
+      <Tx x={1100} y={560} s={30} wt={900} c={C.gold2} w={700} o={p(0.8, 0.5)}>1.000 ₺ • NOMİNAL DEĞER AYNI</Tx>
+      <div style={{position: 'absolute', left: 1100, top: 640, width: 700, opacity: p(T(0, 2) + 0.6, 0.5)}}>
         <Label x={0} y={0} c={C.grey}>ALIM GÜCÜ (GEÇEN YILIN FİYATLARIYLA)</Label>
-        <div style={{position: 'absolute', left: 0, top: 44, width: 600, height: 26, borderRadius: 13, background: 'rgba(255,255,255,.1)'}} />
-        <div style={{position: 'absolute', left: 0, top: 44, width: 600 * power / 1000, height: 26, borderRadius: 13, background: `linear-gradient(90deg, ${C.red}, ${C.gold})`, boxShadow: `0 0 26px ${C.red}88`}} />
+        <div style={{position: 'absolute', left: 0, top: 44, width: 700, height: 26, borderRadius: 13, background: 'rgba(255,255,255,.1)'}} />
+        <div style={{position: 'absolute', left: 0, top: 44, width: 700 * power / 1000, height: 26, borderRadius: 13, background: `linear-gradient(90deg, ${C.red}, ${C.gold})`, boxShadow: `0 0 26px ${C.red}88`}} />
         <Tx x={0} y={84} s={64} wt={900} c={C.red} glow={C.red}>{'≈ ' + Math.round(power).toLocaleString('tr-TR') + ' ₺'}</Tx>
       </div>
       <Stamp x={170} y={770} t0={T(1, 0)} col={C.red} s={72}>SÜPHELİ: ENFLASYON</Stamp>
@@ -246,27 +252,68 @@ const Sc5: React.FC = () => {
   );
 };
 
-// ---------------------------------------------------------------- sahne 6: zam eridi
+// el çizimi daire (roughjs) — çizilerek belirir
+const RoughCircle: React.FC<{cx: number; cy: number; r: number; col: string; t0: number}> = ({cx, cy, r, col, t0}) => {
+  const {p} = useTL();
+  const paths = React.useMemo(() => {
+    const gen = rough.generator({options: {roughness: 1.6, strokeWidth: 5, seed: 7}});
+    const d = gen.ellipse(cx, cy, r * 2, r * 2);
+    return gen.toPaths(d).map((q) => q.d);
+  }, [cx, cy, r]);
+  const q = p(t0, 0.7);
+  return (
+    <svg width={1920} height={1080} style={{position: 'absolute', left: 0, top: 0, pointerEvents: 'none'}}>
+      {paths.map((d, i) => <path key={i} d={d} fill="none" stroke={col} strokeWidth={5} strokeLinecap="round" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - q} style={{filter: `drop-shadow(0 0 10px ${col})`}} />)}
+    </svg>
+  );
+};
+
+// ---------------------------------------------------------------- sahne 6: zam eridi (d3 çizgi grafiği)
 const Sc6: React.FC = () => {
   const T = mk(6);
   const {p} = useTL();
-  const sc = 1500 / 30;
+  const W = 1180, H = 520, X0 = 150, Y0 = 290;
+  const xs = scaleLinear().domain([0, 10]).range([X0, X0 + W]);
+  const ys = scaleLinear().domain([98, 130]).range([Y0 + H, Y0]);
+  const price: [number, number][] = [[0, 100], [1, 104.84], [6, 117.76], [9, 124.32], [10, 127.53]];
+  const wage: [number, number][] = [[0, 100], [0.001, 127.01], [10, 127.01]];
+  const mkLine = d3line<[number, number]>().x((d) => xs(d[0])).y((d) => ys(d[1]));
+  const dp = mkLine(price)!;
+  const dw = mkLine(wage)!;
+  const months = ['Ara', 'Oca', 'Şub', 'Mar', 'Nis', 'May', 'Haz', 'Tem', 'Ağu', 'Eyl', 'Eki'];
+  const q1 = p(T(6, 0) + 0.2, 1.4), q2 = p(T(6, 1) + 0.2, 2.2);
+  const cross = {x: xs(9.9), y: ys(127.4)};
   return (
-    <Shell title="Zam Nereye Gitti?" sub="Ocak 2026'dan ekim 2026'ya">
-      <Label x={110} y={270} c={C.green} o={p(T(6, 0), 0.3)}>ASGARİ ÜCRET ZAMMI</Label>
-      <div style={{position: 'absolute', left: 110, top: 310, width: 27.01 * sc / 1.5 * p(T(6, 0) + 0.2, 0.9), height: 80, borderRadius: 16, background: `linear-gradient(90deg, ${C.green}aa, ${C.green})`, boxShadow: `0 0 30px ${C.green}66`}} />
-      <Tx x={110 + 27.01 * sc / 1.5 + 20} y={322} s={52} wt={900} c={C.green} o={p(T(6, 0) + 0.8, 0.3)}>%27,01</Tx>
-      <Label x={110} y={440} c={C.red} o={p(T(6, 1), 0.3)}>BİRİKMİŞ ENFLASYON (ARALIK → EKİM)</Label>
-      <div style={{position: 'absolute', left: 110, top: 480, width: 24.32 * sc / 1.5 * p(T(6, 1) + 0.2, 0.9), height: 80, borderRadius: '16px 0 0 16px', background: `linear-gradient(90deg, ${C.red}aa, ${C.red})`}} />
-      <div style={{position: 'absolute', left: 110 + 24.32 * sc / 1.5, top: 480, width: 3.2 * sc / 1.5 * p(T(6, 2) + 0.1, 0.5), height: 80, borderRadius: '0 16px 16px 0', background: `linear-gradient(90deg, ${C.gold2}, ${C.gold})`, boxShadow: `0 0 30px ${C.gold}88`}} />
-      <Tx x={110} y={578} s={28} wt={700} c={C.grey} o={p(T(6, 1) + 0.9, 0.3)}>Aralık → eylül: %24,32</Tx>
-      <Tx x={560} y={578} s={28} wt={700} c={C.gold2} o={p(T(6, 2) + 0.4, 0.3)}>+ ekim: %2,58</Tx>
-      <Tx x={110 + 27.5 * sc / 1.5 + 24} y={492} s={52} wt={900} c={C.red} glow={C.red} o={p(T(6, 3) + 0.4, 0.3)}>≈ %27,5</Tx>
-      {/* karşılaştırma çizgisi */}
-      <div style={{position: 'absolute', left: 110 + 27.01 * sc / 1.5, top: 292, width: 4, height: 290, background: C.white, opacity: 0.7 * p(T(6, 4), 0.3)}} />
-      <Stamp x={440} y={700} t0={T(6, 5)} col={C.red} s={80}>ZAM ERİDİ</Stamp>
-      <Chip x={110} y={880} w={900} h={70} t0={T(6, 5) + 1.2} col={C.gold} s={24}>Fiyatlar zam kadar arttı: reel kazanç ≈ %0</Chip>
-      <Src>Tüik (aylık TÜFE), Bisektor, Anadolu Ajansı • Birikmiş enflasyon: kendi hesabımız</Src>
+    <Shell title="Zam Nereye Gitti?" sub="Fiyatlar ücreti on ayda yakaladı (Aralık 2025 = 100)">
+      <svg width={1920} height={1080} style={{position: 'absolute', left: 0, top: 0}}>
+        <defs>
+          <linearGradient id="gw" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stopColor={C.green} stopOpacity=".35" /><stop offset="1" stopColor={C.green} stopOpacity="0" /></linearGradient>
+          <linearGradient id="gp" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stopColor={C.red} stopOpacity=".35" /><stop offset="1" stopColor={C.red} stopOpacity="0" /></linearGradient>
+        </defs>
+        {[100, 110, 120, 130].map((v) => (
+          <g key={v}><line x1={X0} x2={X0 + W} y1={ys(v)} y2={ys(v)} stroke="rgba(255,255,255,.12)" strokeWidth={2} strokeDasharray={v === 100 ? '0' : '8 10'} />
+            <text x={X0 - 18} y={ys(v) + 9} fill={C.grey} fontSize={26} fontFamily={FONT} fontWeight={700} textAnchor="end">{v}</text></g>
+        ))}
+        {months.map((m, i) => <text key={m} x={xs(i)} y={Y0 + H + 44} fill={C.grey} fontSize={24} fontFamily={FONT} fontWeight={700} textAnchor="middle">{m}</text>)}
+        <path d={dw} fill="none" stroke={C.green} strokeWidth={9} strokeLinecap="round" strokeLinejoin="round" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - q1} style={{filter: `drop-shadow(0 0 14px ${C.green})`}} />
+        <path d={dp} fill="none" stroke={C.red} strokeWidth={9} strokeLinecap="round" strokeLinejoin="round" pathLength={1} strokeDasharray={1} strokeDashoffset={1 - q2} style={{filter: `drop-shadow(0 0 14px ${C.red})`}} />
+        {price.map((pt, i) => <circle key={i} cx={xs(pt[0])} cy={ys(pt[1])} r={9} fill={C.red} opacity={p(T(6, 1) + 0.2 + (i / 4) * 2.2, 0.2)} />)}
+      </svg>
+      <Tx x={X0 + 40} y={ys(127.01) - 78} s={34} wt={900} c={C.green} o={p(T(6, 0) + 1.2, 0.4)}>Asgari ücret +%27,01 (ocakta)</Tx>
+      <Tx x={xs(2.2)} y={ys(105) + 24} s={32} wt={900} c={C.red} o={p(T(6, 1) + 0.8, 0.4)}>Fiyatlar (birikmiş)</Tx>
+      <Tx x={xs(1) - 40} y={ys(104.84) + 22} s={24} wt={800} c={C.grey} o={p(T(6, 1) + 0.6, 0.3)}>+%4,84</Tx>
+      <Tx x={xs(6) - 40} y={ys(117.76) + 22} s={24} wt={800} c={C.grey} o={p(T(6, 1) + 1.2, 0.3)}>+%17,76</Tx>
+      <Tx x={xs(9) - 50} y={ys(124.32) + 24} s={24} wt={800} c={C.grey} o={p(T(6, 1) + 1.8, 0.3)}>+%24,32</Tx>
+      <Tx x={xs(10) - 150} y={ys(127.53) - 100} s={34} wt={900} c={C.red} glow={C.red} o={p(T(6, 3) + 0.4, 0.3)}>≈ %27,5</Tx>
+      <RoughCircle cx={cross.x} cy={cross.y} r={44} col={C.gold2} t0={T(6, 4)} />
+      <Stamp x={420} y={440} t0={T(6, 5)} col={C.red} s={70}>ZAM ERİDİ</Stamp>
+      <Card x={1400} y={520} w={410} h={290} t0={T(6, 2)} accent={C.gold}>
+        <Label x={28} y={24} s={22}>EKİM İTİBARIYLA</Label>
+        <Tx x={28} y={72} s={30} wt={700} c={C.grey} w={360}>Ücretin alım gücü</Tx>
+        <Tx x={28} y={118} s={74} wt={900} c={C.red} glow={C.red} o={p(T(6, 5) + 0.6, 0.4)}>99,6</Tx>
+        <Tx x={28} y={214} s={24} wt={600} c={C.grey} w={360}>Aralık 2025 = 100 • reel kazanç ≈ 0</Tx>
+      </Card>
+      <Src>Tüik (aylık TÜFE), Bisektor, Anadolu Ajansı • Ara aylar doğrusal gösterilmiştir • Hesap: kendi hesabımız</Src>
     </Shell>
   );
 };
@@ -539,14 +586,27 @@ const SCENES: {C: React.FC; from: number; to: number; first?: boolean}[] = [
   {C: Sc13, from: 13, to: 17}, {C: Sc14, from: 17, to: 19}, {C: Sc15, from: 19, to: 21},
 ];
 
+const TT = 14;
+const transitions: any[] = [
+  slide({direction: 'from-right'}), fade(), slide({direction: 'from-bottom'}), wipe({direction: 'from-left'}), slide({direction: 'from-right'}), fade(),
+  slide({direction: 'from-right'}), wipe({direction: 'from-bottom'}), fade(), slide({direction: 'from-left'}), fade(), slide({direction: 'from-right'}), wipe({direction: 'from-left'}), slide({direction: 'from-bottom'}),
+];
+
 export const EnfVideo: React.FC = () => (
   <>
     <Bg total={ENF_TOTAL} />
-    {SCENES.map(({C: Sc, from, to}, i) => {
-      const a = fr(paras[from].start);
-      const b = to >= paras.length ? ENF_TOTAL : fr(paras[to].start);
-      return <Sequence key={i} from={a} durationInFrames={Math.max(1, b - a)}><Sc /></Sequence>;
-    })}
+    <TransitionSeries>
+      {SCENES.flatMap(({C: Sc, from, to}, i) => {
+        const a = fr(paras[from].start);
+        const b = to >= paras.length ? ENF_TOTAL : fr(paras[to].start);
+        const last = i === SCENES.length - 1;
+        const out = [
+          <TransitionSeries.Sequence key={'s' + i} durationInFrames={Math.max(TT + 1, b - a + (last ? 0 : TT))}><Sc /></TransitionSeries.Sequence>,
+        ];
+        if (!last) out.push(<TransitionSeries.Transition key={'t' + i} presentation={transitions[i % transitions.length]} timing={springTiming({config: {damping: 200}, durationInFrames: TT})} />);
+        return out;
+      })}
+    </TransitionSeries>
     <TickerE total={ENF_TOTAL} />
   </>
 );
