@@ -109,7 +109,7 @@ const AsgA: React.FC = () => {
       <Chip x={560} y={470} w={460} h={86} t0={0.6} col={C.red} s={34}>%2,58 (Ekim)</Chip>
       <Tx x={540} y={580} w={960} align="center" s={140} wt={900} c={C.red} glow={C.red} ls={-4} o={p(j(1) + 1.4, 0.4) * (1 - p(j(3) + 0.9, 0.3))}>{'%' + fmt(27.5 * p(j(1) + 1.4, 0.9), 1)}</Tx>
       <Tx x={540} y={725} w={960} align="center" s={32} wt={700} c={C.grey} o={p(j(1) + 2.0, 0.4) * (1 - p(j(3) + 0.9, 0.3))}>fiyatlar ocaktan bu yana</Tx>
-      <div style={{opacity: p(j(3), 0.4)}}>
+      <div style={{opacity: p(j(2), 0.4)}}>
         <Tx x={60} y={810} s={34} wt={800}>Asgari ücret zammı</Tx>
         <div style={{position: 'absolute', left: 60, top: 860, width: 900 * 27.01 / 30 * p(j(2), 0.9), height: 64, borderRadius: 32, background: `linear-gradient(90deg, ${C.green}88, ${C.green})`, boxShadow: `0 0 40px ${C.green}66`}} />
         <Tx x={1000} y={866} w={300} align="right" s={44} wt={900} glow={C.green}>%27,01</Tx>
@@ -118,7 +118,7 @@ const AsgA: React.FC = () => {
         <Tx x={1000} y={1001} w={300} align="right" s={44} wt={900} glow={C.red}>%27,5</Tx>
       </div>
       <div style={{position: 'absolute', left: 120, top: 640, width: 840, height: 130, border: `8px solid ${C.red}`, borderRadius: 18, opacity: p(j(3) + 1.0, 0.3), transform: `rotate(-3deg) scale(${0.8 + 0.2 * pop(j(3) + 1.0)})`, background: C.bg + 'ee',
-        display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: FONT, fontWeight: 900, fontSize: 56, color: C.red, letterSpacing: 2}}>ALIM GÜCÜ ≈ 99,6 → ZAM ERİDİ</div>
+        display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: FONT, fontWeight: 900, fontSize: 46, color: C.red, letterSpacing: 1, whiteSpace: "nowrap"}}>ALIM GÜCÜ ≈ 99,6 → ZAM ERİDİ</div>
       <Src t0={1}>TÜİK, Çalışma Bakanlığı • hesap: 1,2432 × 1,0258 • Ocak = 100</Src>
     </Fade>
   );
