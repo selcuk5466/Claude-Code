@@ -21,7 +21,7 @@ const paras = D.paras as P[];
 const mk = (p0: number) => (pi: number, si = 0) => paras[pi].sentences[si] - paras[p0].start;
 
 // ---------------------------------------------------------------- ortak parçalar
-const Src: React.FC<{t0?: number; children: string}> = ({t0 = 0.8, children}) => {
+export const Src: React.FC<{t0?: number; children: string}> = ({t0 = 0.8, children}) => {
   const {p} = useTL();
   return (
     <div style={{position: 'absolute', left: 110, top: 960, width: 1700, opacity: p(t0, 0.4) * 0.92, fontFamily: FONT, fontSize: 24, fontWeight: 600, color: C.grey}}>
@@ -30,7 +30,7 @@ const Src: React.FC<{t0?: number; children: string}> = ({t0 = 0.8, children}) =>
   );
 };
 
-const Stat: React.FC<{x: number; y: number; w: number; h: number; t0: number; col: string; label: string; value: string; sub?: string; vs?: number}> = ({x, y, w, h, t0, col, label, value, sub, vs = 80}) => {
+export const Stat: React.FC<{x: number; y: number; w: number; h: number; t0: number; col: string; label: string; value: string; sub?: string; vs?: number}> = ({x, y, w, h, t0, col, label, value, sub, vs = 80}) => {
   const {p} = useTL();
   return (
     <Card x={x} y={y} w={w} h={h} t0={t0} accent={col}>
@@ -41,7 +41,7 @@ const Stat: React.FC<{x: number; y: number; w: number; h: number; t0: number; co
   );
 };
 
-const Chip: React.FC<{x: number; y: number; w: number; h?: number; t0: number; col: string; children: React.ReactNode; s?: number}> = ({x, y, w, h = 84, t0, col, children, s = 28}) => {
+export const Chip: React.FC<{x: number; y: number; w: number; h?: number; t0: number; col: string; children: React.ReactNode; s?: number}> = ({x, y, w, h = 84, t0, col, children, s = 28}) => {
   const {p, pop} = useTL();
   return (
     <div style={{position: 'absolute', left: x, top: y, width: w, height: h, borderRadius: h / 2, opacity: p(t0, 0.3), transform: `scale(${0.92 + 0.08 * pop(t0)})`,
@@ -51,7 +51,7 @@ const Chip: React.FC<{x: number; y: number; w: number; h?: number; t0: number; c
 };
 
 // yatay yüzde çubuğu: değer 'max'e göre ölçeklenir
-const HBar: React.FC<{x: number; y: number; w: number; t0: number; label: string; val: number; max: number; txt: string; col: string; h?: number; ls?: number}> = ({x, y, w, t0, label, val, max, txt, col, h = 44, ls = 280}) => {
+export const HBar: React.FC<{x: number; y: number; w: number; t0: number; label: string; val: number; max: number; txt: string; col: string; h?: number; ls?: number}> = ({x, y, w, t0, label, val, max, txt, col, h = 44, ls = 280}) => {
   const {p} = useTL();
   const bw = Math.max(6, (w - ls - 150) * (val / max) * p(t0, 0.9));
   return (
@@ -63,7 +63,7 @@ const HBar: React.FC<{x: number; y: number; w: number; t0: number; label: string
   );
 };
 
-const Stamp: React.FC<{x: number; y: number; t0: number; col: string; s?: number; rot?: number; children: React.ReactNode}> = ({x, y, t0, col, s = 64, rot = -6, children}) => {
+export const Stamp: React.FC<{x: number; y: number; t0: number; col: string; s?: number; rot?: number; children: React.ReactNode}> = ({x, y, t0, col, s = 64, rot = -6, children}) => {
   const {pop, p} = useTL();
   const sp = pop(t0);
   return (
@@ -253,7 +253,7 @@ const Sc5: React.FC = () => {
 };
 
 // el çizimi daire (roughjs) — çizilerek belirir
-const RoughCircle: React.FC<{cx: number; cy: number; r: number; col: string; t0: number}> = ({cx, cy, r, col, t0}) => {
+export const RoughCircle: React.FC<{cx: number; cy: number; r: number; col: string; t0: number}> = ({cx, cy, r, col, t0}) => {
   const {p} = useTL();
   const paths = React.useMemo(() => {
     const gen = rough.generator({options: {roughness: 1.6, strokeWidth: 5, seed: 7}});
