@@ -22,3 +22,4 @@ Notlar: Mevduat faizi kaynaklarda farklı (32 günlük %32-39 / ortalama %41,87)
 - Kullanılmayan: yumurta (kasım 2025 A101 145 TL, 2026 kampanya 149 TL, liste 179 TL; kampanya karşılaştırması güvenilir değil), iPhone 17 Pro Max (119.999 lansman, 2026'da en ucuz ~107.000: dolar bazlı ürünler ucuzladı).
 - Tarihsel: TÜİK ekim 2022 yıllık %85,51 (24 yılın zirvesi); Berlin ekmek 1922 sonu ~160 mark → 1923 sonu ~200 milyar mark (yaygın aktarılan rakam).
 - Tüik ekim 2026: ulaştırma yıllık %36,39, gıda yıllık %27,73.
+- Enag ekim 2026 yıllık: %45,12 (Euronews TR) vs TÜİK %29,77. Bin liranın alım gücünü korumak için gereken: 1000 x 1,2977 ≈ 1.298 TL.
