@@ -1,0 +1,96 @@
+{
+ "total": 24.165,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 3.95,
+   "sentences": [
+    {
+     "start": 0.18,
+     "end": 3.509
+    }
+   ]
+  },
+  {
+   "start": 4.3,
+   "dur": 15.865,
+   "sentences": [
+    {
+     "start": 0.766,
+     "end": 5.295
+    },
+    {
+     "start": 5.295,
+     "end": 11.295
+    },
+    {
+     "start": 11.295,
+     "end": 15.865
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.18,
+   "end": 1.77,
+   "text": "Haftaya Güney Kore borsası"
+  },
+  {
+   "start": 1.77,
+   "end": 3.95,
+   "text": "%3,6 düşerek başladı."
+  },
+  {
+   "start": 5.066,
+   "end": 6.265,
+   "text": "Nvidia'nın kurucusu Jensen Huang,"
+  },
+  {
+   "start": 6.265,
+   "end": 7.615,
+   "text": "geçen hafta CEO'luktan ve"
+  },
+  {
+   "start": 7.615,
+   "end": 9.595,
+   "text": "yönetim kurulundan istifa etti."
+  },
+  {
+   "start": 9.595,
+   "end": 11.366,
+   "text": "Şirketin ABD Menkul Kıymetler"
+  },
+  {
+   "start": 11.366,
+   "end": 12.925,
+   "text": "Komisyonu'na yaptığı bildirime göre"
+  },
+  {
+   "start": 12.925,
+   "end": 14.605,
+   "text": "kurul istifayı 11 kasımda"
+  },
+  {
+   "start": 14.605,
+   "end": 15.595,
+   "text": "kabul etti."
+  },
+  {
+   "start": 15.595,
+   "end": 17.06,
+   "text": "Mali işlerden sorumlu Colette"
+  },
+  {
+   "start": 17.06,
+   "end": 18.535,
+   "text": "Kress geçici CEO oldu,"
+  },
+  {
+   "start": 18.535,
+   "end": 20.165,
+   "text": "finans direktörlüğünü de sürdürüyor."
+  }
+ ],
+ "endCardStart": 20.165
+}

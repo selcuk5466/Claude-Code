@@ -1,0 +1,85 @@
+{
+ "total": 25.996,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 21.996,
+   "sentences": [
+    {
+     "start": 0.361,
+     "end": 9.061
+    },
+    {
+     "start": 9.061,
+     "end": 11.881
+    },
+    {
+     "start": 11.881,
+     "end": 16.921
+    },
+    {
+     "start": 16.921,
+     "end": 21.996
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.361,
+   "end": 1.771,
+   "text": "Altın tarafında ons altın"
+  },
+  {
+   "start": 1.771,
+   "end": 4.801,
+   "text": "bugün 3.850 ile 3.870"
+  },
+  {
+   "start": 4.801,
+   "end": 5.941,
+   "text": "dolar arasında,"
+  },
+  {
+   "start": 5.941,
+   "end": 9.061,
+   "text": "ekim 2025'ten beri en düşük seviyede."
+  },
+  {
+   "start": 9.061,
+   "end": 10.471,
+   "text": "Kripto tarafında hafta sonu"
+  },
+  {
+   "start": 10.471,
+   "end": 11.881,
+   "text": "sert bir satış vardı."
+  },
+  {
+   "start": 11.881,
+   "end": 14.161,
+   "text": "Bitcoin 62.000 dolara yaklaştı,"
+  },
+  {
+   "start": 14.161,
+   "end": 16.921,
+   "text": "sonra 65.000 doların üzerine toparlandı."
+  },
+  {
+   "start": 16.921,
+   "end": 18.901,
+   "text": "Spot bitcoin fonlarından çıkışlar"
+  },
+  {
+   "start": 18.901,
+   "end": 21.061,
+   "text": "ve kaldıraçlı pozisyonların tasfiyesi"
+  },
+  {
+   "start": 21.061,
+   "end": 21.996,
+   "text": "satışı büyüttü."
+  }
+ ],
+ "endCardStart": 21.996
+}

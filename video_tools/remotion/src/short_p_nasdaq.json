@@ -1,0 +1,89 @@
+{
+ "total": 24.149,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 20.149,
+   "sentences": [
+    {
+     "start": 0.27,
+     "end": 6.72
+    },
+    {
+     "start": 6.72,
+     "end": 9.06
+    },
+    {
+     "start": 9.06,
+     "end": 11.94
+    },
+    {
+     "start": 11.94,
+     "end": 17.67
+    },
+    {
+     "start": 17.67,
+     "end": 20.149
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.27,
+   "end": 2.85,
+   "text": "Hisse geçen hafta %12,75 düştü,"
+  },
+  {
+   "start": 2.85,
+   "end": 3.9,
+   "text": "ama Nasdaq yine de"
+  },
+  {
+   "start": 3.9,
+   "end": 6.72,
+   "text": "haftayı %2,27 artışla kapattı."
+  },
+  {
+   "start": 6.72,
+   "end": 9.06,
+   "text": "Yani endeksin geri kalanı ayakta kaldı."
+  },
+  {
+   "start": 9.06,
+   "end": 11.94,
+   "text": "Bugün ise Nasdaq vadelileri yeniden düşüşte."
+  },
+  {
+   "start": 11.94,
+   "end": 13.41,
+   "text": "Yatırımcılar şunu soruyor:"
+  },
+  {
+   "start": 13.41,
+   "end": 14.85,
+   "text": "Kurucu gittikten sonra"
+  },
+  {
+   "start": 14.85,
+   "end": 16.38,
+   "text": "şirketin büyüme hikâyesi"
+  },
+  {
+   "start": 16.38,
+   "end": 17.67,
+   "text": "aynı kalacak mı?"
+  },
+  {
+   "start": 17.67,
+   "end": 19.05,
+   "text": "Bu sorunun ilk cevabı"
+  },
+  {
+   "start": 19.05,
+   "end": 20.149,
+   "text": "yarın gece gelecek."
+  }
+ ],
+ "endCardStart": 20.149
+}

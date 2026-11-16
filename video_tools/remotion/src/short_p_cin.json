@@ -1,0 +1,75 @@
+{
+ "total": 23.086,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 19.086,
+   "sentences": [
+    {
+     "start": 0.226,
+     "end": 5.506
+    },
+    {
+     "start": 5.506,
+     "end": 11.446
+    },
+    {
+     "start": 11.446,
+     "end": 14.866
+    },
+    {
+     "start": 14.866,
+     "end": 19.086
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.226,
+   "end": 3.406,
+   "text": "Sanayi üretimi yıllık %4,8 arttı,"
+  },
+  {
+   "start": 3.406,
+   "end": 5.506,
+   "text": "beklenti %5 virgül üçtü."
+  },
+  {
+   "start": 5.506,
+   "end": 8.956,
+   "text": "Perakende satışlar yalnızca %0,4 büyüdü,"
+  },
+  {
+   "start": 8.956,
+   "end": 11.446,
+   "text": "beklenti %0 virgül sekizdi."
+  },
+  {
+   "start": 11.446,
+   "end": 12.976,
+   "text": "Üstelik ekimde bir haftalık"
+  },
+  {
+   "start": 12.976,
+   "end": 14.866,
+   "text": "ulusal bayram tatili vardı."
+  },
+  {
+   "start": 14.866,
+   "end": 16.087,
+   "text": "Sabit varlık yatırımı"
+  },
+  {
+   "start": 16.087,
+   "end": 16.936,
+   "text": "ocak ile ekim"
+  },
+  {
+   "start": 16.936,
+   "end": 19.086,
+   "text": "arasında %8,1 düştü."
+  }
+ ],
+ "endCardStart": 19.086
+}

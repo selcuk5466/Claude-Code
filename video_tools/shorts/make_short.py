@@ -12,6 +12,11 @@ import difflib, json, re, subprocess, sys
 CONFIGS = {
     'fed_tcmb': [(2, 0, 5), (14, 0, 1)],
     'yarin': [(17, 0, 5), (18, 0, 4)],
+    # 16 Kasım piyasa özeti
+    'p_nvidia': [(0, 0, 0), (1, 1, 3)],
+    'p_nasdaq': [(2, 3, 7)],
+    'p_altin': [(6, 0, 3)],
+    'p_cin': [(3, 2, 5)],
     # 15 Kasım ev kredisi videosu
     'ev_borc': [(3, 6, 9)],
     'ev_kar': [(4, 4, 6)],
