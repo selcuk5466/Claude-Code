@@ -33,7 +33,7 @@
   {
    "start": 3.406,
    "end": 5.506,
-   "text": "beklenti %5 virgül üçtü."
+   "text": "beklenti %5,3 idi."
   },
   {
    "start": 5.506,
@@ -43,7 +43,7 @@
   {
    "start": 8.956,
    "end": 11.446,
-   "text": "beklenti %0 virgül sekizdi."
+   "text": "beklenti %0,8 idi."
   },
   {
    "start": 11.446,
