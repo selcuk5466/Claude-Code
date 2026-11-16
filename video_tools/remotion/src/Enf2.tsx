@@ -32,7 +32,7 @@ const House: React.FC<{x: number; y: number; s?: number; col?: string; o?: numbe
 );
 
 // dikey çubuk (milyon ₺)
-const VBar: React.FC<{x: number; base: number; w: number; v: number; max: number; hmax: number; col: string; t0: number; label: string; top?: string; dim?: boolean}> = ({x, base, w, v, max, hmax, col, t0, label, top, dim}) => {
+export const VBar: React.FC<{x: number; base: number; w: number; v: number; max: number; hmax: number; col: string; t0: number; label: string; top?: string; dim?: boolean}> = ({x, base, w, v, max, hmax, col, t0, label, top, dim}) => {
   const {p} = useTL();
   const q = p(t0, 0.9);
   const h = Math.max(4, (v / max) * hmax * q);

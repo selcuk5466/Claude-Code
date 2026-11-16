@@ -7,6 +7,7 @@ import {ShortVideo, SHORT_TOTAL, SHORT_FPS} from './Short';
 import {ShortBorsa, ShortFed, ShortYarin, BORSA_FRAMES, FED_FRAMES, YARIN_FRAMES} from './ShortMulti';
 import {Gun2Video, GUN2_TOTAL} from './Gun2Video';
 import {EvBorc, EvKar, EvBugun, EV_FRAMES} from './ShortEv';
+import {EnfVideo3, ENF3_TOTAL} from './Enf3';
 import {EnfVideo2, ENF2_TOTAL} from './Enf2';
 import {EnfHook, EnfFive, EnfAsg, EnfBer, EnfYan, ENF_SHORT_FRAMES} from './ShortEnf';
 import {G2Altin, G2Fed, G2Nvidia, G2Petrol, G2Turkiye, G2_FRAMES} from './ShortG2';
@@ -46,6 +47,7 @@ export const Root: React.FC = () => (
     <Composition id="EvBorc" component={EvBorc} durationInFrames={EV_FRAMES.borc} fps={30} width={1080} height={1920} />
     <Composition id="EvKar" component={EvKar} durationInFrames={EV_FRAMES.kar} fps={30} width={1080} height={1920} />
     <Composition id="EvBugun" component={EvBugun} durationInFrames={EV_FRAMES.bugun} fps={30} width={1080} height={1920} />
+    <Composition id="Enf3" component={EnfVideo3} durationInFrames={ENF3_TOTAL} fps={30} width={1920} height={1080} />
     <Composition id="EnfHook" component={EnfHook} durationInFrames={ENF_SHORT_FRAMES.hook} fps={30} width={1080} height={1920} />
     <Composition id="EnfFive" component={EnfFive} durationInFrames={ENF_SHORT_FRAMES.five} fps={30} width={1080} height={1920} />
     <Composition id="EnfAsg" component={EnfAsg} durationInFrames={ENF_SHORT_FRAMES.asg} fps={30} width={1080} height={1920} />

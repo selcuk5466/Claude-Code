@@ -53,3 +53,28 @@ export const CoinStack: React.FC<{width: number; height: number; lostFrom: numbe
     </ThreeCanvas>
   );
 };
+
+// ---------------------------------------------------------------- altın külçe yığını
+const BarMat = new THREE.MeshStandardMaterial({color: '#e2b84f', metalness: 0.5, roughness: 0.3, emissive: new THREE.Color('#4a3306'), emissiveIntensity: 0.55});
+const Bar: React.FC<{pos: [number, number, number]; drop: number}> = ({pos, drop}) => (
+  <mesh position={[pos[0], pos[1] - drop, pos[2]]} material={BarMat}>
+    <boxGeometry args={[1.9, 0.5, 0.95]} />
+  </mesh>
+);
+export const GoldBars: React.FC<{width: number; height: number}> = ({width, height}) => {
+  const f = useCurrentFrame();
+  const rise = interpolate(f, [0, 36], [5, 0], {extrapolateRight: 'clamp'});
+  const bob = Math.sin(f * 0.06) * 0.06;
+  const bars: [number, number, number][] = [[-1.0, 0, 0], [1.0, 0, 0], [0, 0.52, 0], [-1.0, 1.04, 0], [1.0, 1.04, 0], [0, 1.56, 0]];
+  return (
+    <ThreeCanvas width={width} height={height} camera={{position: [3.4, 2.6, 5.2], fov: 38}} style={{background: 'transparent'}}>
+      <ambientLight intensity={1.5} />
+      <hemisphereLight args={['#fff2cc', '#2a3f66', 1.2]} />
+      <directionalLight position={[5, 8, 5]} intensity={2.6} />
+      <pointLight position={[-4, 2, 3]} intensity={30} color="#7fb2ff" />
+      <group rotation={[0, f * 0.014, 0]} position={[0, -1.2 + bob, 0]}>
+        {bars.map((b, i) => <Bar key={i} pos={b} drop={Math.max(0, rise - i * 0.4)} />)}
+      </group>
+    </ThreeCanvas>
+  );
+};
