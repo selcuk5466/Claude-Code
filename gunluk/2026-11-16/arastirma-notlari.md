@@ -39,3 +39,10 @@ Veri zamanı: Pazartesi sabahı/öğle. ABD kapanışı (16 Kasım) video çekil
 ## Doğrulanamayan / dikkat
 - Anthropic halka arz detayları, FOMC tutanak tarihi, ABD bilanço tarihleri, cari denge eylül verisi.
 - YouTube ve bazı siteler (wtop, takvim, youtube) bu ortamın ağ izninde değil; veriler arama özetlerinden alındı.
+
+## Güncelleme (video senaryosu için)
+- BIST 100 bugün 11.841,81 (−%0,01) kapandı (CNBC-e, Aposto); USD/TL ≈ 50,386–50,392; gram altın ≈ 6.266–6.275 TL (−%0,26).
+- ABD vadeli: S&P 500 ≈ −%0,5 (≈7.542), Nasdaq vadeli −%1 civarı (zamana göre değişiyor). 10 yıllık 5,131 (Cuma tepe 5,174), 2 yıllık 4,848. Warsh konuşması bu akşam (18.00 CET, San Francisco); FOMC ekim toplantısı tutanakları ve Anthropic halka arz fiyatlaması Çarşamba (24/7 Wall St. haberine göre; teyit edilmedi).
+- Nvidia: Cuma haftalık düşüş serisi 2012'den beri en uzun (tek kaynak); "Huang'ın geri dönüşü" ve "Bessent liderlik değişimi" haberleri tek kaynaklı olduğu için senaryoya alınmadı.
+- Dow Cuma kapanışı kaynaklara göre 52.347,55–52.353,24 → "elli iki bin üç yüz elli civarı".
+- Senaryodaki ABD rakamları cuma kapanışı + bugünkü vadeli işlemlerdir; çekimden sonra ABD kapanışı gelirse güncellenmeli.
