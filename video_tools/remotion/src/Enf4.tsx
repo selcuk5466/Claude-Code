@@ -129,7 +129,7 @@ const S1: React.FC = () => {
 };
 
 // ---------------------------------------------------------------- S2 ABD
-const S2: React.FC = () => {
+export const S2: React.FC = () => {
   const T0 = mk(paras[1].start); const {p} = useTL();
   const idx = [{n: 'Nasdaq', v: -2.5, txt: '−%2,5', t: T0(1, 1) + 5.5}, {n: 'S&P 500', v: -1.9, txt: '−%1,9', t: T0(1, 1)}, {n: 'Dow Jones', v: -1.4, txt: '−%1,4', t: T0(1, 2)}];
   return (
@@ -432,7 +432,7 @@ const S11: React.FC = () => {
 };
 
 // ---------------------------------------------------------------- S12 BIST
-const S12: React.FC = () => {
+export const S12: React.FC = () => {
   const T0 = mk(paras[11].start); const {p, count} = useTL();
   const q = p(T0(11, 0), 2.6);
   return (

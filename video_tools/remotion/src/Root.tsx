@@ -9,6 +9,7 @@ import {Gun2Video, GUN2_TOTAL} from './Gun2Video';
 import {EvBorc, EvKar, EvBugun, EV_FRAMES} from './ShortEv';
 import {PNvidia, PNasdaq, PAltin, PCin, P_FRAMES} from './ShortPiyasa';
 import {QCip, QBil, QAnt, QBut, Q_FRAMES} from './ShortPro';
+import {BrandTest, BRAND_TEST_FRAMES, IntroSting} from './Brand';
 import {Thumb17} from './Thumb17';
 import {EnfVideo4, ENF4_TOTAL} from './Enf4';
 import {ProTest} from './ProTest';
@@ -63,6 +64,8 @@ export const Root: React.FC = () => (
     <Composition id="QAnt" component={QAnt} durationInFrames={Q_FRAMES.ant} fps={30} width={1080} height={1920} />
     <Composition id="QBut" component={QBut} durationInFrames={Q_FRAMES.but} fps={30} width={1080} height={1920} />
     <Composition id="Thumb17" component={Thumb17} durationInFrames={1} fps={30} width={1280} height={720} />
+    <Composition id="BrandTest" component={BrandTest} durationInFrames={BRAND_TEST_FRAMES} fps={30} width={1920} height={1080} />
+    <Composition id="BrandIntro" component={IntroSting} durationInFrames={135} fps={30} width={1920} height={1080} />
     <Composition id="ProTest" component={ProTest} durationInFrames={300} fps={30} width={1920} height={1080} />
     <Composition id="EnfHook" component={EnfHook} durationInFrames={ENF_SHORT_FRAMES.hook} fps={30} width={1080} height={1920} />
     <Composition id="EnfFive" component={EnfFive} durationInFrames={ENF_SHORT_FRAMES.five} fps={30} width={1080} height={1920} />
