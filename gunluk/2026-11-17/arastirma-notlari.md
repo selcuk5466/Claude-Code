@@ -47,3 +47,17 @@ Veri zamanı: Salı sabahı/öğle (Asya kapandı, Avrupa gün içi, BIST açıl
 - Anthropic'te iki farklı değerleme rakamı (yöntem farkı).
 - Walmart bilanço günü, kuralın yürürlük tarihi.
 - Salı kapanış rakamları (Avrupa/BIST/ABD) henüz yok; senaryo yazılırken güncel veri yeniden aranmalı.
+
+## Ek araştırma (ikinci tur)
+- ABD ekim perakende satışları (Reuters/Census): aylık +%0,2 (beklenti ≈%0,2; eylül +%0,8), 748,2 milyar $; çekirdek (otomobil, benzin, inşaat malzemesi, yemek hariç) +%0,6 (beklenti %0,4); motorlu taşıt −%1,6; mobilya −%2,3; internet +%1,2; yıllık +%6,8.
+- Home Depot 3. çeyrek (CNBC, Benzinga): düzeltilmiş hisse başı kâr 3,86 $ (beklenti ≈3,84), gelir 43,4 milyar $ (beklenti ≈42,8), benzer mağaza satışı +%2,2 (beklenti %1,8); yıllık düzeltilmiş EPS büyüme tahmini ≈%2'ye daraltıldı (beklenti daha yüksek); hisse ön piyasada ≈%2–3 düştü; CFO Richard McPhail yeni CEO.
+- Bitcoin ETF: 2–6 Kasım −1,28 milyar $ (haziran'dan beri en büyük haftalık çıkış); 9–13 Kasım ≈ −1,065 milyar $ (üçüncü haftalık çıkış); kasım toplam ≈ −2,1 milyar $ (Decrypt/BitcoinWorld, 13 Kasım'a kadar 7 gün üst üste çıkış).
+- Akaryakıt (İstanbul Avrupa): benzin 71,20 TL, motorin 95,20 TL, LPG 50,70 TL; benzine 6 Kasım'da ≈5,99 TL ve 12 Kasım'da 3,40 TL indirim, motorine 7 Kasım'da ≈5,40 TL indirim; bugün değişiklik yok.
+- Asgari ücret 2027: komisyon aralıkta toplanacak (Bakan Işıkhan, Plan ve Bütçe); kasım enflasyonu 3 Aralık'ta; resmî oran yok; gazetelerde %25–35 senaryoları (28.075,50 TL net; %25 → 35.094, %35 → 37.902 TL).
+- TCMB Enflasyon Raporu (12 Kasım): 2026 yıl sonu %29,5, 2027 %21; brüt rezerv kaybı 49 milyar $ (28 milyar $ altın fiyatından). Kasım piyasa katılımcıları 2027 beklentisini ayrıca vermedi.
+- Avrupa gün içi (≈11.25): Stoxx 600 −%0,7 (657,72), DAX −%0,9 (26.378,06), CAC 40 −%0,5 (8.312,65). Pazartesi kapanış: Stoxx 662,31 (−%0,28), DAX 26.598,64, CAC 8.352.
+- BIST gün içi: öğle −%0,85 (11.741,06), 26 hisse yükselen/73 düşen (Capital). Gün kapanışı bulunamadı.
+- Wall Street bugün: kaynaklar çelişkili (JournalArta: Nasdaq −%2'nin üzerinde öğle, CNBC canlı blog ve diğerleri daha ılımlı). Bu nedenle senaryoda bugünkü ABD seyri yok, pazartesi kapanışı kullanıldı.
+- Japonya: 3. çeyrek GDP −%0,1 (yıllıklandırılmış) ve JGB/yen kaynakları çelişkili; senaryoya alınmadı.
+- Senaryoya alınmayanlar: Nvidia'ya ilişkin "casusluk skandalı" (tek kaynak), Japonya verisi, CDS/yabancı payı (güncel veri yok), Walmart bilanço günü.
+- Not: Senaryodaki Avrupa, BIST ve dolar/gram altın rakamları öğle saatlerine aittir; çekim akşam yapılacaksa kapanış rakamları güncellenmeli.
