@@ -5,8 +5,8 @@ import {Bg4, F, MONO, T, WorldMap, useFonts} from './Pro';
 import {S12, S2} from './Enf4';
 import {useTL} from './ui';
 
-const GOLD = '#f2c14e', GOLD2 = '#ffd978', NAVY = '#06101f', BLUE = '#3b82f6';
-const LOGO = staticFile('brand/logo.png');
+export const GOLD = '#f2c14e', GOLD2 = '#ffd978', NAVY = '#06101f', BLUE = '#3b82f6';
+export const LOGO = staticFile('brand/logo.png');
 export const CHANNEL = 'DÜNYADAN FISILTILAR';
 export const TAGLINE = 'Dünyanın gündemi, ekonominin ritmi.';
 
