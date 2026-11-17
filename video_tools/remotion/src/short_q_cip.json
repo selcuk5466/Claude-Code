@@ -1,0 +1,86 @@
+{
+ "total": 20.211,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 16.211,
+   "sentences": [
+    {
+     "start": 0.2,
+     "end": 6.53
+    },
+    {
+     "start": 6.53,
+     "end": 11.99
+    },
+    {
+     "start": 11.99,
+     "end": 16.211
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.2,
+   "end": 2.03,
+   "text": "ABD Ticaret Bakanlığı pazartesi"
+  },
+  {
+   "start": 2.03,
+   "end": 3.62,
+   "text": "günü yapay zekâ çiplerine"
+  },
+  {
+   "start": 3.62,
+   "end": 5.24,
+   "text": "uzaktan erişimi lisansa bağlayan"
+  },
+  {
+   "start": 5.24,
+   "end": 6.53,
+   "text": "bir kural yayımladı."
+  },
+  {
+   "start": 6.53,
+   "end": 8.27,
+   "text": "Çin merkezli şirketler artık"
+  },
+  {
+   "start": 8.27,
+   "end": 9.86,
+   "text": "yurtdışındaki veri merkezleri üzerinden"
+  },
+  {
+   "start": 9.86,
+   "end": 11.99,
+   "text": "bu çiplere izinsiz ulaşamayacak."
+  },
+  {
+   "start": 11.99,
+   "end": 12.65,
+   "text": "Endonezya,"
+  },
+  {
+   "start": 12.65,
+   "end": 13.16,
+   "text": "Malezya,"
+  },
+  {
+   "start": 13.16,
+   "end": 13.76,
+   "text": "Singapur,"
+  },
+  {
+   "start": 13.76,
+   "end": 14.945,
+   "text": "Tayland ve Brezilya için"
+  },
+  {
+   "start": 14.945,
+   "end": 16.211,
+   "text": "de lisans şartı geldi."
+  }
+ ],
+ "endCardStart": 16.211
+}

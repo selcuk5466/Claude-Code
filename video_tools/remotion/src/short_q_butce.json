@@ -1,0 +1,81 @@
+{
+ "total": 21.986,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 17.986,
+   "sentences": [
+    {
+     "start": 0.026,
+     "end": 7.346
+    },
+    {
+     "start": 7.346,
+     "end": 12.566
+    },
+    {
+     "start": 12.566,
+     "end": 17.986
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.026,
+   "end": 1.316,
+   "text": "Merkezi yönetim bütçesi"
+  },
+  {
+   "start": 1.316,
+   "end": 3.326,
+   "text": "ekimde 481 milyar"
+  },
+  {
+   "start": 3.326,
+   "end": 4.376,
+   "text": "lira açık verdi,"
+  },
+  {
+   "start": 4.376,
+   "end": 5.516,
+   "text": "geçen yıl ekimde açık"
+  },
+  {
+   "start": 5.516,
+   "end": 7.346,
+   "text": "223 milyar liraydı."
+  },
+  {
+   "start": 7.346,
+   "end": 9.836,
+   "text": "Gelirler %13,2 artışla"
+  },
+  {
+   "start": 9.836,
+   "end": 11.096,
+   "text": "bir trilyon 300"
+  },
+  {
+   "start": 11.096,
+   "end": 12.566,
+   "text": "milyar liraya çıktı."
+  },
+  {
+   "start": 12.566,
+   "end": 15.236,
+   "text": "Giderler %29,9 artışla"
+  },
+  {
+   "start": 15.236,
+   "end": 17.006,
+   "text": "bir trilyon 779"
+  },
+  {
+   "start": 17.006,
+   "end": 17.986,
+   "text": "milyar lira oldu."
+  }
+ ],
+ "endCardStart": 17.986
+}

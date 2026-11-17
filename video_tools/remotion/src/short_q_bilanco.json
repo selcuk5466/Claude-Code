@@ -1,0 +1,80 @@
+{
+ "total": 22.839,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 18.839,
+   "sentences": [
+    {
+     "start": 0.309,
+     "end": 6.279
+    },
+    {
+     "start": 6.279,
+     "end": 11.289
+    },
+    {
+     "start": 11.289,
+     "end": 15.456
+    },
+    {
+     "start": 15.456,
+     "end": 18.839
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.309,
+   "end": 2.079,
+   "text": "Analistlerin gelir beklentisi yaklaşık"
+  },
+  {
+   "start": 2.079,
+   "end": 3.369,
+   "text": "109 milyar dolar,"
+  },
+  {
+   "start": 3.369,
+   "end": 4.659,
+   "text": "hisse başı kâr beklentisi"
+  },
+  {
+   "start": 4.659,
+   "end": 6.279,
+   "text": "2 dolar 48 sent."
+  },
+  {
+   "start": 6.279,
+   "end": 9.039,
+   "text": "Şirketin kendi rehberliği 108 milyar dolardı,"
+  },
+  {
+   "start": 9.039,
+   "end": 11.289,
+   "text": "yani beklenti bu bandın tepesinde."
+  },
+  {
+   "start": 11.289,
+   "end": 13.269,
+   "text": "Brüt marj rehberliği %74,"
+  },
+  {
+   "start": 13.269,
+   "end": 15.456,
+   "text": "önceki çeyrekte %75 idi."
+  },
+  {
+   "start": 15.456,
+   "end": 17.199,
+   "text": "Nvidia son 4 çeyreğin"
+  },
+  {
+   "start": 17.199,
+   "end": 18.839,
+   "text": "dördünde de beklentiyi aştı."
+  }
+ ],
+ "endCardStart": 18.839
+}

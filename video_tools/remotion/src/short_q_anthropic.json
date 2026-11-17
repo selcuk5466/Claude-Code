@@ -1,0 +1,105 @@
+{
+ "total": 25.52,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 21.52,
+   "sentences": [
+    {
+     "start": 0.2,
+     "end": 5.36
+    },
+    {
+     "start": 5.36,
+     "end": 11.36
+    },
+    {
+     "start": 11.36,
+     "end": 17.57
+    },
+    {
+     "start": 17.57,
+     "end": 21.52
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.2,
+   "end": 2.87,
+   "text": "Şirket 825 milyon hisseyi 70"
+  },
+  {
+   "start": 2.87,
+   "end": 4.25,
+   "text": "ile 78 dolar arasında"
+  },
+  {
+   "start": 4.25,
+   "end": 5.36,
+   "text": "satışa çıkarıyor."
+  },
+  {
+   "start": 5.36,
+   "end": 6.08,
+   "text": "Üst banda göre"
+  },
+  {
+   "start": 6.08,
+   "end": 7.01,
+   "text": "temel arz yaklaşık"
+  },
+  {
+   "start": 7.01,
+   "end": 8.36,
+   "text": "64 milyar dolar,"
+  },
+  {
+   "start": 8.36,
+   "end": 10.07,
+   "text": "ayrıca 26 milyar dolarlık"
+  },
+  {
+   "start": 10.07,
+   "end": 11.36,
+   "text": "özel plasman var."
+  },
+  {
+   "start": 11.36,
+   "end": 13.25,
+   "text": "Değerleme hesaplama yöntemine göre"
+  },
+  {
+   "start": 13.25,
+   "end": 14.9,
+   "text": "yaklaşık bir trilyon ile"
+  },
+  {
+   "start": 14.9,
+   "end": 16.31,
+   "text": "bir trilyon 400 milyar"
+  },
+  {
+   "start": 16.31,
+   "end": 17.57,
+   "text": "dolar arasında değişiyor."
+  },
+  {
+   "start": 17.57,
+   "end": 19.16,
+   "text": "Hisseler perşembe günü"
+  },
+  {
+   "start": 19.16,
+   "end": 20.246,
+   "text": "Nasdaq'ta ANT koduyla"
+  },
+  {
+   "start": 20.246,
+   "end": 21.52,
+   "text": "işlem görmeye başlayacak."
+  }
+ ],
+ "endCardStart": 21.52
+}

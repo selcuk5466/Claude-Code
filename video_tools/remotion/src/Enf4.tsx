@@ -21,13 +21,13 @@ type Pa = {start: number; end: number; sentences: number[]};
 const paras = D.paras as Pa[];
 const A = (pi: number, si = 0) => paras[pi].sentences[si];
 const mk = (start: number) => (pi: number, si = 0) => A(pi, si) - start;
-const num = (v: number, d = 1) => v.toLocaleString('tr-TR', {minimumFractionDigits: d, maximumFractionDigits: d});
-const RED = '#f05b66', GRN = '#35c987', GLD = '#d6ad52', BLU = '#3b82f6', PUR = '#8b5cf6', TXT = '#f2f6fc';
-const ico = (I: any, size = 52) => <I size={size} strokeWidth={2.4} />;
+export const num = (v: number, d = 1) => v.toLocaleString('tr-TR', {minimumFractionDigits: d, maximumFractionDigits: d});
+export const RED = '#f05b66', GRN = '#35c987', GLD = '#d6ad52', BLU = '#3b82f6', PUR = '#8b5cf6', TXT = '#f2f6fc';
+export const ico = (I: any, size = 52) => <I size={size} strokeWidth={2.4} />;
 
 // ---------------------------------------------------------------- grafik kurucuları
 type It = {n: string; v: number; txt: string; c?: string; q: number};
-const hbar = (items: It[], min: number, max: number, o: {left?: number; right?: number; fs?: number; bw?: number} = {}) => ({
+export const hbar = (items: It[], min: number, max: number, o: {left?: number; right?: number; fs?: number; bw?: number} = {}) => ({
   grid: {left: o.left ?? 170, right: o.right ?? 150, top: 6, bottom: 6},
   xAxis: {type: 'value', show: false, min, max},
   yAxis: {type: 'category', inverse: true, data: items.map((i) => i.n), axisLine: {show: false, onZero: false}, axisTick: {show: false}, axisLabel: {color: '#dbe6f5', fontSize: o.fs ?? 26, fontWeight: 700, fontFamily: F}},
@@ -43,14 +43,14 @@ const hbar = (items: It[], min: number, max: number, o: {left?: number; right?: 
     }),
   }],
 });
-const gaugeOpt = (value: number, max: number, color: string, label: string, size = 62) => ({
+export const gaugeOpt = (value: number, max: number, color: string, label: string, size = 62) => ({
   series: [{type: 'gauge', min: 0, max, startAngle: 210, endAngle: -30, radius: '92%', center: ['50%', '58%'],
     progress: {show: true, width: 28, roundCap: true, itemStyle: {color, shadowBlur: 30, shadowColor: color}},
     axisLine: {roundCap: true, lineStyle: {width: 28, color: [[1, 'rgba(255,255,255,.08)']]}},
     pointer: {show: false}, axisTick: {show: false}, splitLine: {show: false}, axisLabel: {show: false}, anchor: {show: false},
     detail: {formatter: label, fontSize: size, fontWeight: 800, color: '#ffffff', offsetCenter: [0, '2%'], fontFamily: MONO}, data: [{value}]}],
 });
-const donutOpt = (data: {n: string; v: number; c: string}[], centerTxt: string) => ({
+export const donutOpt = (data: {n: string; v: number; c: string}[], centerTxt: string) => ({
   series: [{type: 'pie', radius: ['60%', '84%'], center: ['50%', '50%'], startAngle: 90, silent: true, label: {show: false}, itemStyle: {borderColor: '#0a1730', borderWidth: 4},
     data: data.map((d) => ({name: d.n, value: d.v, itemStyle: {color: d.c, shadowBlur: 24, shadowColor: d.c + '66'}}))}],
   graphic: [{type: 'text', left: 'center', top: 'center', style: {text: centerTxt, fill: '#fff', fontSize: 52, fontWeight: 800, fontFamily: MONO, textAlign: 'center'}}],
@@ -67,7 +67,7 @@ const lineOpt = (cats: string[], vals: number[], q: number, min: number, max: nu
       label: {show: true, position: 'top', formatter: (p: any) => fmt(p.value), color: '#fff', fontSize: 26, fontWeight: 800, fontFamily: MONO, distance: 14}, ...extra}],
   };
 };
-const colBars = (cats: string[], series: {n: string; vals: number[]; c: string}[], q: number, max: number, fmt: (v: number) => string) => ({
+export const colBars = (cats: string[], series: {n: string; vals: number[]; c: string}[], q: number, max: number, fmt: (v: number) => string) => ({
   grid: {left: 30, right: 30, top: 50, bottom: 56},
   legend: {show: series.length > 1, top: 0, textStyle: {color: '#cfdbec', fontSize: 22, fontFamily: F}, itemWidth: 22, itemHeight: 14},
   xAxis: {type: 'category', data: cats, axisLine: {lineStyle: {color: '#3a5072'}}, axisTick: {show: false}, axisLabel: {color: '#dbe6f5', fontSize: 24, fontWeight: 700, fontFamily: F}},
@@ -77,7 +77,7 @@ const colBars = (cats: string[], series: {n: string; vals: number[]; c: string}[
 });
 
 // ---------------------------------------------------------------- küçük bileşenler
-const Row: React.FC<{x: number; y: number; w: number; t0: number; icon: React.ReactNode; c: string; head?: string; text: string; h?: number; ts?: number}> = ({x, y, w, t0, icon, c, head, text, h = 92, ts = 28}) => {
+export const Row: React.FC<{x: number; y: number; w: number; t0: number; icon: React.ReactNode; c: string; head?: string; text: string; h?: number; ts?: number}> = ({x, y, w, t0, icon, c, head, text, h = 92, ts = 28}) => {
   const {p, pop} = useTL(); const sp = pop(t0);
   return (
     <div style={{position: 'absolute', left: x, top: y, width: w, height: h, borderRadius: 22, background: P.panel, border: `1px solid ${P.line}`, opacity: p(t0, 0.3), transform: `translateX(${(1 - sp) * 80}px)`, boxShadow: `0 0 30px ${c}22`}}>
@@ -87,7 +87,7 @@ const Row: React.FC<{x: number; y: number; w: number; t0: number; icon: React.Re
     </div>
   );
 };
-const Big: React.FC<{x: number; y: number; w: number; label: string; value: string; sub?: string; c: string; t0: number; vs?: number; h?: number; icon?: React.ReactNode}> = ({x, y, w, label, value, sub, c, t0, vs = 76, h = 210, icon}) => {
+export const Big: React.FC<{x: number; y: number; w: number; label: string; value: string; sub?: string; c: string; t0: number; vs?: number; h?: number; icon?: React.ReactNode}> = ({x, y, w, label, value, sub, c, t0, vs = 76, h = 210, icon}) => {
   const {p} = useTL();
   return (
     <Panel x={x} y={y} w={w} h={h} t0={t0} accent={c}>
@@ -98,7 +98,7 @@ const Big: React.FC<{x: number; y: number; w: number; label: string; value: stri
     </Panel>
   );
 };
-const Stamp: React.FC<{x: number; y: number; t0: number; c: string; s?: number; rot?: number; children: string}> = ({x, y, t0, c, s = 46, rot = -4, children}) => {
+export const Stamp: React.FC<{x: number; y: number; t0: number; c: string; s?: number; rot?: number; children: string}> = ({x, y, t0, c, s = 46, rot = -4, children}) => {
   const {p, pop} = useTL(); const sp = pop(t0);
   return <div style={{position: 'absolute', left: x, top: y, padding: '8px 28px', border: `6px solid ${c}`, borderRadius: 14, color: c, fontFamily: F, fontWeight: 900, fontSize: s, letterSpacing: 3, opacity: p(t0, 0.12), transform: `rotate(${rot}deg) scale(${1.6 - 0.6 * sp})`, textShadow: `0 0 26px ${c}88`, background: '#06101ecc', boxShadow: `0 0 40px ${c}44`}}>{children}</div>;
 };
