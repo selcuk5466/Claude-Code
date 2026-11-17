@@ -1,0 +1,88 @@
+{
+ "total": 84.0,
+ "voice": "/tmp/g17/v.wav",
+ "voice_parts": [
+  [
+   13.9,
+   46.0,
+   6.0
+  ],
+  [
+   342.4,
+   380.9,
+   39.6
+  ]
+ ],
+ "bed": "/home/user/Claude-Code/video_tools/brand/music/advertisements.mp3",
+ "bed_loud": [
+  [
+   0,
+   4.6
+  ],
+  [
+   4.5,
+   6.0
+  ],
+  [
+   38.1,
+   39.6
+  ],
+  [
+   78.1,
+   84.0
+  ]
+ ],
+ "sfx": [
+  [
+   "/home/user/Claude-Code/video_tools/brand/sfx/riser-2s-soft.wav",
+   0.0,
+   0.55
+  ],
+  [
+   "/home/user/Claude-Code/video_tools/brand/sfx/cinematic-drum-big.wav",
+   1.89,
+   0.75
+  ],
+  [
+   "/home/user/Claude-Code/video_tools/brand/sfx/whoosh-medium-medium.wav",
+   4.45,
+   0.45
+  ],
+  [
+   "/home/user/Claude-Code/video_tools/brand/sfx/impact-deep-soft.wav",
+   4.85,
+   0.4
+  ],
+  [
+   "/home/user/Claude-Code/video_tools/brand/sfx/whoosh-medium-medium.wav",
+   5.62,
+   0.45
+  ],
+  [
+   "/home/user/Claude-Code/video_tools/brand/sfx/whoosh-medium-medium.wav",
+   38.05,
+   0.45
+  ],
+  [
+   "/home/user/Claude-Code/video_tools/brand/sfx/impact-deep-soft.wav",
+   38.45,
+   0.4
+  ],
+  [
+   "/home/user/Claude-Code/video_tools/brand/sfx/whoosh-medium-medium.wav",
+   39.22,
+   0.45
+  ],
+  [
+   "/home/user/Claude-Code/video_tools/brand/sfx/reverse-whoosh-medium-soft.wav",
+   77.42,
+   0.6
+  ],
+  [
+   "/home/user/Claude-Code/video_tools/brand/sfx/cinematic-drum-big.wav",
+   78.1,
+   0.55
+  ]
+ ],
+ "bed_offset": 10.0
+}
