@@ -137,7 +137,7 @@ const S2: React.FC = () => {
       <Hdr title="Wall Street: Sert Düşüş" sub="Pazartesi kapanışı • üst üste üçüncü kayıp" icon={ico(TrendingDown)} accent={RED} />
       <Panel x={110} y={200} w={800} h={390} t0={T0(1, 0)} accent={RED}>
         <T x={34} y={20} s={20} wt={700} c={P.muted} ls={2}>GÜNLÜK DEĞİŞİM</T>
-        <div style={{position: 'absolute', left: 20, top: 58}}><EChart w={760} h={310} option={hbar(idx.map((i) => ({n: i.n, v: i.v, txt: i.txt, q: p(i.t, 0.9)})), -3.2, 0.3, {left: 190, right: 40, bw: 52})} /></div>
+        <div style={{position: 'absolute', left: 20, top: 58}}><EChart w={760} h={310} option={hbar(idx.map((i) => ({n: i.n, v: i.v, txt: i.txt, q: p(i.t, 0.9)})), -3.2, 0.3, {left: 190, right: 160, bw: 52})} /></div>
       </Panel>
       <Panel x={940} y={200} w={870} h={390} t0={T0(1, 1)} accent={BLU}>
         <T x={34} y={20} s={20} wt={700} c={P.muted} ls={2}>KAPANIŞ SEVİYELERİ</T>
@@ -257,7 +257,7 @@ const S6: React.FC = () => {
       <Hdr title="ABD Tüketicisi ve Home Depot" sub="Ekim perakende satışları • üçüncü çeyrek sonuçları" icon={ico(ShoppingCart)} accent={GRN} />
       <Panel x={110} y={200} w={920} h={500} t0={T0(5, 0)} accent={GRN}>
         <T x={34} y={20} s={20} wt={700} c={P.muted} ls={2}>PERAKENDE SATIŞLAR • AYLIK DEĞİŞİM</T>
-        <div style={{position: 'absolute', left: 20, top: 56}}><EChart w={880} h={420} option={hbar(items.map((i) => ({n: i.n, v: i.v, txt: i.txt, q: p(i.t, 0.9)})), -3, 1.8, {left: 180, right: 30, bw: 50})} /></div>
+        <div style={{position: 'absolute', left: 20, top: 56}}><EChart w={880} h={420} option={hbar(items.map((i) => ({n: i.n, v: i.v, txt: i.txt, q: p(i.t, 0.9)})), -3, 1.8, {left: 180, right: 160, bw: 50})} /></div>
       </Panel>
       <Big x={1060} y={200} w={360} h={215} label="YILLIK SATIŞ" value="+%6,8" c={GRN} t0={T0(5, 4)} vs={70} />
       <Panel x={1450} y={200} w={360} h={215} t0={T0(5, 1)} accent={BLU}>
@@ -292,7 +292,7 @@ const S7: React.FC = () => {
           {lon: 114.2, lat: 22.3, label: 'Hong Kong', value: '−%1,0', color: GLD, t0: T0(6, 4), dx: -40, dy: 60}, {lon: 121.5, lat: 31.2, label: 'Şanghay', value: '−%0,5', color: GLD, t0: T0(6, 4) + 1.0, dx: 22, dy: 40}]} />
       <Panel x={1260} y={200} w={550} h={430} t0={T0(6, 1)} accent={RED}>
         <T x={34} y={20} s={20} wt={700} c={P.muted} ls={2}>GÜNLÜK DEĞİŞİM</T>
-        <div style={{position: 'absolute', left: 14, top: 56}}><EChart w={520} h={350} option={hbar(rows.map((r) => ({n: r.n, v: r.v, txt: r.txt, q: p(r.t, 0.9)})), -3.2, 0.2, {left: 150, right: 30, fs: 22, bw: 38})} /></div>
+        <div style={{position: 'absolute', left: 14, top: 56}}><EChart w={520} h={350} option={hbar(rows.map((r) => ({n: r.n, v: r.v, txt: r.txt, q: p(r.t, 0.9)})), -3.2, 0.2, {left: 150, right: 140, fs: 22, bw: 38})} /></div>
       </Panel>
       <Panel x={1260} y={660} w={550} h={260} t0={T0(6, 3)} accent={BLU}>
         <T x={34} y={18} s={20} wt={700} c={P.muted} ls={2}>KAPANIŞ SEVİYELERİ</T>
@@ -314,7 +314,7 @@ const S8: React.FC = () => {
       <Hdr title="Avrupa ve Deutsche Bank" sub="Öğle saatleri • rekorların altında" icon={ico(Building2)} accent={RED} />
       <Panel x={110} y={200} w={700} h={360} t0={T0(7, 0)} accent={RED}>
         <T x={34} y={20} s={20} wt={700} c={P.muted} ls={2}>GÜN İÇİ DEĞİŞİM</T>
-        <div style={{position: 'absolute', left: 14, top: 56}}><EChart w={670} h={290} option={hbar(rows.map((r) => ({n: r.n, v: r.v, txt: r.txt, q: p(r.t, 0.9)})), -1.2, 0.1, {left: 170, right: 30, bw: 48})} /></div>
+        <div style={{position: 'absolute', left: 14, top: 56}}><EChart w={670} h={290} option={hbar(rows.map((r) => ({n: r.n, v: r.v, txt: r.txt, q: p(r.t, 0.9)})), -1.2, 0.1, {left: 170, right: 150, bw: 48})} /></div>
       </Panel>
       <Panel x={110} y={590} w={700} h={340} t0={T0(7, 1)} accent={BLU}>
         <T x={34} y={20} s={20} wt={700} c={P.muted} ls={2}>SEVİYELER</T>
