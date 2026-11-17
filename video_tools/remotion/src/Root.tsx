@@ -8,6 +8,8 @@ import {ShortBorsa, ShortFed, ShortYarin, BORSA_FRAMES, FED_FRAMES, YARIN_FRAMES
 import {Gun2Video, GUN2_TOTAL} from './Gun2Video';
 import {EvBorc, EvKar, EvBugun, EV_FRAMES} from './ShortEv';
 import {PNvidia, PNasdaq, PAltin, PCin, P_FRAMES} from './ShortPiyasa';
+import {EnfVideo4, ENF4_TOTAL} from './Enf4';
+import {ProTest} from './ProTest';
 import {EnfVideo3, ENF3_TOTAL} from './Enf3';
 import {EnfVideo2, ENF2_TOTAL} from './Enf2';
 import {EnfHook, EnfFive, EnfAsg, EnfBer, EnfYan, ENF_SHORT_FRAMES} from './ShortEnf';
@@ -53,6 +55,8 @@ export const Root: React.FC = () => (
     <Composition id="PNasdaq" component={PNasdaq} durationInFrames={P_FRAMES.nq} fps={30} width={1080} height={1920} />
     <Composition id="PAltin" component={PAltin} durationInFrames={P_FRAMES.au} fps={30} width={1080} height={1920} />
     <Composition id="PCin" component={PCin} durationInFrames={P_FRAMES.cn} fps={30} width={1080} height={1920} />
+    <Composition id="Enf4" component={EnfVideo4} durationInFrames={ENF4_TOTAL} fps={30} width={1920} height={1080} />
+    <Composition id="ProTest" component={ProTest} durationInFrames={300} fps={30} width={1920} height={1080} />
     <Composition id="EnfHook" component={EnfHook} durationInFrames={ENF_SHORT_FRAMES.hook} fps={30} width={1080} height={1920} />
     <Composition id="EnfFive" component={EnfFive} durationInFrames={ENF_SHORT_FRAMES.five} fps={30} width={1080} height={1920} />
     <Composition id="EnfAsg" component={EnfAsg} durationInFrames={ENF_SHORT_FRAMES.asg} fps={30} width={1080} height={1920} />
