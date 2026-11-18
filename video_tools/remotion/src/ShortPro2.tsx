@@ -128,7 +128,7 @@ const make = (data: D, S: React.FC, hook: [string, string, string], next: string
     <>
       <ShortBg />
       <T x={540} y={60} w={1080} align="center" s={26} wt={600} c="#8fa3bc">Yatırım tavsiyesi değildir</T>
-      <Sequence from={fr(HOOK)} durationInFrames={fr(data.endCardStart - HOOK)}><S /></Sequence>
+      <Sequence from={0} durationInFrames={fr(data.endCardStart)}><S /></Sequence>
       <Sequence from={0} durationInFrames={fr(HOOK + 0.4)}><Hook src={hook[0]} lines={hook[1]} c={hook[2]} /></Sequence>
       <Sequence from={fr(data.endCardStart)} durationInFrames={total - fr(data.endCardStart)}><End next={next} /></Sequence>
       <Captions caps={data.captions} />
