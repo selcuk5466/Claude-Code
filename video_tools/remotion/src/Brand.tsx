@@ -1,7 +1,7 @@
 import React from 'react';
 import {AbsoluteFill, Img, Sequence, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig, random} from 'remotion';
 import {Bell} from 'lucide-react';
-import {Bg4, F, MONO, T, WorldMap, useFonts} from './Pro';
+import {Bg4, DateCtx, F, MONO, T, WorldMap, useFonts} from './Pro';
 import {S12, S2} from './Enf4';
 import {useTL} from './ui';
 import {Stock} from './Stock';
@@ -42,6 +42,7 @@ export const Wave: React.FC<{x: number; y: number; w: number; h: number; n?: num
 // ---------------------------------------------------------------- açılış jeneriği (4,5 sn)
 export const INTRO_DUR = 4.5;
 export const IntroSting: React.FC = () => {
+  const date = React.useContext(DateCtx);
   const f = useCurrentFrame(); const {fps} = useVideoConfig(); const t = f / fps;
   const HIT = 1.9;
   const ring = interpolate(t, [0.1, HIT], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
@@ -69,7 +70,7 @@ export const IntroSting: React.FC = () => {
       </div>
       <div style={{position: 'absolute', inset: 0, background: '#fff6d8', opacity: flash, mixBlendMode: 'screen'}} />
       <T x={960} y={cy + R + 150} w={1400} align="center" s={40} wt={600} c="#e8eef8" o={tag} ls={1}>{TAGLINE}</T>
-      <T x={960} y={cy + R + 206} w={1400} align="center" s={24} wt={700} mono c={GOLD} o={tag} ls={4}>PİYASA ÖZETİ • 17 KASIM 2026</T>
+      <T x={960} y={cy + R + 206} w={1400} align="center" s={24} wt={700} mono c={GOLD} o={tag} ls={4}>PİYASA ÖZETİ • {date}</T>
       <Grain o={0.06} />
     </AbsoluteFill>
   );

@@ -56,15 +56,17 @@ export const T: React.FC<{x: number; y: number; w?: number; s?: number; wt?: num
     textAlign: align, letterSpacing: ls, lineHeight: lh, whiteSpace: 'pre-wrap', fontVariantNumeric: 'tabular-nums', textShadow: glow ? `0 0 30px ${glow}77` : undefined}}>{children}</div>
 );
 
+export const DateCtx = React.createContext('17 KASIM 2026');
 export const Hdr: React.FC<{title: string; sub?: string; icon: React.ReactNode; accent?: string}> = ({title, sub, icon, accent = C.gold}) => {
   const {p} = useTL();
+  const date = React.useContext(DateCtx);
   const a = p(0, 0.5);
   return (
     <>
       <div style={{position: 'absolute', left: 110, top: 50, width: 92, height: 92, borderRadius: 24, background: `linear-gradient(145deg, ${accent}, ${accent}77)`, boxShadow: `0 0 40px ${accent}66`, display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: a, transform: `scale(${0.7 + 0.3 * a})`, color: '#06101e'}}>{icon}</div>
       <T x={230 - 60 * (1 - a)} y={52} s={62} wt={800} ls={-1.5} o={a}>{title}</T>
       {sub && <T x={232} y={124} s={28} wt={500} c={P.muted} o={p(0.25, 0.5)}>{sub}</T>}
-      <div style={{position: 'absolute', right: 110, top: 62, padding: '8px 22px', borderRadius: 30, border: `1px solid ${accent}77`, background: `${accent}18`, fontFamily: MONO, fontSize: 22, fontWeight: 700, color: accent, letterSpacing: 2, opacity: a}}>17 KASIM 2026</div>
+      <div style={{position: 'absolute', right: 110, top: 62, padding: '8px 22px', borderRadius: 30, border: `1px solid ${accent}77`, background: `${accent}18`, fontFamily: MONO, fontSize: 22, fontWeight: 700, color: accent, letterSpacing: 2, opacity: a}}>{date}</div>
     </>
   );
 };
