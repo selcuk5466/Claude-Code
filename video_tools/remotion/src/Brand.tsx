@@ -167,7 +167,7 @@ const TICK = ['S&P 500 7.416,59 (−%1,9)', 'NASDAQ 24.509,76 (−%2,5)', 'BIST 
 // gerçek stok görüntü araları [baş, son (sn), dosya, başlık, alt başlık, hareket]: cümle sınırlarına oturtuldu
 type BR = [number, number, string, string | undefined, string | undefined, 'in' | 'out' | 'left' | 'right'];
 const BROLL: BR[] = [
-  [6.0, 9.1, 'stock/borsa-2.mp4', undefined, undefined, 'in'],
+  [6.0, 9.1, 'stock/borsa-1.mp4', undefined, undefined, 'in'],
   [28.4, 33.0, 'stock/borsa-3.mp4', 'Çip ve veri merkezi', 'Satışın merkezinde', 'right'],
   [39.6, 45.6, 'stock/istanbul-3.mp4', undefined, undefined, 'out'],
   [58.3, 61.8, 'stock/para-tl.mp4', 'Dolar/TL ≈ 50,42', 'Öğle saatleri', 'in'],
