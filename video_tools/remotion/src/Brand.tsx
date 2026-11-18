@@ -4,6 +4,7 @@ import {Bell} from 'lucide-react';
 import {Bg4, F, MONO, T, WorldMap, useFonts} from './Pro';
 import {S12, S2} from './Enf4';
 import {useTL} from './ui';
+import {Stock} from './Stock';
 
 export const GOLD = '#f2c14e', GOLD2 = '#ffd978', NAVY = '#06101f', BLUE = '#3b82f6';
 export const LOGO = staticFile('brand/logo.png');
@@ -163,6 +164,16 @@ export const BrandTicker: React.FC<{items: string[]; total: number}> = ({items, 
 const fr = (s: number) => Math.round(s * 30);
 export const BT = {intro: 0, b1: 4.5, s1: 6.0, s1dur: 32.1, b2: 38.1, s2: 39.6, s2dur: 38.5, end: 78.1, total: 84.0};
 const TICK = ['S&P 500 7.416,59 (−%1,9)', 'NASDAQ 24.509,76 (−%2,5)', 'BIST 100 11.741 (öğle)', 'USD/TL 50,42', 'GRAM ALTIN ≈6.269 ₺', 'ONS ALTIN ≈3.870 $', 'YATIRIM TAVSİYESİ DEĞİLDİR'];
+// gerçek stok görüntü araları [baş, son (sn), dosya, başlık, alt başlık, hareket]: cümle sınırlarına oturtuldu
+type BR = [number, number, string, string | undefined, string | undefined, 'in' | 'out' | 'left' | 'right'];
+const BROLL: BR[] = [
+  [6.0, 9.1, 'stock/borsa-2.mp4', undefined, undefined, 'in'],
+  [28.4, 33.0, 'stock/borsa-3.mp4', 'Çip ve veri merkezi', 'Satışın merkezinde', 'right'],
+  [39.6, 45.6, 'stock/istanbul-3.mp4', undefined, undefined, 'out'],
+  [58.3, 61.8, 'stock/para-tl.mp4', 'Dolar/TL ≈ 50,42', 'Öğle saatleri', 'in'],
+  [61.8, 65.2, 'stock/altin-1.mp4', 'Gram altın ≈ 6.269 ₺', 'Bankalararası piyasa', 'left'],
+  [65.2, 72.6, 'stock/petrol-1.mp4', 'Akaryakıt', 'Benzin 71,20 ₺ • Motorin 95,20 ₺', 'in'],
+];
 export const BrandTest: React.FC = () => {
   useFonts();
   const total = fr(BT.total);
@@ -171,8 +182,14 @@ export const BrandTest: React.FC = () => {
       <Sequence from={fr(BT.b1)} durationInFrames={fr(BT.end - BT.b1)}>
         <Bg4 total={total} />
       </Sequence>
-      <Sequence from={fr(BT.s1)} durationInFrames={fr(BT.s1dur)}><PushIn dur={BT.s1dur}><S2 /></PushIn><Bug /><LowerThird topic="Wall Street • pazartesi kapanışı" /></Sequence>
-      <Sequence from={fr(BT.s2)} durationInFrames={fr(BT.s2dur)}><PushIn dur={BT.s2dur}><S12 /></PushIn><Bug /><LowerThird topic="Borsa İstanbul • öğle saatleri" /></Sequence>
+      <Sequence from={fr(BT.s1)} durationInFrames={fr(BT.s1dur)}><PushIn dur={BT.s1dur}><S2 /></PushIn></Sequence>
+      <Sequence from={fr(BT.s2)} durationInFrames={fr(BT.s2dur)}><PushIn dur={BT.s2dur}><S12 /></PushIn></Sequence>
+      {BROLL.map(([a, b, src, title, sub, pan], i) => (
+        <Sequence key={i} from={fr(a)} durationInFrames={fr(b - a)}><Stock src={src} dur={b - a} title={title} sub={sub} pan={pan} /></Sequence>
+      ))}
+      <Sequence from={fr(BT.s1)} durationInFrames={fr(BT.end - BT.s1)}><Bug /></Sequence>
+      <Sequence from={fr(BT.s1)} durationInFrames={fr(6)}><LowerThird topic="Wall Street • pazartesi kapanışı" /></Sequence>
+      <Sequence from={fr(BT.s2)} durationInFrames={fr(6)}><LowerThird topic="Borsa İstanbul • öğle saatleri" /></Sequence>
       <Sequence from={fr(BT.b1)} durationInFrames={fr(BT.end - BT.b1)}><BrandTicker items={TICK} total={total} /></Sequence>
       <Sequence from={fr(BT.b1)} durationInFrames={fr(BUMPER_DUR)}><Bumper label="ABD PİYASALARI" sub="WALL STREET" /></Sequence>
       <Sequence from={fr(BT.b2)} durationInFrames={fr(BUMPER_DUR)}><Bumper label="TÜRKİYE" sub="BORSA İSTANBUL" c="#e8485a" /></Sequence>

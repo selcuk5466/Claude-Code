@@ -18,7 +18,7 @@ def exists(url):
     try:
         urllib.request.urlopen(urllib.request.Request(url, headers=UA, method='HEAD'), timeout=15)
         return True
-    except urllib.error.HTTPError:
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, OSError):
         return False
 
 
@@ -34,8 +34,9 @@ def find(vid):
 cred_path = os.path.join(OUT, 'credits.json')
 cred = json.load(open(cred_path)) if os.path.exists(cred_path) else {}
 for arg in sys.argv[1:]:
-    name, vid = arg.split('=')
-    url = find(vid)
+    name, vid = arg.split('=', 1)
+    url = vid if vid.startswith('https://') else find(vid)  # doğrudan dosya adresi de verilebilir
+    vid = vid.rsplit('/video-files/', 1)[-1].split('/')[0]
     if not url:
         print('BULUNAMADI', name, vid)
         continue
