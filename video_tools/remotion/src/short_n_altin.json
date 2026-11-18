@@ -1,0 +1,95 @@
+{
+ "total": 23.967,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 13.626,
+   "sentences": [
+    {
+     "start": 0.106,
+     "end": 1.756
+    },
+    {
+     "start": 1.756,
+     "end": 7.696
+    },
+    {
+     "start": 7.696,
+     "end": 10.546
+    },
+    {
+     "start": 10.546,
+     "end": 13.626
+    }
+   ]
+  },
+  {
+   "start": 13.976,
+   "dur": 5.991,
+   "sentences": [
+    {
+     "start": 0.333,
+     "end": 5.991
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.106,
+   "end": 1.756,
+   "text": "Altında düşüş sürüyor."
+  },
+  {
+   "start": 1.756,
+   "end": 4.906,
+   "text": "Ons altın 3.820 dolar civarında,"
+  },
+  {
+   "start": 4.906,
+   "end": 7.696,
+   "text": "eylül 2025'ten beri en düşük seviyede."
+  },
+  {
+   "start": 7.696,
+   "end": 9.346,
+   "text": "Altın bir haftada %6'dan"
+  },
+  {
+   "start": 9.346,
+   "end": 10.546,
+   "text": "fazla değer kaybetti."
+  },
+  {
+   "start": 10.546,
+   "end": 11.926,
+   "text": "Faiz artışı beklentisi ve"
+  },
+  {
+   "start": 11.926,
+   "end": 13.626,
+   "text": "güçlü dolar altını baskılıyor."
+  },
+  {
+   "start": 14.309,
+   "end": 15.359,
+   "text": "Gram altın ons"
+  },
+  {
+   "start": 15.359,
+   "end": 17.189,
+   "text": "altındaki düşüşle 6.140"
+  },
+  {
+   "start": 17.189,
+   "end": 18.239,
+   "text": "lira civarına indi,"
+  },
+  {
+   "start": 18.239,
+   "end": 19.967,
+   "text": "bu 4 ayın en düşük seviyesi."
+  }
+ ],
+ "endCardStart": 19.967
+}

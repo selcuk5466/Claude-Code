@@ -1,0 +1,86 @@
+{
+ "total": 24.911,
+ "segments": [
+  {
+   "start": 0.0,
+   "dur": 20.911,
+   "sentences": [
+    {
+     "start": 0.2,
+     "end": 7.04
+    },
+    {
+     "start": 7.04,
+     "end": 11.72
+    },
+    {
+     "start": 11.72,
+     "end": 20.911
+    }
+   ]
+  }
+ ],
+ "captions": [
+  {
+   "start": 0.2,
+   "end": 1.73,
+   "text": "Güney Kore'de Kospi yaklaşık"
+  },
+  {
+   "start": 1.73,
+   "end": 4.25,
+   "text": "%2 yükselerek 5.067 puandan"
+  },
+  {
+   "start": 4.25,
+   "end": 5.78,
+   "text": "kapandı ve yeniden 5.000"
+  },
+  {
+   "start": 5.78,
+   "end": 7.04,
+   "text": "puanın üzerine çıktı."
+  },
+  {
+   "start": 7.04,
+   "end": 9.17,
+   "text": "Yükselişi Nvidia'ya bellek çipi"
+  },
+  {
+   "start": 9.17,
+   "end": 10.49,
+   "text": "satan Samsung ve SK"
+  },
+  {
+   "start": 10.49,
+   "end": 11.72,
+   "text": "Hynix taşıdı."
+  },
+  {
+   "start": 11.72,
+   "end": 13.25,
+   "text": "Japonya'da Nikkei gün içinde"
+  },
+  {
+   "start": 13.25,
+   "end": 14.36,
+   "text": "daha yükseğe çıktı,"
+  },
+  {
+   "start": 14.36,
+   "end": 15.65,
+   "text": "kazancın bir kısmını geri"
+  },
+  {
+   "start": 15.65,
+   "end": 18.5,
+   "text": "verdi ve %0,28 artışla"
+  },
+  {
+   "start": 18.5,
+   "end": 20.911,
+   "text": "59.024 puanda kapandı."
+  }
+ ],
+ "endCardStart": 20.911
+}

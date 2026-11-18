@@ -9,8 +9,10 @@ import {Gun2Video, GUN2_TOTAL} from './Gun2Video';
 import {EvBorc, EvKar, EvBugun, EV_FRAMES} from './ShortEv';
 import {PNvidia, PNasdaq, PAltin, PCin, P_FRAMES} from './ShortPiyasa';
 import {QCip, QBil, QAnt, QBut, Q_FRAMES} from './ShortPro';
+import {NNv, NKo, NAl, NIs, N_FRAMES} from './ShortPro2';
 import {BrandTest, BRAND_TEST_FRAMES, IntroSting} from './Brand';
 import {Thumb17} from './Thumb17';
+import {Thumb18} from './Thumb18';
 import {EnfVideo4, ENF4_TOTAL} from './Enf4';
 import {EnfVideo5, ENF5_TOTAL} from './Enf5';
 import {ProTest} from './ProTest';
@@ -61,11 +63,16 @@ export const Root: React.FC = () => (
     <Composition id="PCin" component={PCin} durationInFrames={P_FRAMES.cn} fps={30} width={1080} height={1920} />
     <Composition id="Enf4" component={EnfVideo4} durationInFrames={ENF4_TOTAL} fps={30} width={1920} height={1080} />
     <Composition id="Enf5" component={EnfVideo5} durationInFrames={ENF5_TOTAL} fps={30} width={1920} height={1080} />
+    <Composition id="NNv" component={NNv} durationInFrames={N_FRAMES.nv} fps={30} width={1080} height={1920} />
+    <Composition id="NKo" component={NKo} durationInFrames={N_FRAMES.ko} fps={30} width={1080} height={1920} />
+    <Composition id="NAl" component={NAl} durationInFrames={N_FRAMES.al} fps={30} width={1080} height={1920} />
+    <Composition id="NIs" component={NIs} durationInFrames={N_FRAMES.is} fps={30} width={1080} height={1920} />
     <Composition id="QCip" component={QCip} durationInFrames={Q_FRAMES.cip} fps={30} width={1080} height={1920} />
     <Composition id="QBil" component={QBil} durationInFrames={Q_FRAMES.bil} fps={30} width={1080} height={1920} />
     <Composition id="QAnt" component={QAnt} durationInFrames={Q_FRAMES.ant} fps={30} width={1080} height={1920} />
     <Composition id="QBut" component={QBut} durationInFrames={Q_FRAMES.but} fps={30} width={1080} height={1920} />
     <Composition id="Thumb17" component={Thumb17} durationInFrames={1} fps={30} width={1280} height={720} />
+    <Composition id="Thumb18" component={Thumb18} durationInFrames={1} fps={30} width={1280} height={720} />
     <Composition id="BrandTest" component={BrandTest} durationInFrames={BRAND_TEST_FRAMES} fps={30} width={1920} height={1080} />
     <Composition id="BrandIntro" component={IntroSting} durationInFrames={135} fps={30} width={1920} height={1080} />
     <Composition id="ProTest" component={ProTest} durationInFrames={300} fps={30} width={1920} height={1080} />
