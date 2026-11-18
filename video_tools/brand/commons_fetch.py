@@ -2,7 +2,18 @@
 """Wikimedia Commons'tan yalnızca kamu malı / CC0 görüntü indirir (anahtar gerekmez).
 Kullanım: python3 commons_fetch.py "gold bars" altin 3 [photo|video]
 remotion/public/stock/ altına indirir, credits.json'a kaynak ve lisans yazar."""
-import json, os, re, subprocess, sys, urllib.parse, urllib.request
+import json, os, re, subprocess, sys, time, urllib.error, urllib.parse, urllib.request
+
+
+def get(url, timeout=60):
+    for k in range(8):  # 429 gelirse Retry-After kadar bekle
+        try:
+            with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=timeout) as r:
+                return r.read()
+        except urllib.error.HTTPError as e:
+            if e.code != 429: raise
+            time.sleep(int(e.headers.get('retry-after') or 5) + 1 + k)
+    raise SystemExit('Wikimedia hız sınırı aşılamadı')
 
 q, name, n = sys.argv[1], sys.argv[2], int(sys.argv[3])
 kind = sys.argv[4] if len(sys.argv) > 4 else 'photo'
@@ -15,12 +26,12 @@ OK = re.compile(r'^(public domain|pd|cc0|cc-zero|no restrictions)', re.I)
 def api(**p):
     p.update(format='json', action='query')
     url = 'https://commons.wikimedia.org/w/api.php?' + urllib.parse.urlencode(p)
-    return json.load(urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=40))
+    return json.loads(get(url))
 
 
 ft = 'filetype:video' if kind == 'video' else 'filetype:bitmap'
 d = api(generator='search', gsrsearch=f'{q} {ft}', gsrnamespace=6, gsrlimit=50, prop='imageinfo',
-        iiprop='url|mime|size|extmetadata', iiurlwidth=1920)
+        iiprop='url|mime|size|extmetadata')
 pages = sorted(d.get('query', {}).get('pages', {}).values(), key=lambda p: p.get('index', 0))
 cred_path = os.path.join(out, 'credits.json')
 cred = json.load(open(cred_path)) if os.path.exists(cred_path) else {}
@@ -41,11 +52,16 @@ for p in pages:
     else:
         if ii.get('mime') not in ('image/jpeg', 'image/png'):
             continue
-        src, ext = ii.get('thumburl') or ii['url'], 'jpg'
+        src, ext = ii['url'], 'jpg'
     fn = f'{name}-{got + 1}.{ext}'
     dst = os.path.join(out, fn)
-    with urllib.request.urlopen(urllib.request.Request(src, headers=UA), timeout=120) as r, open(dst, 'wb') as f:
-        f.write(r.read())
+    data = get(src, 300)
+    raw = dst + '.orig'
+    open(raw if kind != 'video' else dst, 'wb').write(data)
+    if kind != 'video':  # orijinali 1920 genişliğe indir
+        subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', raw, '-vf', 'scale=min(1920\\,iw):-2', '-q:v', '3', dst], check=True)
+        os.remove(raw)
+    time.sleep(2)
     if kind == 'video' and ext != 'mp4':  # webm -> mp4, sessiz, 1920 genişlik, en fazla 20 sn
         mp4 = dst.rsplit('.', 1)[0] + '.mp4'
         subprocess.run(['ffmpeg', '-y', '-loglevel', 'error', '-i', dst, '-t', '20', '-an', '-vf', 'scale=1920:-2',
