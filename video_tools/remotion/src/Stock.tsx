@@ -3,13 +3,13 @@ import {AbsoluteFill, Img, OffthreadVideo, interpolate, staticFile, useCurrentFr
 import {GOLD, Grain, NAVY} from './Brand';
 
 // Gerçek stok görüntü (Pexels): marka renk derecelendirmesi, yavaş yakınlaşma, vinyet, isteğe bağlı başlık.
-export const Stock: React.FC<{src: string; dur: number; title?: string; sub?: string; dim?: number; from?: number; pan?: 'in' | 'out' | 'left' | 'right'}> =
-  ({src, dur, title, sub, dim = 0.35, from = 0, pan = 'in'}) => {
+export const Stock: React.FC<{src: string; dur: number; title?: string; sub?: string; dim?: number; from?: number; pan?: 'in' | 'out' | 'left' | 'right'; fin?: boolean}> =
+  ({src, dur, title, sub, dim = 0.35, from = 0, pan = 'in', fin = true}) => {
   const f = useCurrentFrame(), {fps} = useVideoConfig();
   const p = Math.min(1, f / (dur * fps));
   const s = pan === 'out' ? 1.12 - 0.1 * p : 1.02 + 0.1 * p;
   const x = pan === 'left' ? 30 - 60 * p : pan === 'right' ? -30 + 60 * p : 0;
-  const fade = interpolate(f, [0, 10, dur * fps - 10, dur * fps], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+  const fade = interpolate(f, [0, fin ? 10 : 0.01, dur * fps - 10, dur * fps], [fin ? 0 : 1, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   const isVid = /\.(mp4|mov|webm)$/i.test(src);
   const st: React.CSSProperties = {width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${s}) translateX(${x}px)`, filter: 'saturate(0.82) contrast(1.08) brightness(0.92)'};
   const ti = interpolate(f, [8, 22], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
