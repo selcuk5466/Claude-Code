@@ -6,6 +6,12 @@
 - Türkiye haberleri mutlaka olur. Video kapanış/endeks tablosuyla biter.
 - Ana video 8–10 dakika, Shorts yaklaşık 20 saniye.
 
+## Ana video konu seçimi (19 Kasım 2026'dan itibaren)
+- Hedef Türk izleyici. Ana gövde: Borsa İstanbul, dolar/TL ve euro, gram/çeyrek altın, gümüş, konut ve kira, faiz (TCMB, mevduat, kredi), enflasyon, maaş/asgari ücret, akaryakıt ve market fiyatları.
+- Dünya haberi yalnızca bunları etkiliyorsa girer ve her zaman "cebinize/Türkiye'ye etkisi" bağlantısıyla anlatılır (ör. Fed kararı → dolar ve altın; petrol → akaryakıt; ABD tahvil faizi → TL varlıklar).
+- Şirket bilançoları, yabancı endeks ayrıntıları, Asya/Avrupa piyasa turu tek başına anlatılmaz; gerekiyorsa bir cümleyle geçilir.
+- Kapanış tablosu Türkiye ağırlıklı: BIST 100, dolar, euro, gram altın, çeyrek altın, ons altın, gümüş, Brent, (gerekirse) S&P 500.
+
 ## Kapanış (çok önemli)
 - Veda, özet, teşekkür, "görüşmek üzere", "abone olun" gibi bitiş hissi veren hiçbir cümle videonun SON paragrafından önce gelmez.
 - Sıra: haberler → takvim → kapanış tablosu → tek cümlelik kısa özet + "yatırım tavsiyesi değildir" + yarının videosu + "abone olmayı unutmayın".
