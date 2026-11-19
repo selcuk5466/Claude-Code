@@ -20,3 +20,10 @@
 ## Ses
 - Müzik konuşmanın yaklaşık 20 LU altında, konuşma frekansları oyulmuş; -14 LUFS, tepe -1,5 dB.
 - Aynı anda tek konuşma sesi: karışımdan sonra pencereler ölçülerek kontrol edilir.
+
+## Shorts (19 Kasım 2026'dan itibaren)
+1. İlk kare tek cümle: yalnızca bir iddia ya da soru (ör. "Altın 13 ayın dibinde"). Diğer her şey 2. saniyeden sonra girer. Hedef tutma oranı: %27 → %45.
+2. Hareket şart: sayı sayacı, çizilen grafik çizgisi, kelime kelime beliren metin. Statik kart yok. Mümkünse insan sesi (kullanıcı kendi kaydederse TTS yerine o kullanılır).
+3. Konu dar: altın, dolar, asgari ücret, kira/konut, market fiyatları, kredi faizi. Nvidia, Fed, Çin, petrol Shorts'ta şimdilik yok (kanal verisi işe yaramadığını gösteriyor).
+4. Günde en fazla 2 Shorts. Kazanılan zaman ilk 3 saniyeye harcanır.
+5. Format kimliği: her Shorts aynı açılışla başlar: "Bugün cebinizden ne çıktı:" + seri numarası (#1, #2, ...). Numara sırası gunluk/shorts-seri.txt dosyasında tutulur.
