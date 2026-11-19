@@ -4,7 +4,7 @@
 - Humanizer üslubu: "Şimdi … bakalım" gibi sahne açılışları, "X değil Y" karşıtlıkları, üçlü sıralamalar, tire ve şişirilmiş kelimeler yok.
 - Sayılar yazıyla. Okunacak metin başlıksız, tek tıkla kopyalanacak kod bloğunda verilir.
 - Türkiye haberleri mutlaka olur. Video kapanış/endeks tablosuyla biter.
-- Ana video 8–10 dakika, Shorts yaklaşık 20 saniye.
+- Ana video 8–10 dakika = okunacak metin en az 1.400 kelime (yaklaşık 155 kelime/dakika). Shorts yaklaşık 20 saniye.
 
 ## Ana video konu seçimi (19 Kasım 2026'dan itibaren)
 - Hedef Türk izleyici. Ana gövde: Borsa İstanbul, dolar/TL ve euro, gram/çeyrek altın, gümüş, konut ve kira, faiz (TCMB, mevduat, kredi), enflasyon, maaş/asgari ücret, akaryakıt ve market fiyatları.
