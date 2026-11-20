@@ -9,6 +9,7 @@
 ## Ana video konu seçimi (19 Kasım 2026'dan itibaren)
 - Hedef Türk izleyici. Ana gövde: Borsa İstanbul, dolar/TL ve euro, gram/çeyrek altın, gümüş, konut ve kira, faiz (TCMB, mevduat, kredi), enflasyon, maaş/asgari ücret, akaryakıt ve market fiyatları.
 - Dünya haberi yalnızca bunları etkiliyorsa girer ve her zaman "cebinize/Türkiye'ye etkisi" bağlantısıyla anlatılır (ör. Fed kararı → dolar ve altın; petrol → akaryakıt; ABD tahvil faizi → TL varlıklar).
+- Dünya gelişmeleri: her videoda kısa bir "dünyadan" bölümü (2–3 haber); her haber Türkiye'ye/cebimize etkisiyle bağlanır (enerji, tahıl, dolar, altın, borsa).
 - KAP bildirimleri: günün önemli KAP haberleri (büyük ihale/sözleşme, temettü, bedelsiz/bedelli sermaye artırımı, geri alım, birleşme/satın alma, halka arz, önemli bilanço, SPK kararları, devre kesici/tedbir) ayrı bir bölümde, hisse kodu ve tutarla, sade dille anlatılır. Her biri için "bu ne demek" bir cümleyle açıklanır. Al/sat yorumu yapılmaz; "yatırım tavsiyesi değildir" vurgulanır. Kaynak: KAP ve haber siteleri (KAP ekran görüntüsü kullanılmaz, çizim kart yapılır).
 - Şirket bilançoları, yabancı endeks ayrıntıları, Asya/Avrupa piyasa turu tek başına anlatılmaz; gerekiyorsa bir cümleyle geçilir.
 - Kapanış tablosu Türkiye ağırlıklı: BIST 100, dolar, euro, gram altın, çeyrek altın, ons altın, gümüş, Brent, (gerekirse) S&P 500.
