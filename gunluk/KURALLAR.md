@@ -21,6 +21,7 @@
 - Videoda abone ol/teşekkür/kapanış kartı yalnızca son cümle okunurken ya da okunduktan sonra görünür. Render sonrası ASR ile kontrol: "abone olmayı unutmayın" son 15 saniyede olmalı, görsel kapanış kartı ondan önce başlamamalı.
 
 ## Görsel
+- Kalıcı izin: her senaryo için metindeki konulara uygun stok video/fotoğraf (Pexels) sormadan indirilir; logolu/marka görünen klipler elenir.
 - Üçüncü taraf site ekran görüntüsü ya da logosu yok (stok klipte site logosu görünüyorsa kullanılmaz).
 - Hangi ülkenin borsası anlatılıyorsa o ülkenin şehir görüntüsü (public/stock/ulke-*) kullanılır.
 - Marka paketi: açılış jeneriği, konu alt yazısı, köşe logosu, bölüm geçişleri, kapanış kartı.
