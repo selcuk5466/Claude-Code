@@ -1,9 +1,9 @@
 import React from 'react';
 import {AbsoluteFill, Img, Sequence, staticFile, useCurrentFrame, interpolate} from 'remotion';
 import {ShortBg} from './Short';
-import {Landmark, TrendingDown, TrendingUp} from 'lucide-react';
+import {Landmark, TrendingDown, TrendingUp, Coins, Banknote, PiggyBank, Fuel, ArrowDown} from 'lucide-react';
 import {EChart, F, MONO, P, Panel, T, useFonts} from './Pro';
-import {GLD, GRN, RED, BLU, hbar, ico} from './Enf4';
+import {GLD, GRN, RED, BLU, PUR, hbar, ico} from './Enf4';
 import {useTL} from './ui';
 import {Stock} from './Stock';
 
@@ -148,4 +148,62 @@ const G2: React.FC = () => {
   );
 };
 export const Seri2: React.FC = () => <Shell no={2} total={24.6} voiceEnd={21.92} caps={C2} claim={<Claim src="stock/anahtar-3.mp4" lines={'KİRALAR EV\nFİYATLARINI\nGEÇTİ'} c={GLD} dur={2.9} />}><G2 /></Shell>;
-export const SERI_FRAMES = {s1: fr(23.4), s2: fr(24.6)};
+
+// ---------------------------------------------------------------- #3 haftanın bilançosu
+const C3: Cap[] = [[0.15, 1.8, 'Bugün cebinizden ne çıktı?'], [1.85, 3.7, 'Üç numara'], [3.9, 6.4, 'Bu hafta altın eridi, mevduat kazandı'], [6.6, 10.9, 'Pazartesi 100.000 lirayla gram altın alan bugün 92.000 liraya sahip'], [11.5, 13.2, 'Gümüş alan 85.000'], [13.3, 15.5, 'dolar alan 100.400 lira'], [15.7, 19.2, 'Mevduatta tutan 100.800 lira'], [19.4, 20.85, 'Yatırım tavsiyesi değildir']];
+const G3: React.FC = () => {
+  const {p} = useTL();
+  const rows: [string, number, string, number, any][] = [['Gram altın', 92137, GLD, 8.1, Coins], ['Gümüş', 85260, SLV, 11.5, Coins], ['Dolar', 100377, GRN, 13.3, Banknote], ['Mevduat', 100808, PUR, 15.7, PiggyBank]];
+  return (
+    <>
+      <T x={60} y={200} w={960} s={80} wt={900} ls={-3} lh={1.04}>{'100.000 ₺\nBU HAFTA NE OLDU?'}</T>
+      {rows.map(([name, v, col, t0, I], i) => {
+        const q = p(t0, 1.4); const val = 100000 + (v - 100000) * q; const w = 760 * (val - 80000) / 22000;
+        return (
+          <div key={name} style={{position: 'absolute', left: 60, top: 440 + i * 240, width: 960, height: 210, borderRadius: 28, background: P.panel, border: `1px solid ${col}66`, opacity: p(t0 - 0.3, 0.3), boxShadow: `0 0 40px ${col}22`}}>
+            <div style={{position: 'absolute', left: 26, top: 24, color: col}}>{ico(I, 48)}</div>
+            <T x={96} y={26} s={40} wt={800}>{name}</T>
+            <T x={930} y={20} w={500} align="right" s={64} wt={800} mono c={v >= 100000 ? GRN : RED} glow={v >= 100000 ? GRN : RED}>{n(val) + ' ₺'}</T>
+            <div style={{position: 'absolute', left: 30, top: 130, width: 900, height: 44, borderRadius: 12, background: 'rgba(255,255,255,.06)'}} />
+            <div style={{position: 'absolute', left: 30, top: 130, width: Math.max(0, w), height: 44, borderRadius: 12, background: `linear-gradient(90deg, ${col}66, ${col})`}} />
+            <div style={{position: 'absolute', left: 30 + 760 * 20000 / 22000, top: 120, width: 3, height: 64, background: '#ffffffaa'}} />
+          </div>
+        );
+      })}
+    </>
+  );
+};
+export const Seri3: React.FC = () => <Shell no={3} total={23.5} voiceEnd={20.88} caps={C3} claim={<Claim src="stock/para-tl.mp4" lines={'ALTIN ERİDİ\nMEVDUAT\nKAZANDI'} c={PUR} dur={2.9} />}><G3 /></Shell>;
+
+// ---------------------------------------------------------------- #4 motorin
+const C4: Cap[] = [[0.1, 1.9, 'Bugün cebinizden ne çıktı?'], [1.95, 3.0, 'Dört numara'], [3.1, 5.3, 'Motorine 6,5 lira indirim geldi'], [5.4, 10.7, "İstanbul'da litresi 95,30'dan 88,80'e indi"], [10.9, 16.2, '50 litrelik depoyu dolduran 325 lira daha az ödeyecek'], [16.3, 19.1, 'Benzin ise 71,30 liradan sabit']];
+const PumpV: React.FC<{y: number; label: string; v: string; c: string; t0: number}> = ({y, label, v, c, t0}) => {
+  const {p, pop} = useTL();
+  return (
+    <div style={{position: 'absolute', left: 60, top: y, width: 960, height: 330, borderRadius: 30, background: 'linear-gradient(180deg, #0d1a2e, #060d18)', border: `3px solid ${c}`, boxShadow: `0 0 50px ${c}33`, opacity: p(t0, 0.3), transform: `scale(${0.92 + 0.08 * pop(t0)})`}}>
+      <div style={{position: 'absolute', left: 30, top: 26, color: c}}>{ico(Fuel, 52)}</div>
+      <T x={100} y={30} s={40} wt={800} c={c} ls={3}>{label}</T>
+      <div style={{position: 'absolute', left: 30, top: 110, width: 900, height: 190, borderRadius: 18, background: '#020611', border: '1px solid #1f3352', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: MONO, fontWeight: 800, fontSize: 150, color: '#ffe08a', textShadow: '0 0 24px #ffd36b88'}}>{v}</div>
+    </div>
+  );
+};
+const G4: React.FC = () => {
+  const {p} = useTL();
+  return (
+    <>
+      <T x={60} y={200} w={960} s={80} wt={900} ls={-3} lh={1.04}>{'MOTORİNE\n6,5 ₺ İNDİRİM'}</T>
+      <PumpV y={430} label="MOTORİN • İSTANBUL" v={n(95.3 + (88.8 - 95.3) * p(6.0, 3.5), 2)} c={GRN} t0={3.2} />
+      <div style={{position: 'absolute', left: 60, top: 790, width: 960, height: 300, borderRadius: 30, background: `${GRN}18`, border: `3px solid ${GRN}`, opacity: p(10.9, 0.3), boxShadow: `0 0 50px ${GRN}44`}}>
+        <T x={34} y={26} s={30} wt={700} c={P.muted} ls={2}>50 LİTRELİK DEPO</T>
+        <T x={34} y={80} s={60} wt={800} mono c="#cfdbec">50 L × 6,5 ₺</T>
+        <T x={34} y={160} s={110} wt={900} mono c={GRN} glow={GRN}>{'= ' + n(325 * p(12.0, 1.8)) + ' ₺'}</T>
+      </div>
+      <div style={{position: 'absolute', left: 60, top: 1110, width: 960, height: 160, borderRadius: 26, background: P.panel, border: `2px solid ${GLD}`, opacity: p(16.3, 0.3), display: 'flex', alignItems: 'center', gap: 26, paddingLeft: 30}}>
+        <div style={{color: GLD}}>{ico(Fuel, 56)}</div>
+        <div style={{fontFamily: F, fontWeight: 800, fontSize: 44, color: '#fff'}}>Benzin <span style={{fontFamily: MONO, color: GLD}}>71,30 ₺</span> sabit</div>
+      </div>
+    </>
+  );
+};
+export const Seri4: React.FC = () => <Shell no={4} total={21.8} voiceEnd={19.16} caps={C4} claim={<Claim src="stock/foto-akaryakit-12377482.jpg" lines={'MOTORİNE\n6,5 LİRA\nİNDİRİM'} c={GRN} dur={2.9} />}><G4 /></Shell>;
+export const SERI_FRAMES = {s1: fr(23.4), s2: fr(24.6), s3: fr(23.5), s4: fr(21.8)};

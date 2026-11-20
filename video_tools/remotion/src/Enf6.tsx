@@ -23,16 +23,16 @@ const paras = D.paras as Pa[];
 const A = (pi: number, si = 0) => paras[pi].sentences[Math.min(si, paras[pi].sentences.length - 1)];
 const mk = (pi0: number) => (pi: number, si = 0) => A(pi, si) - paras[pi0].start;
 const OFF = D.off, END = D.end;
-const SLV = '#c9d3e0';
-const n = (v: number, d = 0) => v.toLocaleString('tr-TR', {minimumFractionDigits: d, maximumFractionDigits: d});
+export const SLV = '#c9d3e0';
+export const n = (v: number, d = 0) => v.toLocaleString('tr-TR', {minimumFractionDigits: d, maximumFractionDigits: d});
 
 // sayan rakam
-const useCnt = () => {
+export const useCnt = () => {
   const {p} = useTL();
   return (t0: number, v1: number, d = 0, v0 = 0, dur = 1.2) => n(v0 + (v1 - v0) * p(t0, dur), d);
 };
 // çizilen çizgi grafik
-const lineChart = (cats: string[], vals: number[], q: number, min: number, max: number, color: string, fmt: (v: number) => string) => {
+export const lineChart = (cats: string[], vals: number[], q: number, min: number, max: number, color: string, fmt: (v: number) => string) => {
   const k = q * (vals.length - 1);
   const shown = vals.map((v, i) => (i <= Math.floor(k) ? v : i === Math.floor(k) + 1 ? vals[i - 1] + (v - vals[i - 1]) * (k - Math.floor(k)) : null));
   return {
@@ -45,7 +45,7 @@ const lineChart = (cats: string[], vals: number[], q: number, min: number, max: 
   };
 };
 // kinetik büyük başlık
-const Kin: React.FC<{x: number; y: number; w: number; s: number; children: string; delay?: number; c?: string}> = ({x, y, w, s, children, delay = 2, c = '#fff'}) => (
+export const Kin: React.FC<{x: number; y: number; w: number; s: number; children: string; delay?: number; c?: string}> = ({x, y, w, s, children, delay = 2, c = '#fff'}) => (
   <div style={{position: 'absolute', left: x, top: y, width: w, fontFamily: F, fontWeight: 900, fontSize: s, lineHeight: 1.02, color: c, letterSpacing: -3}}>
     <AnimatedText transition={{split: 'word', splitStagger: 3, y: [40, 0], opacity: [0, 1], blur: [14, 0], duration: 22, delay}}>{children}</AnimatedText>
   </div>
@@ -233,7 +233,7 @@ const S6: React.FC = () => {
 };
 
 // ---------------------------------------------------------------- S7 KAP bildirimleri (kart akışı)
-type Kap = {code: string; title: string; type: string; icon: any; c: string; value?: string; mean: string; s: number};
+export type Kap = {code: string; title: string; type: string; icon: any; c: string; value?: string; mean: string; s: number};
 const KAPS: Kap[] = [
   {code: 'AYGAZ', title: 'Aygaz', type: 'KÂR PAYI ÖNERİSİ', icon: Coins, c: GRN, value: 'brüt 4,65 ₺ • net 3,95 ₺', mean: 'Ödeme 25 Aralık. Hak kullanım gününden önce hisseyi tutan ortaklar alır.', s: 1},
   {code: 'GLRMK', title: 'Gülermak', type: 'İHALE SONUCU', icon: Train, c: BLU, value: '707 milyon zloti', mean: 'Polonya Lodz demiryolu tüneli ihalesinde birinci. Sözleşmeye davet bekleniyor.', s: 4},
@@ -334,7 +334,7 @@ const S9: React.FC = () => {
 };
 
 // ---------------------------------------------------------------- S10 akaryakıt (pompa ekranı)
-const Pump: React.FC<{x: number; label: string; v: string; c: string; t0: number}> = ({x, label, v, c, t0}) => {
+export const Pump: React.FC<{x: number; label: string; v: string; c: string; t0: number}> = ({x, label, v, c, t0}) => {
   const {p, pop} = useTL();
   return (
     <div style={{position: 'absolute', left: x, top: 210, width: 540, height: 360, borderRadius: 28, background: 'linear-gradient(180deg, #0d1a2e, #060d18)', border: `2px solid ${c}`, boxShadow: `0 0 50px ${c}33`, opacity: p(t0, 0.3), transform: `translateY(${(1 - pop(t0)) * 40}px)`}}>
