@@ -1,4 +1,4 @@
-// Kanal görsel kimliği (22 Kasım 2026'dan itibaren): #F5F5F0 • #E6D8C3 • #C2A68C • #5D866C
+// Kanal görsel kimliği (Color Hunt): #1E3B2F • #7F8C6A • #C8B48A • #F5F0E6
 // Kurallar: yazılar sert düşerek gelir, solarak kaybolur; sayılar sayarak büyür; grafikler ekranda yükselir/düşer.
 import React, {useEffect, useState} from 'react';
 import {AbsoluteFill, Img, OffthreadVideo, continueRender, delayRender, interpolate, random, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
@@ -6,8 +6,8 @@ import '@fontsource-variable/fraunces/index.css';
 import '@fontsource-variable/inter/index.css';
 
 export const K = {
-  bg: '#F5F5F0', bej: '#E6D8C3', taba: '#C2A68C', sage: '#5D866C',
-  ink: '#24332A', ink2: '#4B5B50', mute: '#7D857C', sageD: '#3F6150', sageL: '#A9C2B0', tabaD: '#8E6F55', paper: '#FBFAF6',
+  bg: '#F5F0E6', bej: '#E9DFCB', taba: '#C8B48A', sage: '#7F8C6A',
+  ink: '#1E3B2F', ink2: '#3E5246', mute: '#7E8173', sageD: '#1E3B2F', sageL: '#B3BA9E', tabaD: '#9A8452', paper: '#FBF8F1', deep2: '#2E4F3F',
 };
 export const SERIF = "'Fraunces Variable', Georgia, serif";
 export const SANS = "'Inter Variable', Inter, Arial, sans-serif";
@@ -89,7 +89,7 @@ export const Tx9: React.FC<{t0: number; x: number; y: number; w?: number; s?: nu
 
 // kart
 export const Card9: React.FC<{t0: number; x: number; y: number; w: number; h: number; tone?: 'bej' | 'sage' | 'paper' | 'taba'; out?: number; children?: React.ReactNode; label?: string}> = ({t0, x, y, w, h, tone = 'paper', out, children, label}) => {
-  const bg = tone === 'sage' ? `linear-gradient(150deg, ${K.sage}, ${K.sageD})` : tone === 'bej' ? `linear-gradient(150deg, ${K.bej}, #DCCBB2)` : tone === 'taba' ? `linear-gradient(150deg, ${K.taba}, ${K.tabaD})` : `linear-gradient(150deg, ${K.paper}, #F1EEE6)`;
+  const bg = tone === 'sage' ? `linear-gradient(150deg, ${K.deep2}, ${K.sageD})` : tone === 'bej' ? `linear-gradient(150deg, ${K.bej}, #DFD1B4)` : tone === 'taba' ? `linear-gradient(150deg, #AE9561, #7F6A3D)` : `linear-gradient(150deg, ${K.paper}, #F0EADC)`;
   const lc = tone === 'sage' || tone === 'taba' ? K.bej : K.tabaD;
   return (
     <Drop t0={t0} out={out} dist={120} x={x} y={y} w={w} h={h} style={{borderRadius: 28, background: bg, border: `2px solid ${tone === 'paper' ? K.bej : 'transparent'}`, boxShadow: '0 18px 40px rgba(36,51,42,.12), 0 2px 0 rgba(255,255,255,.6) inset'}}>
@@ -123,8 +123,8 @@ export const Noise: React.FC<{o?: number}> = ({o = 0.05}) => {
 export const Head9: React.FC<{eyebrow: string; title: string; t0?: number}> = ({eyebrow, title, t0 = 0.15}) => (
   <>
     <Drop t0={t0} x={110} y={70} style={{display: 'flex', alignItems: 'center', gap: 14}}>
-      <div style={{width: 46, height: 6, borderRadius: 3, background: K.sage}} />
-      <div style={{fontFamily: SANS, fontWeight: 800, fontSize: 22, letterSpacing: 4, color: K.sage}}>{eyebrow}</div>
+      <div style={{width: 46, height: 6, borderRadius: 3, background: K.taba}} />
+      <div style={{fontFamily: SANS, fontWeight: 800, fontSize: 22, letterSpacing: 4, color: K.ink2}}>{eyebrow}</div>
     </Drop>
     <DropWords t0={t0 + 0.12} x={108} y={104} w={1560} s={66} c={K.ink} stagger={0.05}>{title}</DropWords>
   </>
@@ -256,7 +256,7 @@ export const Intro9: React.FC<{date: string}> = ({date}) => {
   const out = interpolate(t, [INTRO9 - 0.45, INTRO9], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   return (
     <AbsoluteFill style={{background: K.bg, opacity: out, overflow: 'hidden'}}>
-      <div style={{position: 'absolute', left: 0, top: 0, width: 1920 * wipe, height: 1080, background: `linear-gradient(120deg, ${K.sage}, ${K.sageD})`}} />
+      <div style={{position: 'absolute', left: 0, top: 0, width: 1920 * wipe, height: 1080, background: `linear-gradient(120deg, ${K.deep2}, ${K.sageD})`}} />
       <div style={{position: 'absolute', right: 0, bottom: 0, width: 760 * wipe, height: 22, background: K.taba}} />
       <div style={{position: 'absolute', left: 0, top: 0, width: 520 * wipe, height: 22, background: K.bej}} />
       {Array.from({length: 26}).map((_, i) => {
@@ -280,7 +280,7 @@ export const Bumper9: React.FC<{label: string; sub?: string}> = ({label, sub}) =
   return (
     <AbsoluteFill style={{overflow: 'hidden'}}>
       <div style={{position: 'absolute', left: inX + outX - 120, top: 0, width: 120, height: 1080, background: K.taba}} />
-      <div style={{position: 'absolute', left: inX + outX, top: 0, width: 1920, height: 1080, background: `linear-gradient(120deg, ${K.sage}, ${K.sageD})`}}>
+      <div style={{position: 'absolute', left: inX + outX, top: 0, width: 1920, height: 1080, background: `linear-gradient(120deg, ${K.deep2}, ${K.sageD})`}}>
         <div style={{position: 'absolute', left: 0, top: 0, width: 1920, height: 1080}}>
           <BumpLogo />
           <DropWords t0={0.22} x={300} y={390} w={1400} s={112} c={K.bg} stagger={0.06} out={1.2}>{label}</DropWords>
@@ -302,7 +302,7 @@ export const LT9: React.FC<{topic: string}> = ({topic}) => {
   const w = interpolate(t, [0, 0.4, 4.6, 5.0], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
   return (
     <div style={{position: 'absolute', left: 110, top: 930, height: 54, display: 'flex', alignItems: 'stretch', opacity: Math.min(1, w * 2), clipPath: `inset(0 ${100 - w * 100}% 0 0)`}}>
-      <div style={{background: K.sage, color: K.bg, fontFamily: SANS, fontWeight: 900, fontSize: 20, letterSpacing: 3, padding: '0 20px', display: 'flex', alignItems: 'center'}}>DÜNYADAN FISILTILAR</div>
+      <div style={{background: K.sageD, color: K.bg, fontFamily: SANS, fontWeight: 900, fontSize: 20, letterSpacing: 3, padding: '0 20px', display: 'flex', alignItems: 'center'}}>DÜNYADAN FISILTILAR</div>
       <div style={{background: K.bej, color: K.ink, fontFamily: SANS, fontWeight: 700, fontSize: 24, padding: '0 26px', display: 'flex', alignItems: 'center'}}>{topic}</div>
     </div>
   );
@@ -312,8 +312,8 @@ export const Ticker9: React.FC<{items: string[]}> = ({items}) => {
   const txt = items.join('     •     ');
   const x = -((t * 90) % (txt.length * 14 + 200));
   return (
-    <div style={{position: 'absolute', left: 0, top: 1040, width: 1920, height: 40, background: K.sage, overflow: 'hidden', display: 'flex', alignItems: 'center'}}>
-      <div style={{position: 'absolute', left: 0, top: 0, height: 40, padding: '0 18px', background: K.sageD, color: K.bej, fontFamily: SANS, fontWeight: 900, fontSize: 17, letterSpacing: 3, display: 'flex', alignItems: 'center', zIndex: 2}}>EKONOMİ RİTMİ</div>
+    <div style={{position: 'absolute', left: 0, top: 1040, width: 1920, height: 40, background: K.sageD, overflow: 'hidden', display: 'flex', alignItems: 'center'}}>
+      <div style={{position: 'absolute', left: 0, top: 0, height: 40, padding: '0 18px', background: K.taba, color: K.sageD, fontFamily: SANS, fontWeight: 900, fontSize: 17, letterSpacing: 3, display: 'flex', alignItems: 'center', zIndex: 2}}>EKONOMİ RİTMİ</div>
       <div style={{position: 'absolute', left: 230 + x, whiteSpace: 'nowrap', color: K.bg, fontFamily: SANS, fontWeight: 700, fontSize: 19, letterSpacing: 1}}>{txt + '     •     ' + txt + '     •     ' + txt}</div>
     </div>
   );
@@ -324,12 +324,12 @@ export const End9: React.FC<{next: string}> = ({next}) => {
   return (
     <AbsoluteFill style={{background: K.bg}}>
       <Paper />
-      <div style={{position: 'absolute', left: 0, top: 0, width: 1920, height: 300, background: `linear-gradient(120deg, ${K.sage}, ${K.sageD})`}} />
+      <div style={{position: 'absolute', left: 0, top: 0, width: 1920, height: 300, background: `linear-gradient(120deg, ${K.deep2}, ${K.sageD})`}} />
       <Drop t0={0.1} out={99} x={110} y={90} style={{width: 150, height: 150, borderRadius: '50%', overflow: 'hidden', border: `6px solid ${K.bej}`}}><Img src={LOGO9} style={{width: '100%', height: '100%'}} /></Drop>
       <DropWords t0={0.2} out={99} x={300} y={110} w={1400} s={80} c={K.bg}>DÜNYADAN FISILTILAR</DropWords>
       <Tx9 t0={0.6} out={99} x={110} y={380} s={26} c={K.sage} wt={800} ls={4}>SIRADAKİ VİDEO</Tx9>
       <DropWords t0={0.7} out={99} x={108} y={420} w={1700} s={74} c={K.ink}>{next}</DropWords>
-      <Drop t0={1.0} out={99} x={110} y={640} style={{padding: '28px 70px', borderRadius: 60, background: K.sage, color: K.bg, fontFamily: SANS, fontWeight: 900, fontSize: 56, letterSpacing: 3, transform: `scale(${pulse})`, boxShadow: `0 20px 50px ${K.sage}66`}}>ABONE OL</Drop>
+      <Drop t0={1.0} out={99} x={110} y={640} style={{padding: '28px 70px', borderRadius: 60, background: K.sageD, color: K.bg, fontFamily: SANS, fontWeight: 900, fontSize: 56, letterSpacing: 3, transform: `scale(${pulse})`, boxShadow: `0 20px 50px ${K.sage}66`}}>ABONE OL</Drop>
       <Tx9 t0={1.3} out={99} x={110} y={820} s={30} c={K.ink2} wt={600}>Yatırım tavsiyesi değildir • Bilgilendirme amaçlıdır</Tx9>
     </AbsoluteFill>
   );

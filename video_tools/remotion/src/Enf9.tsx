@@ -37,13 +37,13 @@ const Box: React.FC<{t0: number; x: number; y: number; w: number; label: string;
 };
 // rozet
 const Badge: React.FC<{t0: number; x: number; y: number; children: string; tone?: 'sage' | 'taba'; s?: number; rot?: number}> = ({t0, x, y, children, tone = 'sage', s = 40, rot = -3}) => (
-  <Drop t0={t0} x={x} y={y} style={{padding: `${s * 0.3}px ${s * 0.7}px`, borderRadius: s, background: tone === 'sage' ? K.sage : K.taba, color: K.bg, fontFamily: SANS, fontWeight: 900, fontSize: s, letterSpacing: 1, transform: `rotate(${rot}deg)`, boxShadow: `0 14px 30px ${tone === 'sage' ? K.sage : K.tabaD}55`, whiteSpace: 'nowrap'}}>{children}</Drop>
+  <Drop t0={t0} x={x} y={y} style={{padding: `${s * 0.3}px ${s * 0.7}px`, borderRadius: s, background: tone === 'sage' ? K.sageD : K.taba, color: tone === 'sage' ? K.bg : K.sageD, fontFamily: SANS, fontWeight: 900, fontSize: s, letterSpacing: 1, transform: `rotate(${rot}deg)`, boxShadow: `0 14px 30px ${tone === 'sage' ? K.sage : K.tabaD}55`, whiteSpace: 'nowrap'}}>{children}</Drop>
 );
 // madde satırı
 const Item: React.FC<{t0: number; x: number; y: number; w: number; I: any; head: string; text: string; tone?: 'sage' | 'taba'}> = ({t0, x, y, w, I, head, text, tone = 'sage'}) => (
   <Card9 t0={t0} x={x} y={y} w={w} h={116}>
     <div style={{position: 'absolute', left: 22, top: 20}}><Ico9 I={I} c={tone === 'sage' ? K.sage : K.tabaD} s={36} /></div>
-    <div style={{position: 'absolute', left: 120, top: 18, fontFamily: SANS, fontWeight: 800, fontSize: 19, letterSpacing: 3, color: tone === 'sage' ? K.sage : K.tabaD}}>{head}</div>
+    <div style={{position: 'absolute', left: 120, top: 18, fontFamily: SANS, fontWeight: 800, fontSize: 19, letterSpacing: 3, color: tone === 'sage' ? K.ink2 : K.tabaD}}>{head}</div>
     <div style={{position: 'absolute', left: 120, top: 48, width: w - 150, fontFamily: SANS, fontWeight: 700, fontSize: 32, color: K.ink}}>{text}</div>
   </Card9>
 );
@@ -54,7 +54,7 @@ const S0: React.FC = () => {
   return (
     <AbsoluteFill>
       <Frame9 src="stock/kart-3.mp4" t0={0} x={1060} y={120} w={760} h={500} />
-      <Tx9 t0={0} x={110} y={120} s={24} c={K.sage} wt={800} ls={4}>BU HAFTA CEBİNİZDE NE DEĞİŞTİ?</Tx9>
+      <Tx9 t0={0} x={110} y={120} s={24} c={K.tabaD} wt={800} ls={4}>BU HAFTA CEBİNİZDE NE DEĞİŞTİ?</Tx9>
       <DropWords t0={0.05} x={106} y={160} w={900} s={104} stagger={0.08}>Kredi kartı borcun mu var?</DropWords>
       <DropWords t0={T0(0, 1)} x={106} y={410} w={900} s={56} c={K.sageD} wt={700} stagger={0.05}>Asgari ödeme oranı değişti</DropWords>
       <Card9 t0={T0(0, 3)} x={110} y={560} w={730} h={330} tone="sage" label="ASGARİ ÖDEME • 100–200 BİN ₺ LİMİT">
@@ -225,7 +225,7 @@ const S6: React.FC = () => {
         <HBar x={40} y={80} w={1200} v={100} v1={25} tc={T0(6, 2)} max={100} t0={T0(6, 1) + 0.4} label="Bankanın verebileceği kredi" fmt={(v) => '%' + tr(v)} c={K.sage} />
         <Tx9 t0={T0(6, 2) + 0.6} x={40} y={250} w={1600} s={40} c={K.tabaD} wt={800} font={SERIF}>%75 azaltma: kredinin sadece dörtte biri</Tx9>
       </Card9>
-      <Tx9 t0={T0(6, 3)} x={110} y={660} s={24} c={K.sage} wt={800} ls={4}>KONUT SAYISINA KİMLER DAHİL?</Tx9>
+      <Tx9 t0={T0(6, 3)} x={110} y={660} s={24} c={K.tabaD} wt={800} ls={4}>KONUT SAYISINA KİMLER DAHİL?</Tx9>
       {([[User, 'Sen'], [Heart, 'Eşin'], [Baby, '18 yaş altı çocukların']] as [any, string][]).map(([I, s], i) => (
         <Card9 key={s} t0={T0(6, 3) + 0.4 + i * 0.5} x={110 + i * 575} y={710} w={550} h={180} tone={i === 0 ? 'sage' : 'bej'}>
           <div style={{position: 'absolute', left: 30, top: 40}}><Ico9 I={I} c={i === 0 ? K.bg : K.sageD} s={44} bg={i === 0 ? `${K.bg}22` : `${K.bg}aa`} /></div>
@@ -549,7 +549,7 @@ const S19: React.FC = () => {
       <Card9 t0={T0(19, 2)} x={110} y={540} w={1700} h={170} tone="bej" label="PAZARTESİ">
         <Tx9 t0={T0(19, 2) + 0.2} x={30} y={66} w={1640} s={50} c={K.ink} wt={800} font={SERIF}>Yeni haftanın piyasa açılışı ve önemli veriler</Tx9>
       </Card9>
-      <Drop t0={T0(19, 3)} x={560} y={760} w={800} h={120} style={{borderRadius: 60, background: K.sage, boxShadow: `0 20px 50px ${K.sage}66`, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 22, fontFamily: SANS, fontWeight: 900, fontSize: 52, color: K.bg, letterSpacing: 3}}><Bell size={48} strokeWidth={2.4} />ABONE OL</Drop>
+      <Drop t0={T0(19, 3)} x={560} y={760} w={800} h={120} style={{borderRadius: 60, background: K.sageD, boxShadow: `0 20px 50px ${K.sageD}55`, display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 22, fontFamily: SANS, fontWeight: 900, fontSize: 52, color: K.bg, letterSpacing: 3}}><Bell size={48} strokeWidth={2.4} />ABONE OL</Drop>
     </AbsoluteFill>
   );
 };
