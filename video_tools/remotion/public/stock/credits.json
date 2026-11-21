@@ -237,5 +237,59 @@
   "page": "https://www.pexels.com/video/11122340/",
   "file": "https://videos.pexels.com/video-files/11122340/11122340-hd_1920_1080_25fps.mp4",
   "license": "Pexels License"
+ },
+ "kart-1.mp4": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/video/6683942/",
+  "file": "https://videos.pexels.com/video-files/6683942/6683942-hd_1920_1080_25fps.mp4",
+  "license": "Pexels License"
+ },
+ "kart-2.mp4": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/video/8830801/",
+  "file": "https://videos.pexels.com/video-files/8830801/8830801-hd_1920_1080_25fps.mp4",
+  "license": "Pexels License"
+ },
+ "kart-3.mp4": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/video/7821646/",
+  "file": "https://videos.pexels.com/video-files/7821646/7821646-hd_1920_1080_30fps.mp4",
+  "license": "Pexels License"
+ },
+ "hesap-1.mp4": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/video/6780089/",
+  "file": "https://videos.pexels.com/video-files/6780089/6780089-hd_1920_1080_30fps.mp4",
+  "license": "Pexels License"
+ },
+ "hesap-2.mp4": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/video/7735854/",
+  "file": "https://videos.pexels.com/video-files/7735854/7735854-hd_1920_1080_25fps.mp4",
+  "license": "Pexels License"
+ },
+ "ev-1.mp4": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/video/7347891/",
+  "file": "https://videos.pexels.com/video-files/7347891/7347891-hd_1920_1080_25fps.mp4",
+  "license": "Pexels License"
+ },
+ "ev-2.mp4": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/video/7646757/",
+  "file": "https://videos.pexels.com/video-files/7646757/7646757-hd_1920_1080_25fps.mp4",
+  "license": "Pexels License"
+ },
+ "ev-3.mp4": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/video/7578541/",
+  "file": "https://videos.pexels.com/video-files/7578541/7578541-hd_1920_1080_30fps.mp4",
+  "license": "Pexels License"
+ },
+ "para-sayma-1.mp4": {
+  "source": "Pexels",
+  "page": "https://www.pexels.com/video/8479276/",
+  "file": "https://videos.pexels.com/video-files/8479276/8479276-hd_1920_1080_25fps.mp4",
+  "license": "Pexels License"
  }
 }

@@ -43,3 +43,4 @@
 - Yazılar: ilgi çekici büyüklükte ve renkte; ekrana SERT DÜŞEREK gelir (yukarıdan hızlı iniş + küçük sekme), SOLARAK kaybolur.
 - Sayılar: ekrana gelirken sayarak büyür (sayaç), statik rakam yok.
 - Grafikler: ekranda hareketli; çubuklar/çizgiler gözün önünde yükselir ya da düşer.
+- Açılışta logo animasyonu/jenerik YOK: video ilk saniyeden doğrudan konuyla (kanca cümle + hareketli yazı) başlar, izleyici kaçmasın. Logo animasyonu yalnızca bölüm geçişlerinde (bumper) kullanılır.

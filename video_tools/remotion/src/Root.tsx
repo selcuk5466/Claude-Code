@@ -22,6 +22,7 @@ import {EnfVideo5, ENF5_TOTAL} from './Enf5';
 import {EnfVideo6, ENF6_TOTAL} from './Enf6';
 import {EnfVideo7, ENF7_TOTAL} from './Enf7';
 import {EnfVideo8, ENF8_TOTAL} from './Enf8';
+import {EnfVideo9, ENF9_TOTAL} from './Enf9';
 import {ProTest} from './ProTest';
 import {EnfVideo3, ENF3_TOTAL} from './Enf3';
 import {EnfVideo2, ENF2_TOTAL} from './Enf2';
@@ -70,6 +71,7 @@ export const Root: React.FC = () => (
     <Composition id="PCin" component={PCin} durationInFrames={P_FRAMES.cn} fps={30} width={1080} height={1920} />
     <Composition id="Enf4" component={EnfVideo4} durationInFrames={ENF4_TOTAL} fps={30} width={1920} height={1080} />
     <Composition id="Enf7" component={EnfVideo7} durationInFrames={ENF7_TOTAL} fps={30} width={1920} height={1080} />
+    <Composition id="Enf9" component={EnfVideo9} durationInFrames={ENF9_TOTAL} fps={30} width={1920} height={1080} />
     <Composition id="Enf8" component={EnfVideo8} durationInFrames={ENF8_TOTAL} fps={30} width={1920} height={1080} />
     <Composition id="Enf6" component={EnfVideo6} durationInFrames={ENF6_TOTAL} fps={30} width={1920} height={1080} />
     <Composition id="Enf5" component={EnfVideo5} durationInFrames={ENF5_TOTAL} fps={30} width={1920} height={1080} />
