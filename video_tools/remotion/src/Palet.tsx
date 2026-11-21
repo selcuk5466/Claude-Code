@@ -1,4 +1,4 @@
-// Kanal görsel kimliği (Color Hunt): #1E3B2F • #7F8C6A • #C8B48A • #F5F0E6
+// Kanal görsel kimliği: #FF8364 (mercan) • #FFB677 (şeftali) • #FFD98E (açık sarı) • #616F39 (zeytin)
 // Kurallar: yazılar sert düşerek gelir, solarak kaybolur; sayılar sayarak büyür; grafikler ekranda yükselir/düşer.
 import React, {useEffect, useState} from 'react';
 import {AbsoluteFill, Img, OffthreadVideo, continueRender, delayRender, interpolate, random, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
@@ -6,8 +6,8 @@ import '@fontsource-variable/fraunces/index.css';
 import '@fontsource-variable/inter/index.css';
 
 export const K = {
-  bg: '#F5F0E6', bej: '#E9DFCB', taba: '#C8B48A', sage: '#7F8C6A',
-  ink: '#1E3B2F', ink2: '#3E5246', mute: '#7E8173', sageD: '#1E3B2F', sageL: '#B3BA9E', tabaD: '#9A8452', paper: '#FBF8F1', deep2: '#2E4F3F',
+  bg: '#FFF7E6', bej: '#FFE9B8', taba: '#FFB677', sage: '#616F39',
+  ink: '#3B4422', ink2: '#5A6340', mute: '#8A8466', sageD: '#3B4422', sageL: '#A3AD78', tabaD: '#E8603F', paper: '#FFFBF2', deep2: '#4E5A2D', coral: '#FF8364', sari: '#FFD98E',
 };
 export const SERIF = "'Fraunces Variable', Georgia, serif";
 export const SANS = "'Inter Variable', Inter, Arial, sans-serif";
@@ -89,10 +89,10 @@ export const Tx9: React.FC<{t0: number; x: number; y: number; w?: number; s?: nu
 
 // kart
 export const Card9: React.FC<{t0: number; x: number; y: number; w: number; h: number; tone?: 'bej' | 'sage' | 'paper' | 'taba'; out?: number; children?: React.ReactNode; label?: string}> = ({t0, x, y, w, h, tone = 'paper', out, children, label}) => {
-  const bg = tone === 'sage' ? `linear-gradient(150deg, ${K.deep2}, ${K.sageD})` : tone === 'bej' ? `linear-gradient(150deg, ${K.bej}, #DFD1B4)` : tone === 'taba' ? `linear-gradient(150deg, #AE9561, #7F6A3D)` : `linear-gradient(150deg, ${K.paper}, #F0EADC)`;
+  const bg = tone === 'sage' ? `linear-gradient(150deg, ${K.deep2}, ${K.sageD})` : tone === 'bej' ? `linear-gradient(150deg, ${K.bej}, ${K.sari})` : tone === 'taba' ? `linear-gradient(150deg, ${K.coral}, ${K.tabaD})` : `linear-gradient(150deg, ${K.paper}, #FFF1D6)`;
   const lc = tone === 'sage' || tone === 'taba' ? K.bej : K.tabaD;
   return (
-    <Drop t0={t0} out={out} dist={120} x={x} y={y} w={w} h={h} style={{borderRadius: 28, background: bg, border: `2px solid ${tone === 'paper' ? K.bej : 'transparent'}`, boxShadow: '0 18px 40px rgba(36,51,42,.12), 0 2px 0 rgba(255,255,255,.6) inset'}}>
+    <Drop t0={t0} out={out} dist={120} x={x} y={y} w={w} h={h} style={{borderRadius: 28, background: bg, border: `2px solid ${tone === 'paper' ? K.bej : 'transparent'}`, boxShadow: '0 18px 40px rgba(59,68,34,.12), 0 2px 0 rgba(255,255,255,.6) inset'}}>
       {label && <div style={{position: 'absolute', left: 32, top: 24, fontFamily: SANS, fontWeight: 800, fontSize: 20, letterSpacing: 3, color: lc}}>{label}</div>}
       {children}
     </Drop>
@@ -133,7 +133,7 @@ export const Src9: React.FC<{children: string}> = ({children}) => <Tx9 t0={0.9} 
 export const DateChip: React.FC<{date: string}> = ({date}) => (
   <div style={{position: 'absolute', right: 140, top: 74, padding: '8px 18px', borderRadius: 30, border: `2px solid ${K.taba}`, fontFamily: SANS, fontWeight: 800, fontSize: 18, letterSpacing: 2, color: K.tabaD}}>{date}</div>
 );
-export const Bug9: React.FC = () => <div style={{position: 'absolute', right: 52, top: 56, width: 70, height: 70, borderRadius: '50%', overflow: 'hidden', boxShadow: `0 6px 20px rgba(36,51,42,.25)`, border: `3px solid ${K.bg}`}}><Img src={LOGO9} style={{width: '100%', height: '100%'}} /></div>;
+export const Bug9: React.FC = () => <div style={{position: 'absolute', right: 52, top: 56, width: 70, height: 70, borderRadius: '50%', overflow: 'hidden', boxShadow: `0 6px 20px rgba(59,68,34,.25)`, border: `3px solid ${K.bg}`}}><Img src={LOGO9} style={{width: '100%', height: '100%'}} /></div>;
 
 // ---------------------------------------------------------------- grafikler
 // dikey çubuklar: yaylı yükselme, değer sayaçla; v1 verilirse tc anında v1'e iner/çıkar
@@ -228,7 +228,7 @@ export const Stock9: React.FC<{src: string; dur: number; title?: string; sub?: s
     <AbsoluteFill style={{opacity: fade, overflow: 'hidden', clipPath: `inset(0 ${100 - wipe}% 0 0)`, background: K.ink}}>
       {isVid ? <OffthreadVideo src={staticFile(src)} startFrom={Math.round(from * fps)} muted style={st} /> : <Img src={staticFile(src)} style={st} />}
       <AbsoluteFill style={{background: K.taba, opacity: 0.16, mixBlendMode: 'color'}} />
-      <AbsoluteFill style={{background: `linear-gradient(180deg, rgba(36,51,42,0) 45%, rgba(36,51,42,.82) 100%)`}} />
+      <AbsoluteFill style={{background: `linear-gradient(180deg, rgba(59,68,34,0) 45%, rgba(59,68,34,.85) 100%)`}} />
       <Noise o={0.06} />
       {title && <StockTitle title={title} sub={sub} />}
     </AbsoluteFill>
@@ -347,7 +347,7 @@ export const Frame9: React.FC<{src: string; t0: number; x: number; y: number; w:
   const z = 1.04 + 0.05 * Math.min(1, Math.max(0, t - t0) / 12);
   const st: React.CSSProperties = {width: '100%', height: '100%', objectFit: 'cover', transform: `scale(${z})`, filter: 'saturate(0.8) sepia(0.12) contrast(1.03)'};
   return (
-    <Drop t0={t0} out={out} dist={140} x={x} y={y} w={w} h={h} style={{borderRadius: 30, overflow: 'hidden', border: `8px solid ${K.paper}`, boxShadow: '0 24px 60px rgba(36,51,42,.22)'}}>
+    <Drop t0={t0} out={out} dist={140} x={x} y={y} w={w} h={h} style={{borderRadius: 30, overflow: 'hidden', border: `8px solid ${K.paper}`, boxShadow: '0 24px 60px rgba(59,68,34,.2)'}}>
       {isVid ? <OffthreadVideo src={staticFile(src)} startFrom={Math.round(from * fps)} muted style={st} /> : <Img src={staticFile(src)} style={st} />}
       <AbsoluteFill style={{background: K.taba, opacity: 0.12, mixBlendMode: 'color'}} />
     </Drop>

@@ -2,7 +2,7 @@
 import React from 'react';
 import {AbsoluteFill, Img, Sequence, interpolate, useCurrentFrame} from 'remotion';
 import {Home, ShieldAlert, Bell} from 'lucide-react';
-import {Bars, Card9, Count, DropWords, HBar, Ico9, K, LOGO9, Paper, SANS, SERIF, SceneDur, Stock9, Tx9, tr, useFonts9} from './Palet';
+import {Bars, Card9, Frame9, Count, DropWords, HBar, Ico9, K, LOGO9, Paper, SANS, SERIF, SceneDur, Stock9, Tx9, tr, useFonts9} from './Palet';
 
 const FPS = 30;
 const fr = (s: number) => Math.round(s * FPS);
@@ -12,7 +12,7 @@ const Badge: React.FC<{no: number}> = ({no}) => (
   <div style={{position: 'absolute', left: 60, top: 70, display: 'flex', alignItems: 'center', gap: 16, zIndex: 5}}>
     <div style={{width: 76, height: 76, borderRadius: '50%', overflow: 'hidden', border: `4px solid ${K.taba}`}}><Img src={LOGO9} style={{width: '100%', height: '100%'}} /></div>
     <div style={{padding: '10px 22px', borderRadius: 16, background: K.taba, fontFamily: SANS, fontWeight: 900, fontSize: 28, color: K.sageD, letterSpacing: 1}}>BUGÜN CEBİNİZDEN NE ÇIKTI</div>
-    <div style={{padding: '10px 18px', borderRadius: 16, background: K.sageD, fontFamily: SANS, fontWeight: 900, fontSize: 30, color: K.bg}}>{'#' + no}</div>
+    <div style={{padding: '10px 18px', borderRadius: 16, background: K.coral, fontFamily: SANS, fontWeight: 900, fontSize: 30, color: K.bg}}>{'#' + no}</div>
   </div>
 );
 const Captions: React.FC<{caps: Cap[]; dark?: boolean}> = ({caps}) => {
@@ -86,6 +86,7 @@ const G7: React.FC = () => (
     <Card9 t0={9.5} x={60} y={790} w={960} h={150} tone="bej">
       <Tx9 t0={9.8} x={34} y={44} w={900} s={46} c={K.ink} wt={800} font={SERIF}>Limit: 100 – 200 bin ₺</Tx9>
     </Card9>
+    <Frame9 src="stock/kart-3.mp4" t0={5.6} out={17.0} x={60} y={970} w={960} h={480} />
     <Card9 t0={17.4} x={60} y={970} w={960} h={500} label="25.000 ₺ EKSTREDE ASGARİ ÖDEME" />
     <Bars x={60} y={1000} w={960} h={470} max={11500} bw={250} vs={60} ls={28} items={[
       {label: 'Eski (%40)', v: 10000, t0: 20.6, fmt: (v) => tr(v) + ' ₺', c: K.taba},
@@ -111,10 +112,11 @@ const G8: React.FC = () => (
     <Card9 t0={10.3} x={60} y={710} w={960} h={260} label="ÖNCEKİ UYGULAMA • BANKANIN VERECEĞİ KREDİ">
       <HBar x={34} y={70} w={640} v={100} v1={25} tc={12.6} max={100} t0={10.5} label="" fmt={(v) => '%' + tr(v)} c={K.taba} ls={1} />
     </Card9>
+    <Frame9 src="stock/ev-1.mp4" t0={5.2} out={14.0} x={60} y={1000} w={960} h={470} />
     <Card9 t0={14.3} x={60} y={1000} w={960} h={470} label="ÖRNEK • BANKANIN VEREBİLECEĞİ 2 MİLYON ₺" />
     <Bars x={60} y={1030} w={960} h={440} max={2300} bw={260} vs={56} ls={28} items={[
       {label: 'Eskiden', v: 500, t0: 16.6, fmt: (v) => tr(v) + ' bin ₺', c: K.taba},
-      {label: 'Yeni kural', v: 2000, t0: 18.8, fmt: (v) => (v >= 1000 ? tr(v / 1000, v % 1000 ? 1 : 0) + ' milyon ₺' : tr(v) + ' bin ₺'), c: K.sage},
+      {label: 'Yeni kural', v: 2000, t0: 18.8, fmt: (v) => (v >= 1000 ? tr(Math.round(v / 100) / 10, Math.abs(v - 2000) < 50 ? 0 : 1) + ' milyon ₺' : tr(Math.round(v)) + ' bin ₺'), c: K.sage},
     ]} />
     <Card9 t0={19.6} x={60} y={710} w={960} h={260} tone="sage" label="YENİ KURAL • KISITLAMA KİME?">
       <Count t0={19.8} v={2} v0={1} d={1.2} s={150} c={K.bg} x={40} y={80} />

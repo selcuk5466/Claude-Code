@@ -38,8 +38,8 @@
 5. Format kimliği: her Shorts aynı açılışla başlar: "Bugün cebinizden ne çıktı:" + seri numarası (#1, #2, ...). Numara sırası gunluk/shorts-seri.txt dosyasında tutulur.
 
 ## Görsel kimlik ve animasyon (22 Kasım 2026'dan itibaren, kalıcı)
-- Kanal renk paleti (22 Kasım 2026 güncellemesi, Color Hunt): #1E3B2F (koyu orman yeşili: yazı ve koyu kartlar), #7F8C6A (adaçayı: grafik ve vurgu), #C8B48A (altın-bej: ikinci vurgu, maliyet/düşüş), #F5F0E6 (sıcak kırık beyaz: zemin). Kaynak: colorhunt.co/palette/1e3b2f7f8c6ac8b48af5f0e6. Tüm videolar, Shorts, kapaklar ve marka paketi bu paletle yapılır. (Önceki palet #F5F5F0/#E6D8C3/#C2A68C/#5D866C geçersiz.)
-- Yardımcı tonlar (paletin açık/koyu tonları): bej kart #E9DFCB, koyu altın #9A8452 (düşüş/maliyet), koyu yeşil geçiş #2E4F3F. Kırmızı/neon kullanılmaz.
+- Kanal renk paleti (22 Kasım 2026, kullanıcının seçimi): #FF8364 (mercan: düşüş/maliyet vurgusu), #FFB677 (şeftali: ikinci vurgu), #FFD98E (açık sarı: kart ve vurgu zemini), #616F39 (zeytin yeşili: ana grafik/marka rengi). Tüm videolar, Shorts, kapaklar ve marka paketi bu paletle yapılır. Önceki paletler (#F5F5F0... ve #1E3B2F...) geçersiz.
+- Yardımcı tonlar (paletin açık/koyu tonları): zemin #FFF7E6 (açık sarının açığı), yazı ve koyu kartlar #3B4422 (zeytinin koyusu), açık kart #FFE9B8, koyu mercan #E8603F. Neon/saf kırmızı kullanılmaz.
 - Amatör görünüm yok: profesyonel yayın kalitesi hedeflenir. Gerektiğinde GitHub kütüphaneleri, Canva ve gerçek fotoğraf/video kullanılabilir.
 - Yazılar: ilgi çekici büyüklükte ve renkte; ekrana SERT DÜŞEREK gelir (yukarıdan hızlı iniş + küçük sekme), SOLARAK kaybolur.
 - Sayılar: ekrana gelirken sayarak büyür (sayaç), statik rakam yok.

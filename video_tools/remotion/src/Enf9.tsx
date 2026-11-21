@@ -127,7 +127,7 @@ const S2: React.FC = () => {
 
 // ---------------------------------------------------------------- S3 örnek
 const CardArt: React.FC<{t0: number}> = ({t0}) => (
-  <Drop t0={t0} x={110} y={250} w={640} h={400} style={{borderRadius: 34, background: `linear-gradient(135deg, ${K.sage}, ${K.sageD} 70%)`, boxShadow: '0 30px 70px rgba(36,51,42,.3)', overflow: 'hidden'}}>
+  <Drop t0={t0} x={110} y={250} w={640} h={400} style={{borderRadius: 34, background: `linear-gradient(135deg, ${K.sage}, ${K.sageD} 70%)`, boxShadow: '0 30px 70px rgba(59,68,34,.3)', overflow: 'hidden'}}>
     <div style={{position: 'absolute', right: -80, top: -80, width: 320, height: 320, borderRadius: '50%', background: `${K.bej}22`}} />
     <div style={{position: 'absolute', left: 50, top: 60, width: 90, height: 66, borderRadius: 12, background: `linear-gradient(135deg, ${K.bej}, ${K.taba})`}} />
     <div style={{position: 'absolute', left: 50, top: 190, fontFamily: SANS, fontWeight: 700, fontSize: 40, color: K.bej, letterSpacing: 6}}>•••• •••• •••• 2026</div>
@@ -254,7 +254,7 @@ const S7: React.FC = () => {
       <Card9 t0={T0(7, 3) - 0.2} x={700} y={240} w={1110} h={480} label="ÖRNEK • BANKANIN VEREBİLECEĞİ 2 MİLYON ₺" />
       <Bars x={700} y={260} w={1110} h={460} max={2300} bw={250} vs={58} items={[
         {label: 'Eskiden (tek evi olan)', v: 500, t0: T0(7, 3) + 1.5, fmt: (v) => tr(v) + ' bin ₺', c: K.taba},
-        {label: 'Yeni kural', v: 2000, t0: T0(7, 4), fmt: (v) => (v >= 1000 ? tr(v / 1000, v % 1000 ? 1 : 0) + ' milyon ₺' : tr(v) + ' bin ₺'), c: K.sage},
+        {label: 'Yeni kural', v: 2000, t0: T0(7, 4), fmt: (v) => (v >= 1000 ? tr(Math.round(v / 100) / 10, Math.abs(v - 2000) < 50 ? 0 : 1) + ' milyon ₺' : tr(Math.round(v)) + ' bin ₺'), c: K.sage},
       ]} />
       <Item t0={T0(7, 5)} x={110} y={760} w={840} I={Car} head="KAPSAM" text="Taşıt hariç konut teminatlı krediler de" />
       <Item t0={T0(7, 6)} x={970} y={760} w={840} I={FileText} head="HİSSELİ TAPU" text="%50 ve altı hisse genelde sayılmıyor" tone="taba" />
