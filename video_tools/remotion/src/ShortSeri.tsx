@@ -206,4 +206,66 @@ const G4: React.FC = () => {
   );
 };
 export const Seri4: React.FC = () => <Shell no={4} total={21.8} voiceEnd={19.16} caps={C4} claim={<Claim src="stock/foto-akaryakit-12377482.jpg" lines={'MOTORİNE\n6,5 LİRA\nİNDİRİM'} c={GRN} dur={2.9} />}><G4 /></Shell>;
-export const SERI_FRAMES = {s1: fr(23.4), s2: fr(24.6), s3: fr(23.5), s4: fr(21.8)};
+
+// ---------------------------------------------------------------- #5 ons zirveden −%36, gram −%2,6
+const C5: Cap[] = [[0.15, 1.75, 'Bugün cebinizden ne çıktı?'], [1.9, 2.8, 'Beş numara'], [3.2, 6.8, 'Ons altın ocaktaki zirvesinden %36 düştü'], [6.9, 11.2, 'Ama gram altın yılbaşına göre sadece %2,6 aşağıda'], [11.45, 12.6, 'Sebebi dolar'], [12.8, 14.5, 'Ons %17 düşerken'], [14.5, 17.8, 'dolar da liraya karşı %17,7 yükseldi'], [18.1, 19.4, 'Yatırım tavsiyesi değildir']];
+const G5: React.FC = () => {
+  const {p, pop} = useTL();
+  return (
+    <>
+      <T x={60} y={200} w={960} s={78} wt={900} ls={-3} lh={1.04}>{'ONS ÇÖKTÜ\nGRAM NEDEN DAYANDI?'}</T>
+      <Panel x={60} y={430} w={960} h={300} t0={3.2} accent={RED}>
+        <T x={34} y={22} s={24} wt={700} c={P.muted} ls={2}>ONS ALTIN ($) • OCAK ZİRVESİNDEN</T>
+        <div style={{position: 'absolute', right: 30, top: 20, color: RED}}>{ico(TrendingDown, 48)}</div>
+        <T x={34} y={66} s={150} wt={800} mono c="#fff" glow={RED} ls={-6}>{n(5590 + (3573 - 5590) * p(3.6, 2.8))}</T>
+        <T x={640} y={210} s={56} wt={900} mono c={RED} o={p(5.4, 0.3)}>−%36</T>
+      </Panel>
+      <Panel x={60} y={750} w={960} h={300} t0={6.9} accent={GLD}>
+        <T x={34} y={22} s={24} wt={700} c={P.muted} ls={2}>GRAM ALTIN (₺) • YILBAŞINDAN</T>
+        <div style={{position: 'absolute', right: 30, top: 20, color: GLD}}>{ico(Coins, 48)}</div>
+        <T x={34} y={66} s={150} wt={800} mono c="#fff" glow={GLD} ls={-6}>{n(5966 + (5810 - 5966) * p(7.4, 2.4))}</T>
+        <T x={620} y={210} s={56} wt={900} mono c={GLD} o={p(9.3, 0.3)}>−%2,6</T>
+      </Panel>
+      <Panel x={60} y={1070} w={960} h={360} t0={11.45} accent={GRN}>
+        <T x={34} y={22} s={24} wt={700} c={P.muted} ls={2}>YILBAŞINDAN BU YANA</T>
+        <div style={{position: 'absolute', left: 10, top: 60}}><EChart w={940} h={280} option={hbar([
+          {n: 'Ons', v: -17.3, txt: '−%17', c: RED, q: p(12.9, 1.0)},
+          {n: 'Dolar/TL', v: 17.7, txt: '+%17,7', c: GRN, q: p(15.2, 1.0)},
+        ], -26, 30, {left: 180, right: 150, bw: 70, fs: 30})} /></div>
+      </Panel>
+      <div style={{position: 'absolute', left: 300, top: 1372, padding: '10px 30px', borderRadius: 18, border: `5px solid ${GRN}`, background: '#06101fee', fontFamily: F, fontWeight: 900, fontSize: 42, color: GRN, letterSpacing: 2, opacity: p(17.2, 0.2), transform: `rotate(-5deg) scale(${1.4 - 0.4 * pop(17.2)})`, boxShadow: `0 0 40px ${GRN}66`}}>DOLAR DENGELEDİ</div>
+    </>
+  );
+};
+export const Seri5: React.FC = () => <Shell no={5} total={22.2} voiceEnd={19.45} caps={C5} claim={<Claim src="stock/taki-1.mp4" lines={'ONS ALTIN\nZİRVEDEN\n%36 DÜŞTÜ'} c={RED} dur={2.9} />}><G5 /></Shell>;
+
+// ---------------------------------------------------------------- #6 zirvede alan / 3 yıl önce alan
+const C6: Cap[] = [[0.15, 2.0, 'Bugün cebinizden ne çıktı?'], [2.1, 2.95, 'Altı numara'], [3.2, 6.6, 'Ocak zirvesinde 100.000 liralık gram altın alan biri'], [6.6, 9.6, 'bugün yaklaşık 74.400 liraya sahip'], [10.0, 13.85, '3 yıl önce alan ise parasını yaklaşık 3 katına çıkarmış'], [14.2, 17.1, 'Altında ne zaman aldığınız her şeyi değiştiriyor'], [17.25, 18.6, 'Yatırım tavsiyesi değildir']];
+const G6: React.FC = () => {
+  const {p, pop} = useTL();
+  const g = p(11.0, 2.2);
+  return (
+    <>
+      <T x={60} y={200} w={960} s={78} wt={900} ls={-3} lh={1.04}>{'100.000 ₺ ALTIN\nNE ZAMAN ALINDI?'}</T>
+      <div style={{position: 'absolute', left: 60, top: 430, width: 960, height: 400, borderRadius: 30, background: `linear-gradient(160deg, ${RED}26, rgba(9,22,42,.96))`, border: `3px solid ${RED}`, opacity: p(3.2, 0.3), transform: `scale(${0.92 + 0.08 * pop(3.2)})`, boxShadow: `0 0 50px ${RED}44`}}>
+        <T x={34} y={26} s={30} wt={800} c={RED} ls={2}>OCAK ZİRVESİNDE ALAN</T>
+        <T x={34} y={76} s={36} wt={700} c="#cfdbec">100.000 ₺ → bugün</T>
+        <T x={34} y={130} s={160} wt={800} mono c="#fff" glow={RED} ls={-6}>{n(100000 + (74400 - 100000) * p(6.8, 2.2))}</T>
+        <T x={34} y={316} s={52} wt={900} mono c={RED} o={p(8.6, 0.3)}>−%26 zararda</T>
+      </div>
+      <div style={{position: 'absolute', left: 60, top: 860, width: 960, height: 520, borderRadius: 30, background: `linear-gradient(160deg, ${GRN}22, rgba(9,22,42,.96))`, border: `3px solid ${GRN}`, opacity: p(10.0, 0.3), transform: `scale(${0.92 + 0.08 * pop(10.0)})`, boxShadow: `0 0 50px ${GRN}44`}}>
+        <T x={34} y={26} s={30} wt={800} c={GRN} ls={2}>3 YIL ÖNCE ALAN • KASIM 2023</T>
+        <T x={34} y={76} s={36} wt={700} c="#cfdbec">gram 1.829 ₺ → bugün 5.810 ₺</T>
+        <div style={{position: 'absolute', left: 120, bottom: 70, width: 220, height: 90, borderRadius: '14px 14px 0 0', background: `linear-gradient(180deg, ${SLV}, ${SLV}55)`}} />
+        <div style={{position: 'absolute', left: 120, bottom: 20, width: 220, textAlign: 'center', fontFamily: F, fontWeight: 800, fontSize: 30, color: P.muted}}>2023</div>
+        <div style={{position: 'absolute', left: 420, bottom: 70, width: 220, height: 90 + 196 * g, borderRadius: '14px 14px 0 0', background: `linear-gradient(180deg, ${GLD}, ${GLD}55)`, boxShadow: `0 0 30px ${GLD}66`}} />
+        <div style={{position: 'absolute', left: 420, bottom: 20, width: 220, textAlign: 'center', fontFamily: F, fontWeight: 800, fontSize: 30, color: P.muted}}>bugün</div>
+        <T x={670} y={196} s={92} wt={900} mono c={GRN} glow={GRN}>{'×' + n(1 + 2.2 * p(12.3, 1.4), 1)}</T>
+        <T x={674} y={310} s={34} wt={700} c={GRN} o={p(13.0, 0.3)}>≈ 3 katı</T>
+      </div>
+      <div style={{position: 'absolute', left: 60, top: 860, width: 960, height: 520, borderRadius: 30, background: '#06101ff2', border: `3px solid ${GLD}`, opacity: p(14.2, 0.3), display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', fontFamily: F, fontWeight: 900, fontSize: 76, lineHeight: 1.1, color: '#fff', padding: 40, boxShadow: `0 0 60px ${GLD}55`}}>Ne zaman aldığınız her şeyi değiştiriyor</div>
+    </>
+  );
+};
+export const Seri6: React.FC = () => <Shell no={6} total={21.4} voiceEnd={18.7} caps={C6} claim={<Claim src="stock/foto-kapalicarsi-20279698.jpg" lines={'ZİRVEDE\nALAN %26\nZARARDA'} c={RED} dur={2.9} />}><G6 /></Shell>;
+export const SERI_FRAMES = {s1: fr(23.4), s2: fr(24.6), s3: fr(23.5), s4: fr(21.8), s5: fr(22.2), s6: fr(21.4)};
