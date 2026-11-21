@@ -17,6 +17,7 @@ import {Thumb18} from './Thumb18';
 import {Thumb19} from './Thumb19';
 import {Thumb20} from './Thumb20';
 import {Thumb21} from './Thumb21';
+import {Thumb22} from './Thumb22';
 import {EnfVideo4, ENF4_TOTAL} from './Enf4';
 import {EnfVideo5, ENF5_TOTAL} from './Enf5';
 import {EnfVideo6, ENF6_TOTAL} from './Enf6';
@@ -93,6 +94,7 @@ export const Root: React.FC = () => (
     <Composition id="QAnt" component={QAnt} durationInFrames={Q_FRAMES.ant} fps={30} width={1080} height={1920} />
     <Composition id="QBut" component={QBut} durationInFrames={Q_FRAMES.but} fps={30} width={1080} height={1920} />
     <Composition id="Thumb17" component={Thumb17} durationInFrames={1} fps={30} width={1280} height={720} />
+    <Composition id="Thumb22" component={Thumb22} durationInFrames={1} fps={30} width={1280} height={720} />
     <Composition id="Thumb21" component={Thumb21} durationInFrames={1} fps={30} width={1280} height={720} />
     <Composition id="Thumb20" component={Thumb20} durationInFrames={1} fps={30} width={1280} height={720} />
     <Composition id="Thumb19" component={Thumb19} durationInFrames={1} fps={30} width={1280} height={720} />
