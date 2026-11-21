@@ -57,13 +57,13 @@ const S0: React.FC = () => {
       <Tx9 t0={0} x={110} y={120} s={24} c={K.sage} wt={800} ls={4}>BU HAFTA CEBİNİZDE NE DEĞİŞTİ?</Tx9>
       <DropWords t0={0.05} x={106} y={160} w={900} s={104} stagger={0.08}>Kredi kartı borcun mu var?</DropWords>
       <DropWords t0={T0(0, 1)} x={106} y={410} w={900} s={56} c={K.sageD} wt={700} stagger={0.05}>Asgari ödeme oranı değişti</DropWords>
-      <Card9 t0={T0(0, 3)} x={110} y={560} w={680} h={330} tone="sage" label="ASGARİ ÖDEME • 100–200 BİN ₺ LİMİT">
-        <Count t0={T0(0, 3) + 0.4} v={30} v0={40} d={2} pre="%" s={190} c={K.bg} x={30} y={100} />
-        <Tx9 t0={T0(0, 3) + 1.2} x={420} y={200} s={36} c={K.bej} wt={800}>%40’tan indi</Tx9>
+      <Card9 t0={T0(0, 3)} x={110} y={560} w={730} h={330} tone="sage" label="ASGARİ ÖDEME • 100–200 BİN ₺ LİMİT">
+        <Count t0={T0(0, 3) + 0.4} v={30} v0={40} d={2} pre="%" s={170} c={K.bg} x={30} y={110} />
+        <Tx9 t0={T0(0, 3) + 1.2} x={490} y={200} s={36} c={K.bej} wt={800}>%40’tan indi</Tx9>
       </Card9>
-      <Card9 t0={T0(0, 4)} x={820} y={660} w={500} h={230} tone="bej" label="KONUT KREDİSİ">
+      <Card9 t0={T0(0, 4)} x={870} y={660} w={450} h={230} tone="bej" label="KONUT KREDİSİ">
         <div style={{position: 'absolute', left: 30, top: 70}}><Ico9 I={Home} c={K.sageD} s={44} bg={`${K.bg}aa`} /></div>
-        <Tx9 t0={T0(0, 4) + 0.3} x={140} y={74} w={340} s={40} c={K.ink} wt={800} font={SERIF}>Kısıtlama esnetildi</Tx9>
+        <Tx9 t0={T0(0, 4) + 0.3} x={140} y={74} w={290} s={40} c={K.ink} wt={800} font={SERIF}>Kısıtlama esnetildi</Tx9>
       </Card9>
       {['Kredi kartı', 'Konut kredisi', 'Mevduat', 'Kredi faizleri', 'Kapanış'].map((s, i) => (
         <Drop key={s} t0={T0(0, 5) + i * 0.25} x={1340 + (i % 2) * 240} y={660 + Math.floor(i / 2) * 76} style={{padding: '10px 22px', borderRadius: 30, background: K.paper, border: `2px solid ${K.taba}`, fontFamily: SANS, fontWeight: 800, fontSize: 24, color: K.ink2}}>{s}</Drop>
