@@ -38,7 +38,7 @@
 5. Format kimliği: her Shorts aynı açılışla başlar: "Bugün cebinizden ne çıktı:" + seri numarası (#1, #2, ...). Numara sırası gunluk/shorts-seri.txt dosyasında tutulur.
 
 ## Görsel kimlik ve animasyon (22 Kasım 2026'dan itibaren, kalıcı)
-- Kanal renk paleti (22 Kasım 2026, kullanıcının seçimi): #FF8364 (mercan: düşüş/maliyet vurgusu), #FFB677 (şeftali: ikinci vurgu), #FFD98E (açık sarı: kart ve vurgu zemini), #616F39 (zeytin yeşili: ana grafik/marka rengi). Tüm videolar, Shorts, kapaklar ve marka paketi bu paletle yapılır. Önceki paletler (#F5F5F0... ve #1E3B2F...) geçersiz.
+- Kanal renk paleti (22 Kasım 2026, kullanıcının seçimi): #FF8364 (mercan: düşüş/maliyet vurgusu), #FFB677 (şeftali: ikinci vurgu), #FFD98E (açık sarı: kart ve vurgu zemini), #616F39 (zeytin yeşili: ana grafik/marka rengi). Tüm videolar, Shorts, kapaklar ve marka paketi bu paletle yapılır. Önceki paletler (#F5F5F0... ve #1E3B2F...) geçersiz. 22 Kasım'da #9FED72/#FFECCB/#FFA97B/#E00000 de denendi; kullanıcı bu paleti (v2) kesinleştirdi. Kodda Palet.tsx içinde v2 varsayılandır.
 - Yardımcı tonlar (paletin açık/koyu tonları): zemin #FFF7E6 (açık sarının açığı), yazı ve koyu kartlar #3B4422 (zeytinin koyusu), açık kart #FFE9B8, koyu mercan #E8603F. Neon/saf kırmızı kullanılmaz.
 - Amatör görünüm yok: profesyonel yayın kalitesi hedeflenir. Gerektiğinde GitHub kütüphaneleri, Canva ve gerçek fotoğraf/video kullanılabilir.
 - Yazılar: ilgi çekici büyüklükte ve renkte; ekrana SERT DÜŞEREK gelir (yukarıdan hızlı iniş + küçük sekme), SOLARAK kaybolur.
