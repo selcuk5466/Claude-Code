@@ -5,10 +5,20 @@ import {AbsoluteFill, Img, OffthreadVideo, continueRender, delayRender, interpol
 import '@fontsource-variable/fraunces/index.css';
 import '@fontsource-variable/inter/index.css';
 
-export const K = {
-  bg: '#FFF7E6', bej: '#FFE9B8', taba: '#FFB677', sage: '#616F39',
-  ink: '#3B4422', ink2: '#5A6340', mute: '#8A8466', sageD: '#3B4422', sageL: '#A3AD78', tabaD: '#E8603F', paper: '#FFFBF2', deep2: '#4E5A2D', coral: '#FF8364', sari: '#FFD98E',
+const PALETTES = {
+  // v2: #FF8364 • #FFB677 • #FFD98E • #616F39
+  v2: {
+    bg: '#FFF7E6', bej: '#FFE9B8', taba: '#FFB677', sage: '#616F39',
+    ink: '#3B4422', ink2: '#5A6340', mute: '#8A8466', sageD: '#3B4422', sageL: '#A3AD78', tabaD: '#E8603F', paper: '#FFFBF2', deep2: '#4E5A2D', coral: '#FF8364', sari: '#FFD98E',
+  },
+  // v3: #9FED72 • #FFECCB • #FFA97B • #E00000
+  v3: {
+    bg: '#FFF5E3', bej: '#FFECCB', taba: '#FFA97B', sage: '#6FCB3E',
+    ink: '#1E3A14', ink2: '#3D5530', mute: '#8A8270', sageD: '#1E3A14', sageL: '#9FED72', tabaD: '#B80000', paper: '#FFFAF0', deep2: '#2E5A1F', coral: '#E00000', sari: '#FFECCB',
+  },
 };
+export const PALET: keyof typeof PALETTES = (process.env.REMOTION_PALET as 'v2' | 'v3') || 'v2';
+export const K = PALETTES[PALET];
 export const SERIF = "'Fraunces Variable', Georgia, serif";
 export const SANS = "'Inter Variable', Inter, Arial, sans-serif";
 export const LOGO9 = staticFile('brand/logo.png');
