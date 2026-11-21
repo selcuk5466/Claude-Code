@@ -5,3 +5,4 @@ __pycache__/
 # stok görüntüler (Pexels) yeniden indirilebilir; sadece kaynak listesi tutulur
 video_tools/remotion/public/stock/*.mp4
 video_tools/remotion/public/stock/*.jpg
+video_tools/remotion/public/audio-*.wav
