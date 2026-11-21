@@ -36,3 +36,10 @@
 3. Konu dar: altın, dolar, asgari ücret, kira/konut, market fiyatları, kredi faizi. Nvidia, Fed, Çin, petrol Shorts'ta şimdilik yok (kanal verisi işe yaramadığını gösteriyor).
 4. Günde en fazla 2 Shorts. Kazanılan zaman ilk 3 saniyeye harcanır.
 5. Format kimliği: her Shorts aynı açılışla başlar: "Bugün cebinizden ne çıktı:" + seri numarası (#1, #2, ...). Numara sırası gunluk/shorts-seri.txt dosyasında tutulur.
+
+## Görsel kimlik ve animasyon (22 Kasım 2026'dan itibaren, kalıcı)
+- Kanal renk paleti: #F5F5F0 (kırık beyaz), #E6D8C3 (bej), #C2A68C (taba), #5D866C (adaçayı yeşili). Tüm videolar, Shorts, kapaklar ve marka paketi bu paletle yapılır. Okunabilirlik için yazı rengi olarak paletin koyu tonu (#24332A, adaçayının koyusu) kullanılır.
+- Amatör görünüm yok: profesyonel yayın kalitesi hedeflenir. Gerektiğinde GitHub kütüphaneleri, Canva ve gerçek fotoğraf/video kullanılabilir.
+- Yazılar: ilgi çekici büyüklükte ve renkte; ekrana SERT DÜŞEREK gelir (yukarıdan hızlı iniş + küçük sekme), SOLARAK kaybolur.
+- Sayılar: ekrana gelirken sayarak büyür (sayaç), statik rakam yok.
+- Grafikler: ekranda hareketli; çubuklar/çizgiler gözün önünde yükselir ya da düşer.
