@@ -24,9 +24,9 @@ const pct = (d = 0) => (v: number) => '%' + tr(v, d);
 const tl = (v: number) => tr(v) + ' ₺';
 
 // küçük ok
-const Arrow: React.FC<{t0: number; x: number; y: number; c?: string}> = ({t0, x, y, c = K.taba}) => <Drop t0={t0} x={x} y={y} style={{color: c}}><ArrowRight size={56} strokeWidth={2.6} /></Drop>;
+export const Arrow: React.FC<{t0: number; x: number; y: number; c?: string}> = ({t0, x, y, c = K.taba}) => <Drop t0={t0} x={x} y={y} style={{color: c}}><ArrowRight size={56} strokeWidth={2.6} /></Drop>;
 // akış kutusu
-const Box: React.FC<{t0: number; x: number; y: number; w: number; label: string; v: number; pre?: string; suf?: string; tone?: 'paper' | 'sage' | 'taba' | 'bej'; d?: number; dec?: number}> = ({t0, x, y, w, label, v, pre = '', suf = ' ₺', tone = 'paper', d = 1.2, dec = 0}) => {
+export const Box: React.FC<{t0: number; x: number; y: number; w: number; label: string; v: number; pre?: string; suf?: string; tone?: 'paper' | 'sage' | 'taba' | 'bej'; d?: number; dec?: number}> = ({t0, x, y, w, label, v, pre = '', suf = ' ₺', tone = 'paper', d = 1.2, dec = 0}) => {
   const dark = tone === 'sage' || tone === 'taba';
   return (
     <Card9 t0={t0} x={x} y={y} w={w} h={190} tone={tone}>
@@ -36,11 +36,11 @@ const Box: React.FC<{t0: number; x: number; y: number; w: number; label: string;
   );
 };
 // rozet
-const Badge: React.FC<{t0: number; x: number; y: number; children: string; tone?: 'sage' | 'taba'; s?: number; rot?: number}> = ({t0, x, y, children, tone = 'sage', s = 40, rot = -3}) => (
+export const Badge: React.FC<{t0: number; x: number; y: number; children: string; tone?: 'sage' | 'taba'; s?: number; rot?: number}> = ({t0, x, y, children, tone = 'sage', s = 40, rot = -3}) => (
   <Drop t0={t0} x={x} y={y} style={{padding: `${s * 0.3}px ${s * 0.7}px`, borderRadius: s, background: tone === 'sage' ? K.sageD : K.taba, color: tone === 'sage' ? K.bg : K.sageD, fontFamily: SANS, fontWeight: 900, fontSize: s, letterSpacing: 1, transform: `rotate(${rot}deg)`, boxShadow: `0 14px 30px ${tone === 'sage' ? K.sage : K.tabaD}55`, whiteSpace: 'nowrap'}}>{children}</Drop>
 );
 // madde satırı
-const Item: React.FC<{t0: number; x: number; y: number; w: number; I: any; head: string; text: string; tone?: 'sage' | 'taba'}> = ({t0, x, y, w, I, head, text, tone = 'sage'}) => (
+export const Item: React.FC<{t0: number; x: number; y: number; w: number; I: any; head: string; text: string; tone?: 'sage' | 'taba'}> = ({t0, x, y, w, I, head, text, tone = 'sage'}) => (
   <Card9 t0={t0} x={x} y={y} w={w} h={116}>
     <div style={{position: 'absolute', left: 22, top: 20}}><Ico9 I={I} c={tone === 'sage' ? K.sage : K.tabaD} s={36} /></div>
     <div style={{position: 'absolute', left: 120, top: 18, fontFamily: SANS, fontWeight: 800, fontSize: 19, letterSpacing: 3, color: tone === 'sage' ? K.ink2 : K.tabaD}}>{head}</div>
