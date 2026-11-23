@@ -35,3 +35,11 @@
 
 ## Shorts
 - #9 Benzine 2,90 TL indirim (50 L ≈145 TL). #10 Gram altın bir haftada −529 TL (6.261 → 5.732), 100.000 → ≈91.550.
+
+## Öğlen revizyonu (23 Kasım)
+- Hanehalkı Beklenti Anketi (Kasım, 5–13 Kasım, 3.195 hanehalkı): 12 ay sonrası enflasyon %43,24 (−0,51); dolar beklentisi 58,18 (+1,32; ekim 56,86); konut fiyat artışı beklentisi %30,10 (−0,26); asgari ücret ve altı gelirli %46,8; kadın %44,6, erkek %42,3. Piyasa katılımcıları %24,04 (+0,15), reel sektör %31,70 (−0,10). (AA, Dünya, Haberler.com)
+- BIST 100 açılış: +60,76 puan, %0,55 → 11.192,08 (Manşet Haber); direnç 11.300/11.400 (Borsatek). Öğle verisi bulunamadı.
+- Ons sabah 3.609–3.632 $ (+%2,4), gram 5.862–5.911 TL (Bloomberg HT 5.897; Türkgün 09.30 5.881), çeyrek 10.165–10.230 (kuyumcu).
+- Dolar/TL 50,60 (Diken, Canlı Gaste); DXY 103,72 (−%0,1), 19 ayın zirvesinden geriledi; Fed aralık artış ihtimali ≈%95 (Paratic).
+- Fon soruşturması: savcılık 18 Kasım yazısı, 108 kişi için malvarlığı tedbiri; kazanç 100 milyon TL üzeri; hisseler fonlar üzerinden ≈100 kata kadar; suçlar nitelikli dolandırıcılık, SPKn'a muhalefet, aklama; 28 Eylül'de 106 kişi/kuruluş (42 kişi, 46 şirket, 18 fon). Tedbir ≠ yargı kararı. (Para Ajansı, 10haber; kaynak CNBC-e/Ekonomim)
+- KAP 23 Kasım: HUNER ve KGYO (YK başkanı, hâkim ortak şahsi malvarlığına kısıtlama tebligatı; şirket varlıklarına tedbir yok); YYLGD (listede geçen kişi YK başkanı değil); TRHOL işlem sırası ODFM açıklaması gecikmesi nedeniyle kapatıldı, 10.15'te açıldı; GESAN Konya Selçuklu GES sözleşmesi 1,6 milyon $; ENDAE Romanya GES/BESS (50,9 MWp, 80 MWh) yabancı yatırım incelemesi süreci; GRNYO fiyat/NAV > 2 kat.
