@@ -1,8 +1,8 @@
 // Shorts (yeni kanal paleti): ilk kare tek iddia, sert düşen yazılar, sayan sayılar, hareketli grafikler
 import React from 'react';
 import {AbsoluteFill, Img, Sequence, interpolate, useCurrentFrame} from 'remotion';
-import {Home, ShieldAlert, Bell} from 'lucide-react';
-import {Bars, Card9, Frame9, Count, DropWords, HBar, Ico9, K, LOGO9, Paper, SANS, SERIF, SceneDur, Stock9, Tx9, tr, useFonts9} from './Palet';
+import {Home, ShieldAlert, Bell, Fuel, TrendingDown} from 'lucide-react';
+import {Bars, Card9, Frame9, Line9, Count, DropWords, HBar, Ico9, K, LOGO9, Paper, SANS, SERIF, SceneDur, Stock9, Tx9, tr, useFonts9} from './Palet';
 
 const FPS = 30;
 const fr = (s: number) => Math.round(s * FPS);
@@ -125,4 +125,61 @@ const G8: React.FC = () => (
   </>
 );
 export const Seri8: React.FC = () => <Shell no={8} total={27.2} voiceEnd={24.5} caps={C8} claim={<Claim src="stock/ev-2.mp4" lines={'Tek evi olana\ntam konut\nkredisi'} dur={2.6} />}><G8 /></Shell>;
-export const SERIP_FRAMES = {s7: fr(30.8), s8: fr(27.2)};
+
+// ---------------------------------------------------------------- #9 benzin indirimi
+const PumpP: React.FC<{t0: number; v: number; v0: number; t1: number}> = ({t0, v, v0, t1}) => {
+  const f = useCurrentFrame(); const t = f / FPS;
+  const q = interpolate(t, [t1, t1 + 2.4], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp', easing: (x) => 1 - Math.pow(1 - x, 3)});
+  return (
+    <Card9 t0={t0} x={60} y={430} w={960} h={420} tone="sage" label="BENZİN • İSTANBUL AVRUPA • LİTRE">
+      <div style={{position: 'absolute', left: 36, top: 70, color: K.taba}}><Fuel size={70} strokeWidth={2.2} /></div>
+      <div style={{position: 'absolute', left: 40, top: 170, width: 880, height: 200, borderRadius: 22, background: '#1F2610', border: `3px solid ${K.taba}`, display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: SANS, fontWeight: 900, fontSize: 150, color: K.sari, letterSpacing: 4, fontVariantNumeric: 'tabular-nums', textShadow: `0 0 30px ${K.sari}66`}}>{tr(v0 + (v - v0) * q, 2)}</div>
+    </Card9>
+  );
+};
+const C9: Cap[] = [[0.15, 2.1, 'Motorinden sonra sıra benzine geldi'], [2.2, 6.2, 'Cumartesi günü benzinin litresi yaklaşık 2,90 lira ucuzladı'], [6.4, 10.1, 'İstanbul’da litre fiyatı 68,40 liraya kadar geriledi'], [10.3, 12.4, 'Peki bu indirim size ne kazandırdı?'], [12.6, 17.4, '50 litrelik depoyu dolduran sürücü artık yaklaşık 145 lira daha az ödüyor'], [17.5, 18.8, 'Yatırım tavsiyesi değildir']];
+const G9: React.FC = () => (
+  <>
+    <DropWords t0={2.6} x={60} y={200} w={960} s={84} stagger={0.06}>Benzine 2,90 lira indirim</DropWords>
+    <PumpP t0={2.6} v={68.4} v0={71.3} t1={3.6} />
+    <Card9 t0={4.4} x={60} y={880} w={960} h={140} tone="bej">
+      <div style={{position: 'absolute', left: 30, top: 34, color: K.tabaD}}><TrendingDown size={60} strokeWidth={2.4} /></div>
+      <Tx9 t0={4.7} x={120} y={36} w={820} s={52} c={K.ink} wt={900}>Litrede yaklaşık −2,90 ₺</Tx9>
+    </Card9>
+    <Frame9 src="stock/foto-akaryakit-29370543.jpg" t0={6.4} out={12.3} x={60} y={1050} w={960} h={420} />
+    <Card9 t0={12.6} x={60} y={1050} w={960} h={420} tone="paper" label="50 LİTRELİK DEPO">
+      <Tx9 t0={13.0} x={40} y={80} w={880} s={60} c={K.ink2} wt={800}>50 L × 2,90 ₺</Tx9>
+      <Count t0={14.4} v={145} d={1.8} pre="−" suf=" ₺" s={190} c={K.sage} x={40} y={170} />
+    </Card9>
+  </>
+);
+export const Seri9: React.FC = () => <Shell no={9} total={21.5} voiceEnd={18.8} caps={C9} claim={<Claim src="stock/foto-akaryakit-12377482.jpg" lines={'Benzine\n2,90 lira\nindirim'} dur={2.6} />}><G9 /></Shell>;
+
+// ---------------------------------------------------------------- #10 gram altın bir haftada
+const C10: Cap[] = [[0.15, 4.3, 'Gram altın bir haftada tam 529 lira değer kaybetti'], [4.4, 11.0, 'Geçen hafta 6.261 lira olan gram altın cuma günü 5.732 liraya kadar geriledi'], [11.1, 14.2, 'Peki bu düşüş yatırımcının cebine nasıl yansıdı?'], [14.3, 20.7, 'Pazartesi 100 bin liralık altın alanın parası cuma günü yaklaşık 91.500 liraya düştü'], [20.8, 24.2, 'Yani bir haftada yaklaşık 8.500 lira kayıp'], [24.3, 27.9, 'Bu sabah gram altın 5.880 lira civarına yükseldi'], [28.1, 33.8, 'Ancak dikkat, bu toparlanma geçen haftaki kaybın sadece küçük bir bölümünü telafi etti'], [33.9, 35.3, 'Yatırım tavsiyesi değildir']];
+const G10: React.FC = () => (
+  <>
+    <DropWords t0={2.6} x={60} y={200} w={960} s={84} stagger={0.06}>Gram altın bir haftada</DropWords>
+    <Card9 t0={2.6} x={60} y={420} w={960} h={250} tone="sage" label="HAFTALIK KAYIP">
+      <Count t0={2.9} v={529} d={1.6} pre="−" suf=" ₺" s={170} c={K.bg} x={40} y={70} />
+    </Card9>
+    <Card9 t0={4.4} out={24.0} x={60} y={700} w={960} h={480} label="GRAM ALTIN (₺)">
+      <Line9 x={20} y={50} w={920} h={420} pts={[6261, 5732]} labels={['Geçen hafta', 'Cuma']} t0={4.8} dur={5.4} min={5550} max={6400} c={K.coral} fmt={(v) => tr(v)} vs={46} />
+    </Card9>
+    <Card9 t0={24.3} x={60} y={700} w={960} h={480} label="GRAM ALTIN (₺) • BU SABAH">
+      <Line9 x={20} y={50} w={920} h={420} pts={[6261, 5732, 5880]} labels={['Geçen hafta', 'Cuma', 'Bu sabah']} t0={24.4} dur={3.0} min={5550} max={6400} c={K.sage} fmt={(v) => tr(v)} vs={40} />
+    </Card9>
+    <Card9 t0={14.3} out={24.0} x={60} y={1200} w={960} h={270} tone="bej" label="PAZARTESİ 100.000 ₺ → CUMA">
+      <Count t0={14.8} v={91550} v0={100000} d={3} suf=" ₺" s={120} c={K.ink} x={40} y={80} />
+    </Card9>
+    <Card9 t0={20.8} out={24.0} x={620} y={1180} w={400} h={140} tone="taba">
+      <Count t0={21.0} v={8450} d={1.4} pre="−" suf=" ₺" s={70} c={K.bg} x={26} y={34} />
+    </Card9>
+    <Card9 t0={28.1} x={60} y={1200} w={960} h={270} tone="sage">
+      <div style={{position: 'absolute', left: 40, top: 40}}><Ico9 I={ShieldAlert} c={K.taba} s={50} bg={`${K.bg}18`} /></div>
+      <Tx9 t0={28.3} x={170} y={46} w={760} s={52} c={K.bg} wt={800} font={SERIF} lh={1.08}>Kaybın sadece küçük bir kısmı geri geldi</Tx9>
+    </Card9>
+  </>
+);
+export const Seri10: React.FC = () => <Shell no={10} total={38.0} voiceEnd={35.3} caps={C10} claim={<Claim src="stock/altin-1.mp4" lines={'Gram altın\nbir haftada\n529 lira düştü'} dur={2.6} />}><G10 /></Shell>;
+export const SERIP_FRAMES = {s7: fr(30.8), s8: fr(27.2), s9: fr(21.5), s10: fr(38.0)};
