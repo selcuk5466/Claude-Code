@@ -253,7 +253,7 @@ const S8: React.FC = () => {
       </Card9>
       <Card9 t0={T0(8, 3)} x={110} y={600} w={820} h={300} tone="bej" label="ARTIŞI KİM YAPTI?">
         <Count t0={T0(8, 3) + 0.3} v={90} d={1.4} pre="≈%" s={120} c={K.tabaD} x={28} y={90} />
-        <Tx9 t0={T0(8, 3) + 1.0} x={340} y={130} s={44} c={K.ink} wt={800}>şirketler</Tx9>
+        <Tx9 t0={T0(8, 3) + 1.0} x={420} y={130} s={44} c={K.ink} wt={800}>şirketler</Tx9>
       </Card9>
       <Card9 t0={T0(8, 4) - 0.3} x={960} y={240} w={850} h={500} label="TCMB BRÜT REZERV (MİLYAR $)">
         <Line9 x={20} y={60} w={810} h={430} pts={[165, 148]} labels={['13 Kasım', '20 Kasım']} t0={T0(8, 4)} dur={2.4} min={135} max={175} c={K.coral} fmt={(v) => tr(v)} vs={44} />
