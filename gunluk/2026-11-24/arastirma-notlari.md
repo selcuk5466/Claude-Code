@@ -36,3 +36,14 @@
 - Dolar 50,63; euro 55,34
 - FedWatch aralıkta 25 bp artış %95; Goolsbee 50 bp seçeneği de masada dedi
 - Destek/direnç ons: 3.609 / 3.651–3.695
+
+## Güncelleme (sabah, senaryo için)
+- TÜİK kasım güven: hizmet 109,9 (+%0,6), perakende 113,6 (+%0,9; 3 ay satış beklentisi +%3,5), inşaat 80,2 (−%3,8; sipariş −%3, çalışan beklentisi −%4,5)
+- BIST 100 bugün açılış 11.111,42 (+%0,06); direnç 11.200/11.300, destek 11.000/10.900
+- Fon soruşturması: 4 yeni tutuklama, toplam tutuklu 140
+- Goldman Sachs: 13 Kasım haftası yerleşik DTH +5 milyar $ (Mart 2025'ten beri en büyük), %90 şirketler; brüt rezerv 20 Kasım 148 milyar $ (haftalık −17; 8'i altın değerleme); aralıkta faiz sabit beklentisi
+- BDDK 19.11 kararı: asgari ödeme limit ≤100 bin %20, 100–200 bin %30 (önce %40), >200 bin %40
+- Nvidia: Huang yeniden CEO → S&P +%4,99, Nasdaq +%6,92 (23 Kasım)
+- Brent 86,75 $ (−%6,29); benzin bu ay İst. Avrupa'da ~%15 ucuzladı (ekonomim)
+- KAP: ISCTR EBRD 151,5 milyon € (51,5 TURYIB + 100 GEFF III); CWENE 1.679.693,75 $ (84,84 milyon TL) ABD panel; GESAN TEİAŞ 284,7 milyon TL sözleşme daveti; ARDYZ 1.605.984 € (89,24 milyon TL); ULKER S&P BB teyit, görünüm negatif; CRDFA ortağı Altınbaş Holding (%29,05) TMSF kayyım; KFILO 134 milyon TL bono itfa/kupon ödenemedi (10.11 üç aylık geçici mühlet); EUKYO SPK bir kişiye 6 ay işlem yasağı
+- Kart faizi aralık: henüz açıklanmadı (bugün bekleniyor) → metinde "bugün açıklıyor" diye geçiyor; açıklanırsa güncellenecek
