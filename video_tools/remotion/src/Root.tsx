@@ -19,6 +19,7 @@ import {Thumb20} from './Thumb20';
 import {Thumb21} from './Thumb21';
 import {Thumb22} from './Thumb22';
 import {Thumb23} from './Thumb23';
+import {Thumb24} from './Thumb24';
 import {EnfVideo4, ENF4_TOTAL} from './Enf4';
 import {EnfVideo5, ENF5_TOTAL} from './Enf5';
 import {EnfVideo6, ENF6_TOTAL} from './Enf6';
@@ -26,7 +27,8 @@ import {EnfVideo7, ENF7_TOTAL} from './Enf7';
 import {EnfVideo8, ENF8_TOTAL} from './Enf8';
 import {EnfVideo9, ENF9_TOTAL} from './Enf9';
 import {EnfVideo10, ENF10_TOTAL} from './Enf10';
-import {Seri7, Seri8, Seri9, Seri10, SERIP_FRAMES} from './ShortPalet';
+import {EnfVideo11, ENF11_TOTAL} from './Enf11';
+import {Seri7, Seri8, Seri9, Seri10, Seri11, Seri12, SERIP_FRAMES} from './ShortPalet';
 import {ProTest} from './ProTest';
 import {EnfVideo3, ENF3_TOTAL} from './Enf3';
 import {EnfVideo2, ENF2_TOTAL} from './Enf2';
@@ -77,9 +79,12 @@ export const Root: React.FC = () => (
     <Composition id="Enf7" component={EnfVideo7} durationInFrames={ENF7_TOTAL} fps={30} width={1920} height={1080} />
     <Composition id="Seri9" component={Seri9} durationInFrames={SERIP_FRAMES.s9} fps={30} width={1080} height={1920} />
     <Composition id="Seri10" component={Seri10} durationInFrames={SERIP_FRAMES.s10} fps={30} width={1080} height={1920} />
+    <Composition id="Seri11" component={Seri11} durationInFrames={SERIP_FRAMES.s11} fps={30} width={1080} height={1920} />
+    <Composition id="Seri12" component={Seri12} durationInFrames={SERIP_FRAMES.s12} fps={30} width={1080} height={1920} />
     <Composition id="Seri7" component={Seri7} durationInFrames={SERIP_FRAMES.s7} fps={30} width={1080} height={1920} />
     <Composition id="Seri8" component={Seri8} durationInFrames={SERIP_FRAMES.s8} fps={30} width={1080} height={1920} />
     <Composition id="Enf10" component={EnfVideo10} durationInFrames={ENF10_TOTAL} fps={30} width={1920} height={1080} />
+    <Composition id="Enf11" component={EnfVideo11} durationInFrames={ENF11_TOTAL} fps={30} width={1920} height={1080} />
     <Composition id="Enf9" component={EnfVideo9} durationInFrames={ENF9_TOTAL} fps={30} width={1920} height={1080} />
     <Composition id="Enf8" component={EnfVideo8} durationInFrames={ENF8_TOTAL} fps={30} width={1920} height={1080} />
     <Composition id="Enf6" component={EnfVideo6} durationInFrames={ENF6_TOTAL} fps={30} width={1920} height={1080} />
@@ -100,6 +105,7 @@ export const Root: React.FC = () => (
     <Composition id="QBut" component={QBut} durationInFrames={Q_FRAMES.but} fps={30} width={1080} height={1920} />
     <Composition id="Thumb17" component={Thumb17} durationInFrames={1} fps={30} width={1280} height={720} />
     <Composition id="Thumb23" component={Thumb23} durationInFrames={1} fps={30} width={1280} height={720} />
+    <Composition id="Thumb24" component={Thumb24} durationInFrames={1} fps={30} width={1280} height={720} />
     <Composition id="Thumb22" component={Thumb22} durationInFrames={1} fps={30} width={1280} height={720} />
     <Composition id="Thumb21" component={Thumb21} durationInFrames={1} fps={30} width={1280} height={720} />
     <Composition id="Thumb20" component={Thumb20} durationInFrames={1} fps={30} width={1280} height={720} />

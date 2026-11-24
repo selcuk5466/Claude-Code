@@ -1,7 +1,7 @@
 // Shorts (yeni kanal paleti): ilk kare tek iddia, sert düşen yazılar, sayan sayılar, hareketli grafikler
 import React from 'react';
 import {AbsoluteFill, Img, Sequence, interpolate, useCurrentFrame} from 'remotion';
-import {Home, ShieldAlert, Bell, Fuel, TrendingDown} from 'lucide-react';
+import {Home, ShieldAlert, Bell, Fuel, TrendingDown, CalendarDays, CreditCard} from 'lucide-react';
 import {Bars, Card9, Frame9, Line9, Count, DropWords, HBar, Ico9, K, LOGO9, Paper, SANS, SERIF, SceneDur, Stock9, Tx9, tr, useFonts9} from './Palet';
 
 const FPS = 30;
@@ -182,4 +182,55 @@ const G10: React.FC = () => (
   </>
 );
 export const Seri10: React.FC = () => <Shell no={10} total={38.0} voiceEnd={35.3} caps={C10} claim={<Claim src="stock/altin-1.mp4" lines={'Gram altın\nbir haftada\n529 lira düştü'} dur={2.6} />}><G10 /></Shell>;
-export const SERIP_FRAMES = {s7: fr(30.8), s8: fr(27.2), s9: fr(21.5), s10: fr(38.0)};
+
+// ---------------------------------------------------------------- #11 kira geliri istisnası
+const C11: Cap[] = [[0.2, 3.9, 'Evini kiraya verenleri ilgilendiren yeni yılın rakamı belli oldu'], [4.4, 10.2, 'Kira geliri istisnası 58 bin liradan 74.141 liraya yükseliyor'], [10.8, 15.4, 'Yıllık kira geliri bu tutarın altında kalan ev sahibi beyanname vermeyecek'], [15.8, 19.5, 'Aylık hesaplarsak yaklaşık 6.180 liralık kira demek'], [20.4, 24.9, 'Bu tutarı aşan kira gelirleri için mart ayında beyanname verilmesi gerekiyor'], [25.5, 26.9, 'Yatırım tavsiyesi değildir']];
+const G11: React.FC = () => (
+  <>
+    <DropWords t0={2.6} x={60} y={200} w={960} s={84} stagger={0.06}>Kira geliri istisnası 2027</DropWords>
+    <Card9 t0={4.4} x={60} y={430} w={960} h={300} tone="sage" label="YILLIK KONUT KİRA GELİRİ İSTİSNASI">
+      <div style={{position: 'absolute', left: 40, top: 90, fontFamily: SANS, fontWeight: 800, fontSize: 56, color: K.sageL, textDecoration: 'line-through'}}>58.000 ₺</div>
+      <Count t0={6.6} v={74141} v0={58000} d={2.4} suf=" ₺" s={130} c={K.bg} x={40} y={150} />
+    </Card9>
+    <Card9 t0={10.8} x={60} y={760} w={960} h={240} tone="bej">
+      <div style={{position: 'absolute', left: 36, top: 70}}><Ico9 I={Home} c={K.sageD} s={60} bg={`${K.bg}aa`} /></div>
+      <Tx9 t0={11.1} x={200} y={50} w={720} s={52} c={K.ink} wt={800} font={SERIF} lh={1.08}>Altında kalan ev sahibi beyanname vermiyor</Tx9>
+    </Card9>
+    <Frame9 src="stock/ev-1.mp4" t0={4.4} out={15.5} x={60} y={1030} w={960} h={440} />
+    <Card9 t0={15.8} out={20.2} x={60} y={1030} w={960} h={440} label="AYLIK KARŞILIĞI">
+      <Count t0={16.2} v={6180} d={2.2} pre="≈ " suf=" ₺" s={170} c={K.sageD} x={40} y={110} />
+      <Tx9 t0={17.4} x={44} y={330} s={48} c={K.ink2} wt={800}>kira / ay</Tx9>
+    </Card9>
+    <Card9 t0={20.4} x={60} y={1030} w={960} h={440} tone="taba" label="BU TUTARI AŞAN KİRA GELİRİ">
+      <div style={{position: 'absolute', left: 40, top: 100, color: K.bg}}><CalendarDays size={90} strokeWidth={2.2} /></div>
+      <Tx9 t0={20.8} x={40} y={230} w={880} s={70} c={K.bg} wt={800} font={SERIF} lh={1.05}>Mart ayında beyanname</Tx9>
+    </Card9>
+  </>
+);
+export const Seri11: React.FC = () => <Shell no={11} total={29.6} voiceEnd={26.9} caps={C11} claim={<Claim src="stock/ev-2.mp4" lines={'Ev sahiplerine\nyeni yıl\nrakamı'} dur={2.6} />}><G11 /></Shell>;
+
+// ---------------------------------------------------------------- #12 kredi kartı faizi
+const C12: Cap[] = [[0.2, 3.3, 'Kredi kartı faizleri tam 11 aydır değişmedi'], [3.8, 8.9, 'Dönem borcunuz 30 bin liranın altındaysa aylık faiz %3,25'], [9.2, 13.9, '30 bin ile 180 bin lira arasındaki borçlarda %3,75'], [14.3, 17.8, 'Nakit avans faizi ise %4,25'], [18.3, 22.8, 'Peki 25 bin liralık borcun yalnızca asgarisini öderseniz ne olur?'], [23.2, 28.6, 'Kalan 20 bin lira için vergiler dahil ayda yaklaşık 845 lira faiz ödersiniz'], [29.1, 33.5, 'Aralıkta geçerli olacak yeni oranları Merkez Bankası bugün açıklıyor'], [33.9, 35.3, 'Yatırım tavsiyesi değildir']];
+const G12: React.FC = () => (
+  <>
+    <DropWords t0={2.6} x={60} y={200} w={960} s={84} stagger={0.06}>Kart faizi 11 aydır aynı</DropWords>
+    <Card9 t0={3.8} x={60} y={420} w={960} h={600} label="AYLIK AZAMİ FAİZ • DÖNEM BORCUNA GÖRE" />
+    <Bars x={60} y={470} w={960} h={550} max={5.6} bw={230} vs={56} ls={24} items={[
+      {label: '30 bin ₺ altı', v: 3.25, t0: 6.8, fmt: (v) => '%' + tr(v, 2), c: K.sageL},
+      {label: '30–180 bin ₺', v: 3.75, t0: 12.3, fmt: (v) => '%' + tr(v, 2), c: K.taba},
+      {label: 'Nakit avans', v: 4.25, t0: 16.0, fmt: (v) => '%' + tr(v, 2), c: K.coral},
+    ]} />
+    <Frame9 src="stock/kart-1.mp4" t0={3.8} out={18.1} x={60} y={1050} w={960} h={420} />
+    <Card9 t0={18.3} out={28.9} x={60} y={1050} w={960} h={420} tone="bej" label="25.000 ₺ BORÇ • SADECE ASGARİ ÖDEME">
+      <Tx9 t0={18.6} x={40} y={80} w={880} s={46} c={K.ink2} wt={800}>Kalan 20.000 ₺ × %3,25 + vergiler</Tx9>
+      <Count t0={23.4} v={845} d={1.8} pre="≈ " suf=" ₺" s={170} c={K.tabaD} x={40} y={170} />
+      <Tx9 t0={24.6} x={600} y={250} s={40} c={K.ink2} wt={800}>/ ay</Tx9>
+    </Card9>
+    <Card9 t0={29.1} x={60} y={1050} w={960} h={420} tone="sage" label="ARALIK ORANLARI">
+      <div style={{position: 'absolute', left: 40, top: 100, color: K.sari}}><Bell size={90} strokeWidth={2.2} /></div>
+      <Tx9 t0={29.5} x={40} y={230} w={880} s={66} c={K.bg} wt={800} font={SERIF} lh={1.05}>Merkez Bankası bugün açıklıyor</Tx9>
+    </Card9>
+  </>
+);
+export const Seri12: React.FC = () => <Shell no={12} total={38.0} voiceEnd={35.3} caps={C12} claim={<Claim src="stock/kart-2.mp4" lines={'Kart faizi\n11 aydır\ndeğişmedi'} dur={2.6} />}><G12 /></Shell>;
+export const SERIP_FRAMES = {s7: fr(30.8), s8: fr(27.2), s9: fr(21.5), s10: fr(38.0), s11: fr(29.6), s12: fr(38.0)};
